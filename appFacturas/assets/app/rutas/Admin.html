@@ -1,0 +1,110 @@
+
+
+<div class="container">
+
+  <div class="row">
+
+    <a href="#/login" ng-click="logout()" class="btn btn-primary">Cerrar Sesion</a>
+  </div>
+<div class="row">
+
+  <form ng-submit="crearLimite()" name="LimiteForm">
+
+    <!--Nombre-->
+    <div class="form-group">
+      <label for="Periodo">Periodo</label>
+      <input  name="Periodo" type="text" ng-model=" nuevoLimite.periodo" class="form-control" aria-describedby="ayuda" placeholder="Ingrese Periodo">
+      <small id="ayuda" class="form-text text-muted">Periodo.</small>
+    </div>
+    <div class="form-group">
+      <label for="categoria">Categoria</label>
+      <select class="form-control" ng-model="nuevoLimite.nombre">
+        <option ng-repeat="categoria in Categorias" value="{{categoria}}">{{categoria}} </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="valorLimite">Valor Limite</label>
+      <input  name="valorLimite" type="text" ng-model=" nuevoLimite.valor" class="form-control" aria-describedby="ayuda" placeholder="Ingrese Valor Limite">
+      <small id="ayuda" class="form-text text-muted">Periodo.</small>
+    </div>
+
+
+
+
+
+
+
+    <button  type="submit" class="btn btn-primary btn-block">Crear Limite</button>
+
+
+
+  </form>
+</div>
+
+
+  <div class="row">
+    <div style="  height: 300px; overflow-y: scroll;">
+
+      <h2>Tabla de Limites</h2>
+
+
+      <table class="table table-bordered table-hover table-condensed">
+
+        <tr style="font-weight: bold; text-align: center;">
+          <td>Nombre</td>
+          <td>Limite</td>
+          <td>Periodo</td>
+
+        </tr>
+        <tr ng-repeat="limite in limites">
+          <td>
+
+                <span editable-textarea="limite.nombre" e-name="nombre" e-form="editLimite" e-required>
+                  {{ limite.nombre || 'Nombre Vacio' }}
+                </span>
+
+          </td>
+          <td>
+
+
+                <span editable-textarea="limite.valor" e-name="valor" e-form="editLimite" e-required>
+                  {{ limite.valor || 'Nombre Vacio' }}
+                </span>
+
+          </td>
+          <td>
+
+                <span editable-textarea="limite.periodo" e-name="periodo" e-form="editLimite" e-required>
+                  {{ limite.periodo || 'Nombre Vacio' }}
+                </span>
+
+          </td>
+
+          <td style="white-space: nowrap">
+            <div ng-show="editLimite.$visible">
+              <form editable-form name="editLimite" class="form-buttons form-inline" shown="inserted == limite" onaftersave="actualizarLimite(limite)">
+                <button type="submit" ng-disabled="editLimite.$waiting" class="btn btn-primary btn-xs">
+                  <i class="fa fa-check" aria-hidden="true"></i>
+                </button>
+
+              </form>
+
+
+              <button type="button" ng-disabled="editLimite.$waiting" ng-click="editLimite.$cancel()" class="btn btn-default btn-xs">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="buttons" ng-show="!editLimite.$visible">
+              <button class="btn btn-primary btn-xs" ng-click="editLimite.$show()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+
+            </div>
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+  </div>
+
+</div>

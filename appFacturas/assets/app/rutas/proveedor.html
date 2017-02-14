@@ -1,0 +1,208 @@
+<div class="container">
+  <div class="row">
+  <center>
+    <h1>Proveedores</h1>
+  </center>
+
+
+
+  </div>
+  <hr>
+  <div class="row">
+    <center>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWbJXRfEBk3Nb7mPJmBpleWyXbjzqbLIO7e4uynCyWTtb8RNWdpMrOOA" alt="">
+    </center>
+  </div>
+  <div class="row">
+    <h2>Cree,Edite o elimine</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+
+
+
+
+
+    <div class="col-md-7">
+      <div class="row">
+        <div class="btn btn-info" ng-click="ocultarBotonAgregar()" ng-hide="botones.agregarProveedor">Agregar Proveedor</div>
+        <div class="btn btn-warning" ng-click="ocultarBotonAgregar()" ng-show="botones.agregarProveedor">Ocultar</div>
+      </div>
+      <div class="row" ng-show="botones.agregarProveedor">
+        <form ng-submit="crearProveedor()" name="proveedorForm">
+          <!--          NOMBRE-->
+          <div ng-show="proveedorForm.$submitted || proveedorForm.nombre.$touched">
+            <div ng-show="proveedorForm.nombre.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+              <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+              <span class="sr-only">Error:</span> Ingrese un Nombre.
+            </div>
+            <div ng-show="(proveedorForm.nombre.$error.minlength || proveedorForm.nombre.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+              <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+              <span class="sr-only">Error:</span> El nombre debe de tener de 4 a 20 caracteres.
+            </div>
+
+          </div>
+
+          <!--          ruc-->
+          <div ng-show="proveedorForm.$submitted || proveedorForm.Ruc.$touched">
+            <div ng-show="proveedorForm.Ruc.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+              <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+              <span class="sr-only">Error:</span> Ingrese un RUC.
+            </div>
+            <div ng-show="( proveedorForm.Ruc.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+              <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+              <span class="sr-only">Error:</span> El Ruc deber tener 13 digitos.
+            </div>
+
+          </div>
+
+          <!--          direccion-->
+          <div ng-show="proveedorForm.$submitted || proveedorForm.direccion.$touched">
+            <div ng-show="proveedorForm.direccion.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+              <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+              <span class="sr-only">Error:</span> Debe ingresar una direccion.
+            </div>
+            <div ng-show="( proveedorForm.direccion.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+              <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+              <span class="sr-only">Error:</span> La direccion no debe exceder de los 20 caracteres.
+            </div>
+
+          </div>
+          <!--telefono-->
+
+          <div ng-show="proveedorForm.$submitted || proveedorForm.telefono.$touched">
+            <div ng-show="proveedorForm.telefono.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+              <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+              <span class="sr-only">Error:</span> Ingresar un numero de telefono.
+            </div>
+            <div ng-show="( proveedorForm.telefono.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+              <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+              <span class="sr-only">Error:</span> El telefono no debe exceder de 10 digitos.
+            </div>
+
+          </div>
+          <!--Nombre-->
+          <div class="form-group">
+            <label for="nombre">Nombre Proveedor</label>
+            <input required ng-minlength="4" ng-maxlength="20" name="nombre" type="text" ng-model=" nuevoProveedor.nombre" class="form-control" aria-describedby="ayuda" placeholder="Ingrese Nombre Proveedor">
+            <small id="ayuda" class="form-text text-muted">Nombre del Proveedor.</small>
+          </div>
+          <!--          RUC-->
+          <div class="form-group">
+            <label for="Ruc">RUC</label>
+            <input required ng-maxlength="13" name="Ruc" ng-keyup="validarRuc(nuevoProveedor.Ruc)" type="text" ng-model=" nuevoProveedor.Ruc" class="form-control"  aria-describedby="ayudaCed" placeholder="Ingresar RUC">
+            <small id="ayudaCed" class="form-text text-muted"> RUC.</small>
+          </div>
+          <!--direccion-->
+          <div class="form-group">
+            <label for="direccion">Direccion Proveedor</label>
+            <input required ng-maxlength="40" name="direccion" type="text" ng-model=" nuevoProveedor.direccion" class="form-control"  aria-describedby="ayudap" placeholder="Ingrese direccion">
+            <small id="ayudap" class="form-text text-muted">Direccion del Proveedor</small>
+          </div>
+          <!--          telefono-->
+          <div class="form-group">
+            <label for="telefono"> Telefono</label>
+            <input required type="text" ng-pattern="/^[0-9]*$/" name="telefono" ng-model=" nuevoProveedor.telefono" class="form-control"  aria-describedby="at" placeholder="Ingrese telefono">
+            <small id="at" class="form-text text-muted">Telefono</small>
+          </div>
+
+
+
+
+
+          <button ng-disabled="proveedorForm.$invalid" type="submit" class="btn btn-primary btn-block">Crear Proveedor</button>
+
+
+
+        </form>
+
+      </div>
+      <hr>
+      <div class="row">
+        <h2>Click en el boton para Ver/ocultar Tabla de Proveedores</h2>
+        <div class="btn btn-info" ng-click="verProveedores()" ng-hide="botones.verTabla">Ver Proveedores</div>
+        <div class="btn btn-warning" ng-click="verProveedores()" ng-show="botones.verTabla">Ocultar</div>
+      </div>
+
+      <div class="row" ng-show="botones.verTabla">
+
+        <div style="  height: 300px; overflow-y: scroll;">
+
+          <h2>Tabla de clientes</h2>
+
+          <p>Buscar
+            <input type="text" ng-model="filtroProveedor">
+          </p>
+          <table class="table table-bordered table-hover table-condensed">
+
+            <tr style="font-weight: bold; text-align: center;">
+              <td>Nombre</td>
+              <td>RUC</td>
+              <td>Direccion</td>
+              <td>Telefono</td>
+            </tr>
+            <tr ng-repeat="proveedor in proveedores| filter: filtroProveedor">
+              <td>
+
+                <span editable-textarea="proveedor.nombre" e-name="nombre" e-form="editProveedor" e-required>
+                  {{ proveedor.nombre || 'Nombre Vacio' }}
+                </span>
+
+              </td>
+              <td>
+
+
+                <span editable-textarea="proveedor.Ruc" e-name="Ruc" e-form="editProveedor" e-required>
+                  {{ proveedor.Ruc || 'Nombre Vacio' }}
+                </span>
+
+              </td>
+              <td>
+
+                <span editable-textarea="proveedor.direccion" e-name="direccion" e-form="editProveedor" e-required>
+                  {{ proveedor.direccion || 'Nombre Vacio' }}
+                </span>
+
+              </td>
+              <td>
+
+                <span editable-textarea="proveedor.telefono" e-name="telefono" e-form="editProveedor" e-required>
+                  {{ proveedor.telefono || 'Nombre Vacio' }}
+                </span>
+              </td>
+              <td style="white-space: nowrap">
+                <div ng-show="editProveedor.$visible">
+                  <form editable-form name="editProveedor" class="form-buttons form-inline" shown="inserted == proveedor" onaftersave="actualizarProveedor(proveedor)">
+                    <button type="submit" ng-disabled="editProveedor.$waiting" class="btn btn-primary btn-xs">
+                      <i class="fa fa-check" aria-hidden="true"></i>
+                    </button>
+
+                  </form>
+                  <button class="btn btn-danger btn-xs" ng-disabled="editProveedor.$waiting" ng-click="borrarProveedor(proveedor.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+
+                  <button type="button" ng-disabled="editProveedor.$waiting" ng-click="editProveedor.$cancel()" class="btn btn-default btn-xs">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                  </button>
+                </div>
+
+                <div class="buttons" ng-show="!editProveedor.$visible">
+                  <button class="btn btn-primary btn-xs" ng-click="editProveedor.$show()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+
+                </div>
+              </td>
+            </tr>
+
+          </table>
+
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>

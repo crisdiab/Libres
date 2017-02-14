@@ -1,0 +1,52 @@
+
+
+<div class="container">
+
+
+
+  <h1>Facturas</h1>
+
+  <div style="  height: 300px; overflow-y: scroll;">
+
+    <h2>Tabla de Facturas</h2>
+
+    <p>Buscar  <input type="text" ng-model="busqueda"></p>
+    <!--<button ng-click="verFacturas()">ver Tabla</button>-->
+    <table class="table table-bordered table-hover table-condensed">
+
+      <tr style="font-weight: bold; text-align: center;">
+        <td>Nombre</td>
+        <td>Apellido</td>
+        <td>Proveedor</td>
+        <td>Fecha Emision</td>
+        <td>Numero de Factura</td>
+        <td>Valor De la Factura</td>
+        <td>Periodo</td>
+        <td>Detalle de Factura</td>
+
+      </tr>
+      <tr ng-repeat="factura in facturas | filter: busqueda">
+        <td>{{factura.idComprador.nombre}}</td>
+        <td>{{factura.idComprador.apellido}}</td>
+        <td>{{factura.idProveedor.nombre}}</td>
+        <td>{{factura.fechaEmision | date:'dd/MM/yyyy'}}</td>
+        <td>{{factura.numFactura }}</td>
+        <td>{{factura.valorFactura | currency}}</td>
+        <td>{{factura.periodo}}</td>
+        <td><a href="#/detfac/{{factura.id}}">Ir a detalles</a></td>
+
+      </tr>
+
+    </table>
+
+
+  </div>
+
+  <br>
+  <!--<p>Si desesa consultar sus gastos por periodo clik en <a  href="#/gastos">Consultar gastos</a> </p>-->
+
+
+</div>
+
+
+

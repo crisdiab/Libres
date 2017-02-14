@@ -1,0 +1,50 @@
+<div class="container">
+
+
+  <div class="row">
+    <div style="  height: 300px; overflow-y: scroll;">
+
+      <h2>Tabla de Limites</h2>
+
+
+      <table class="table table-bordered table-hover table-condensed">
+
+        <tr style="font-weight: bold; text-align: center;">
+          <td>Nombre</td>
+          <td>Limite</td>
+          <td>Periodo</td>
+
+        </tr>
+        <tr ng-repeat="limite in limitesConsultar">
+          <td>
+
+                <span editable-textarea="limite.nombre" e-name="nombre" e-form="editLimite" e-required>
+                  {{ limite.nombre || 'Nombre Vacio' }}
+                </span>
+
+          </td>
+          <td>
+
+
+                <span editable-textarea="limite.valor" e-name="valor" e-form="editLimite" e-required>
+                  {{ limite.valor || 'Nombre Vacio' }}
+                </span>
+
+          </td>
+          <td>
+
+                <span editable-textarea="limite.periodo" e-name="periodo" e-form="editLimite" e-required>
+                  {{ limite.periodo || 'Nombre Vacio' }}
+                </span>
+
+          </td>
+
+
+        </tr>
+
+      </table>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,143 @@
+<div class="modal-header">
+  <h3 class="modal-title" id="modal-title">Compradores</h3>
+</div>
+<div class="modal-body" id="modal-body">
+
+
+<!-- -->
+
+
+<!--   -->
+<!--inicio1-->
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseDisponible" aria-expanded="false" aria-controls="collapseDisponible" >
+    Clientes existentes
+  </button>
+  <div class="collapse" id="collapseDisponible">
+    <div class="row">
+      <ul>
+
+        <div style="  height: 300px; overflow-y: scroll;">
+
+
+
+          <p>Buscar
+            <input type="text" ng-model="filtroCliente">
+          </p>
+          <table class="table table-bordered table-hover table-condensed">
+
+            <tr style="font-weight: bold; text-align: center;">
+              <td>Nombre</td>
+              <td>Apellido</td>
+              <td></td>
+            </tr>
+            <tr ng-repeat="cliente in clientes | filter: filtroCliente">
+              <td>{{cliente.nombre}}</td>
+              <td>{{cliente.apellido}}</td>
+
+              <td> <button ng-click="seleccionarCliente(cliente)">Seleccionar</button></td>
+            </tr>
+
+          </table>
+
+        </div>
+
+      </ul>
+
+
+    </div>
+  </div>
+<!--  fin1-->
+<!--inicio2-->
+
+
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseCrear" aria-expanded="false" aria-controls="collapseCrear" >
+    Crear Nuevo
+  </button>
+  <div class="collapse" id="collapseCrear">
+    <div class="row" >
+      <form ng-submit="crearCliente() " name="clienteModal">
+
+
+        <!--          NOMBRE-->
+        <div ng-show="clienteModal.$submitted || clienteModal.nombre.$touched">
+          <div ng-show="clienteModal.nombre.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> Ingrese una Nombre.
+          </div>
+          <div ng-show="(clienteModal.nombre.$error.minlength || clienteModal.nombre.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> El nombre debe de tener de 4 a 20 caracteres.
+          </div>
+
+        </div>
+
+        <!--          APELLIDO-->
+        <div ng-show="clienteModal.$submitted || clienteModal.apellido.$touched">
+          <div ng-show="clienteModal.apellido.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> Ingrese una Apellido.
+          </div>
+          <div ng-show="(clienteModal.apellido.$error.minlength || clienteModal.apellido.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> El apellido debe de tener de 4 a 20 caracteres.
+          </div>
+
+        </div>
+
+        <!--          CEDULA-->
+        <div ng-show="clienteModal.$submitted || clienteModal.cedula.$touched">
+          <div ng-show="clienteModal.cedula.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> Ingrese una cedula.
+          </div>
+          <div ng-show="( clienteModal.cedula.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> La cedula debe tener al menos 10 digitos.
+          </div>
+
+        </div>
+        <!--Nombre-->
+        <div class="form-group">
+          <label for="nombre">Nombre Cliente</label>
+          <input required ng-minlength="2" ng-maxlength="20" type="text" name="nombre" ng-model=" nuevoCliente.nombre" class="form-control" id="nombreCliente" aria-describedby="ayuda" placeholder="Ingrese Nombre">
+          <small id="ayuda" class="form-text text-muted">Nombre del cliente.</small>
+        </div>
+        <!--Apellido-->
+        <div class="form-group">
+          <label for="apellido">Apellido Cliente</label>
+          <input required ng-minlength="2" ng-maxlength="20"  type="text" ng-model=" nuevoCliente.apellido" name="apellido" class="form-control"  aria-describedby="ayudap" placeholder="Ingrese apellido">
+          <small id="ayudap" class="form-text text-muted">Apellido del cliente.</small>
+        </div>
+        <!--Cedula-->
+        <div class="form-group">
+          <label for="cedula">Cedula</label>
+          <input required  ng-maxlength="20"  ng-keyup="validarCedula(nuevoCliente.cedula)" name="cedula" type="text" ng-model=" nuevoCliente.cedula" class="form-control" id="cedula" aria-describedby="ayudaCed" placeholder="Ingresar Cedula">
+          <small id="ayudaCed" class="form-text text-muted">Cedula o RUC.</small>
+        </div>
+
+
+
+        <button ng-disabled="clienteModal.$invalid" type="submit" class="btn btn-primary btn-block">Crear Cliente</button>
+
+
+
+      </form>
+
+    </div>
+  </div>
+
+
+
+
+<!--fin2-->
+
+</div>
+
+
+<div class="modal-footer">
+<!--  <button class="btn btn-primary" type="button" ng-click="$ok()">OK</button>-->
+  <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+
+
+
+</div>

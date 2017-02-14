@@ -1,0 +1,86 @@
+<div class="container">
+
+  <h1>Perfil de {{clientes.nombre}} {{clientes.apellido}}</h1>
+
+  <div style="  height: 300px; overflow-y: scroll;">
+
+
+    <table class="table table-bordered table-hover table-condensed">
+
+      <tr style="font-weight: bold; text-align: center;">
+        <td>Nombre</td>
+        <td>Apellido</td>
+        <td>Cedula</td>
+        <td>Usuario</td>
+        <td>Password</td>
+     <td></td>
+      </tr>
+      <tr >
+        <td>
+
+          <span editable-textarea="clientes.nombre" e-name="nombre" e-form="editPerfil" e-required>
+            {{ clientes.nombre || 'Nombre Vacio' }}
+          </span>
+        </td>
+        <td>
+
+          <span editable-textarea="clientes.apellido" e-name="apellido" e-form="editPerfil" e-required>
+            {{ clientes.apellido || 'Nombre Vacio' }}
+          </span>
+
+        </td>
+        <td>
+
+          <span editable-textarea="clientes.cedula" e-name="cedula" e-form="editPerfil" e-required>
+            {{ clientes.cedula || 'Nombre Vacio' }}
+          </span>
+
+        </td>
+        <td>
+
+          <span editable-textarea="clientes.usuario" e-name="usuario" e-form="editPerfil" e-required>
+            {{ clientes.usuario || 'Nombre Vacio' }}
+          </span>
+
+        </td>
+        <td>
+
+          <span editable-textarea="clientes.password" e-name="password" e-form="editPerfil" e-required>
+            {{ clientes.password || 'Nombre Vacio' }}
+          </span>
+
+        </td>
+        <td style="white-space: nowrap">
+          <div ng-show="editPerfil.$visible">
+            <form editable-form name="editPerfil" class="form-buttons form-inline" shown="inserted == clientes" onaftersave="actualizarPerfil()">
+              <button type="submit" ng-disabled="editPerfil.$waiting" class="btn btn-primary btn-xs">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </button>
+
+            </form>
+
+
+            <button type="button" ng-disabled="editPerfil.$waiting" ng-click="editPerfil.$cancel()" class="btn btn-default btn-xs">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="buttons" ng-show="!editPerfil.$visible">
+            <button class="btn btn-primary btn-xs" ng-click="editPerfil.$show()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+
+          </div>
+        </td>
+
+
+      </tr>
+
+    </table>
+
+  </div>
+
+
+
+
+</div>
+
+

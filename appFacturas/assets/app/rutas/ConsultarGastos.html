@@ -1,0 +1,122 @@
+<div class="container">
+  <div class="row">
+
+    <h2>Seleccionar el periodo a consultar</h2>
+    <div class="col-md-2">
+      <select class="form-control" ng-model="periodo">
+
+        <option ng-repeat="periodo in periodos" value="{{periodo}}">{{periodo}} </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2>Seccion de Limites de las facturas</h2>
+
+    <br><br>
+    <div class="row">
+      <div class="col-md-1">
+        <button class="btn btn-info" ng-click="verLimitesXperiodo(periodo)" ng-disabled="bloquearLimites" > Ver Limites</button>
+        <button class="btn" ng-click="consultarFacturas(periodo)" ng-disabled="bloquearConsultar">Calcular</button>
+
+      </div>
+    </div>
+
+    <div class="row"></div>
+
+
+
+  </div>
+  <div class="row"></div>
+  <div class="row">
+    <table class="table table-bordered table-hover tale -condensed">
+
+      <tr style="font-weight: bold; text-align: center;">
+        <td>Categoria</td>
+        <td>Total</td>
+        <td>Limite</td>
+        <td>Estado</td>
+        <td>Diferencia</td>
+      </tr>
+      <tr >
+
+        <td>Educacion</td>
+        <td>{{sumaCategoria(Arreglos.Educacion,Sumas.sumarEducacion)| number: 2 | currency}}</td>
+        <td>{{limites.educacion | currency}}</td>
+        <td>{{limites.mensaje}}</td>
+
+        <td>{{calcularLimites(limites.educacion,sumaCategoria(Arreglos.Educacion,Sumas.sumarEducacion),diferenciaLimite.difEducacion) | currency}}</td>
+
+
+      </tr>
+      <tr >
+        <td>Vivienda</td>
+        <td>{{sumaCategoria(Arreglos.Vivienda,Sumas.sumarVivienda)| number: 2 | currency}}</td>
+        <td>{{limites.vivienda |currency}}</td>
+        <td>{{limites.mensaje}}</td>
+
+        <td>{{calcularLimites(limites.vivienda,sumaCategoria(Arreglos.Vivienda,Sumas.sumarVivienda),diferenciaLimite.difVivienda) | currency}}</td>
+
+
+      </tr>
+      <tr >
+        <td>Salud</td>
+        <td>{{sumaCategoria(Arreglos.Salud,Sumas.sumarSalud)| number: 2 | currency}}</td>
+        <td>{{limites.salud | currency}}</td>
+        <td>{{limites.mensaje}}</td>
+
+        <td>{{calcularLimites(limites.salud,sumaCategoria(Arreglos.Salud,Sumas.sumarSalud),diferenciaLimite.difSalud) | currency}}</td>
+
+
+      </tr>
+      <tr >
+        <td>Alimentacion</td>
+        <td>{{sumaCategoria(Arreglos.Alimento,Sumas.sumarAlimentos)| number: 2 | currency}}</td>
+        <td>{{limites.alimentacion | currency}}</td>
+        <td>{{limites.mensaje}}</td>
+
+        <td>{{calcularLimites(limites.alimentacion,sumaCategoria(Arreglos.Alimento,Sumas.sumarAlimentos),diferenciaLimite.difAlimento) | currency}}</td>
+
+
+      </tr>
+      <tr >
+        <td>Gastos Personales</td>
+        <td>{{sumaCategoria(Arreglos.GastosNegocio,Sumas.sumarGastosNegocio)| number: 2 | currency}}</td>
+        <td>{{limites.gastosPersonales| currency}}</td>
+        <td>{{limites.mensaje}}</td>
+
+        <td>{{calcularLimites(limites.gastosPersonales,sumaCategoria(Arreglos.GastosNegocio,Sumas.sumarGastosNegocio),diferenciaLimite.difGN) | currency}}</td>
+
+
+      </tr>
+
+    </table>
+  </div>
+
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <button class="btn btn-success" ng-click="nuevaConsulta()" ng-disabled="bloquearNuevaConsulta">nueva consulta</button>
+    </div>
+    <div class="col-md-6">
+      <button class="btn btn-info"
+              ng-click="exportar(
+            sumaCategoria(Arreglos.Educacion,Sumas.sumarEducacion),calcularLimites(limites.educacion,sumaCategoria(Arreglos.Educacion,Sumas.sumarEducacion),diferenciaLimite.difEducacion),
+            sumaCategoria(Arreglos.Vivienda,Sumas.sumarVivienda),calcularLimites(limites.vivienda,sumaCategoria(Arreglos.Vivienda,Sumas.sumarVivienda),diferenciaLimite.difVivienda),
+            sumaCategoria(Arreglos.Salud,Sumas.sumarSalud),calcularLimites(limites.salud,sumaCategoria(Arreglos.Salud,Sumas.sumarSalud),diferenciaLimite.difSalud),
+            sumaCategoria(Arreglos.Alimento,Sumas.sumarAlimentos),calcularLimites(limites.alimentacion,sumaCategoria(Arreglos.Alimento,Sumas.sumarAlimentos),diferenciaLimite.difAlimento),
+            sumaCategoria(Arreglos.GastosNegocio,Sumas.sumarGastosNegocio),calcularLimites(limites.gastosPersonales,sumaCategoria(Arreglos.GastosNegocio,Sumas.sumarGastosNegocio),diferenciaLimite.difGN)
+    )">
+        exportar EXEL
+      </button>
+    </div>
+
+  </div>
+
+  <div class="row">
+</div>
+
+
+</div>
+

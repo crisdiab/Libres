@@ -1,0 +1,71 @@
+
+<!--
+{{UsuarioCokie}}
+{{nuevaFactura||JSON}}
+
+-->
+
+
+
+ <div class="container">
+  <div class="row">
+    <center>
+      <h1>Factura</h1>
+    </center>
+
+    <center>
+      <img src="http://us.123rf.com/450wm/alexmillos/alexmillos1203/alexmillos120300048/12950779-sobre-y-factura-de-dise-o-ilustraci-n-documentos-en-blanco.jpg?ver=6" alt="">
+    </center>
+
+    <form ng-submit="crearFactura()" name="facturaForm">
+
+
+      <div ng-show="facturaForm.$submitted || facturaForm.numFactura.$touched">
+        <div ng-show="facturaForm.numFactura.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+          <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+          <span class="sr-only">Error:</span> Es necesario ingresar un numero de factura
+        </div>
+
+
+      </div>
+      <div class="form-group">
+        <label for="numFactura">Numero de la Factura</label>
+        <input required type="text" ng-model=" nuevaFactura.numFactura" name="numFactura"class="form-control"  aria-describedby="ayuda" placeholder="xxx-xxx-xxxxx">
+        <small id="ayuda" class="form-text text-muted">Formato del numero de la factura xxx-xxx-xxxxx.</small>
+      </div>
+
+      <br>
+      <br>
+      <div class="form-group">
+        <div class="btn btn-primary" ng-click="seleccionarProveedor()">Seleccionar Proveedor</div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="fecha">Fecha de emision</label>
+        <input type="date" ng-model=" nuevaFactura.fechaEmision" class="form-control" id="fecha" aria-describedby="ayuda" placeholder="fecha yyyy-mm-dd">
+        <small id="ayuda" class="form-text text-muted">Fecha.</small>
+      </div>
+
+
+      <div class="form-group">
+        <label for="VT">Valor Total</label>
+        <input type="float" ng-model=" nuevaFactura.valorFactura" class="form-control" id="VT" aria-describedby="ayuda" placeholder="Valor total factura">
+        <small id="ayuda" class="form-text text-muted">Valor total ej 12.43.</small>
+      </div>
+
+
+      <div class="form-actions">
+        <button type="submit"  ng-disabled="facturaForm.$invalid " class="btn btn-primary">Crear Factura</button>
+
+        <a href="#/consultar" class="btn btn-link">Consultar Facturas</a>
+      </div>
+
+    </form>
+
+
+
+
+
+  </div>
+</div>

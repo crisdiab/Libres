@@ -1,0 +1,75 @@
+<div class="modal-header">
+  <h3 class="modal-title" id="modal-title">Factura</h3>
+</div>
+<div class="modal-body" id="modal-body">
+
+
+  <!-- -->
+
+
+  <!--   -->
+  <!--inicio1-->
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseDisponible" aria-expanded="false" aria-controls="collapseDisponible" >
+    Facturas existentes
+  </button>
+  <div class="collapse" id="collapseDisponible">
+    <div class="row">
+      <ul>
+
+        <div style="  height: 300px; overflow-y: scroll;">
+
+          <h2>Tabla de Facturas</h2>
+
+          <p>Buscar  <input type="text" ng-model="filtroFactura"></p>
+          <table class="table table-bordered table-hover table-condensed">
+
+            <tr style="font-weight: bold; text-align: center;">
+              <td>Nombre</td>
+              <td>Apellido</td>
+              <td>Proveedor</td>
+              <td>Fecha Emision</td>
+              <td>Numero de Factura</td>
+              <td>Valor De la Factura</td>
+              <td></td>
+            </tr>
+            <tr ng-repeat="factura in facturas | filter: filtroFactura">
+              <td>{{factura.idComprador.nombre}}</td>
+              <td>{{factura.idComprador.apellido}}</td>
+              <td>{{factura.idProveedor.nombre}}</td>
+              <td>{{factura.fechaEmision}}</td>
+              <td>{{factura.numFactura}}</td>
+              <td>{{factura.valorFactura}}</td>
+               <td> <button ng-click="seleccionarFactura(factura)">Seleccionar</button></td>
+            </tr>
+
+          </table>
+
+        </div>
+
+      </ul>
+
+
+    </div>
+  </div>
+  <!--  fin1-->
+  <!--inicio2-->
+
+
+<!--
+ -->
+
+
+
+
+  <!--fin2-->
+
+</div>
+
+
+<div class="modal-footer">
+  <!--  <button class="btn btn-primary" type="button" ng-click="$ok()">OK</button>-->
+  <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+
+
+
+</div>

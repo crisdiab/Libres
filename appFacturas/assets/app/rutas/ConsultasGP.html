@@ -1,0 +1,89 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      Ingrese un Periodo
+      <br>
+
+      <div class="input-group">
+        <input type="text" ng-model="periodo"class="form-control" placeholder="Buscar periodo...">
+        <span class="input-group-btn">
+        <button ng-hide="bloquearBuscar" class="btn btn-success" type="button" ng-click="facturasPorPeriodo(facturas,periodo)" >Buscar</button>
+
+
+      </span>
+      </div><!-- /input-group -->
+
+      <div class="row"></div>
+
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
+
+    <br><br><br>
+    <h2>Gastos Personales Por Periodo</h2>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Tipo de Gasto</th>
+        <th>Gasto Acumulado</th>
+        <th>Limites de Gasto</th>
+        <th>Diferencia</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <!--ng-repeat="factura in factXperiodo"-->
+      <tr >
+        <td>{{elementos.alimentos.nombre}}</td>
+        <td>{{elementos.alimentos.total}}</td>
+        <td>{{elementos.alimentos.limite}}</td>
+        <td>{{elementos.alimentos.diferencia}}</td>
+
+      </tr>
+      <tr>
+        <td>{{elementos.salud.nombre}}</td>
+        <td>{{elementos.salud.total}}</td>
+        <td>{{elementos.salud.limite}}</td>
+        <td>{{elementos.salud.diferencia}}</td>
+      </tr>
+      <tr>
+        <td>{{elementos.vivienda.nombre}}</td>
+        <td>{{elementos.vivienda.total}}</td>
+        <td>{{elementos.vivienda.limite}}</td>
+        <td>{{elementos.vivienda.diferencia}}</td>
+      </tr>
+      <tr>
+        <td>{{elementos.educacion.nombre}}</td>
+        <td>{{elementos.educacion.total}}</td>
+        <td>{{elementos.educacion.limite}}</td>
+        <td>{{elementos.educacion.diferencia}}</td>
+      </tr>
+      <tr>
+        <td>{{elementos.vestido.nombre}}</td>
+        <td>{{elementos.vestido.total}}</td>
+        <td>{{elementos.vestido.limite}}</td>
+        <td>{{elementos.vestido.diferencia}}</td>
+      </tr>
+      <tr>
+        <td>{{elementos.otros.nombre}}</td>
+        <td>{{elementos.otros.total}}</td>
+        <td>{{elementos.otros.limite}}</td>
+        <td>{{elementos.otros.diferencia}}</td>
+      </tr>
+
+      </tbody>
+    </table>
+    <br><br>
+    <div class="row">
+      <div class="col-md-4">
+        <button ng-show="ocultar" class="btn btn-info" ng-click="exportarGP()">Exportar</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-info" ng-click="limpiarTodo()">Nueva Busqueda</button>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</div>

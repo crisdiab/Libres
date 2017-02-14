@@ -1,0 +1,523 @@
+
+
+
+<div class="container">
+
+  <div class="row">
+
+
+
+    <div class="col-md-4">
+
+      <div class="input-group">
+
+        <input type="text" ng-model="periodo"class="form-control" placeholder="Buscar periodo...">
+
+        <span class="input-group-btn">
+
+        <button class="btn btn-success" type="button" ng-click="FacturasXPeriodo(facturas,periodo)" >Buscar</button>
+
+
+
+
+
+      </span>
+
+      </div><!-- /input-group -->
+
+    </div><!-- /.col-lg-6 -->
+
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="row">
+
+    <table class="table table-hover">
+
+      <thead>
+
+      <tr>
+
+        <th>Mes</th>
+
+        <th>Alimentacion</th>
+
+        <th>Educacion</th>
+
+        <th>Vivienda</th>
+
+        <th>Vestimenta</th>
+
+        <th>Salud</th>
+
+        <th>Otros</th>
+
+
+
+      </tr>
+
+      </thead>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <tbody>
+
+      <!--ng-repeat="factura in factXperiodo"-->
+
+
+
+      <!--<tr ng-repeat="mes in meses">-->
+
+      <!--<td >{{mes}}</td>-->
+
+
+
+      <!--</tr>-->
+
+      <tr>
+
+        <td>Enero</td>
+
+        <td>{{sumaCategoria(tipos.alimentos1,sumas.Alimento1)}}</td>
+
+        <td>{{sumaCategoria(tipos.educacion1,sumas.Educacion1)}}</td>
+
+        <td>{{sumaCategoria(tipos.vivienda1,sumas.Vivienda1)}}</td>
+
+        <td>{{sumaCategoria(tipos.vestido1,sumas.Vestido1)}}</td>
+
+        <td>{{sumaCategoria(tipos.salud1,sumas.Salud1)}}</td>
+
+        <td>{{sumaCategoria(tipos.otros1,sumas.Otros1)}}</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Febrero</td>
+
+        <td>{{sumaCategoria(tipos.alimentos2,sumas.Alimento2)}}</td>
+
+        <td>{{sumaCategoria(tipos.educacion2,sumas.Educacion2)}}</td>
+
+        <td>{{sumaCategoria(tipos.vivienda2,sumas.Vivienda2)}}</td>
+
+        <td>{{sumaCategoria(tipos.vestido2,sumas.Vestido2)}}</td>
+
+        <td>{{sumaCategoria(tipos.salud2,sumas.Salud2)}}</td>
+
+        <td>{{sumaCategoria(tipos.otros2,sumas.Otros2)}}</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Marzo</td>
+
+        <td>{{sumaCategoria(tipos.alimentos3,sumas.Alimento3)}}</td>
+
+        <td>{{sumaCategoria(tipos.educacion3,sumas.Educacion3)}}</td>
+
+        <td>{{sumaCategoria(tipos.vivienda3,sumas.Vivienda3)}}</td>
+
+        <td>{{sumaCategoria(tipos.vestido3,sumas.Vestido3)}}</td>
+
+        <td>{{sumaCategoria(tipos.salud3,sumas.Salud3)}}</td>
+
+        <td>{{sumaCategoria(tipos.otros3,sumas.Otros3)}}</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Abril</td>
+
+        <td>{{sumaCategoria(tipos.alimentos4,sumas.Alimento4)}}</td>
+
+        <td>{{sumaCategoria(tipos.educacion4,sumas.Educacion4)}}</td>
+
+        <td>{{sumaCategoria(tipos.vivienda4,sumas.Vivienda4)}}</td>
+
+        <td>{{sumaCategoria(tipos.vestido4,sumas.Vestido4)}}</td>
+
+        <td>{{sumaCategoria(tipos.salud4,sumas.Salud4)}}</td>
+
+        <td>{{sumaCategoria(tipos.otros4,sumas.Otros4)}}</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Mayo</td>
+
+        <td>{{sumaCategoria(tipos.alimentos5,sumas.Alimento5)}}</td>
+
+        <td>{{sumaCategoria(tipos.educacion5,sumas.Educacion5)}}</td>
+
+        <td>{{sumaCategoria(tipos.vivienda5,sumas.Vivienda5)}}</td>
+
+        <td>{{sumaCategoria(tipos.vestido5,sumas.Vestido5)}}</td>
+
+        <td>{{sumaCategoria(tipos.salud5,sumas.Salud5)}}</td>
+
+        <td>{{sumaCategoria(tipos.otros5,sumas.Otros5)}}</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Junio</td>
+
+        <td>{{sumaCategoria(tipos.alimentos6,sumas.Alimento6)}}</td>
+
+        <td>{{sumaCategoria(tipos.educacion6,sumas.Educacion6)}}</td>
+
+        <td>{{sumaCategoria(tipos.vivienda6,sumas.Vivienda6)}}</td>
+
+        <td>{{sumaCategoria(tipos.vestido6,sumas.Vestido6)}}</td>
+
+        <td>{{sumaCategoria(tipos.salud6,sumas.Salud6)}}</td>
+
+        <td>{{sumaCategoria(tipos.otros6,sumas.Otros6)}}</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Julio</td>
+
+        <td>{{sumaCategoria(tipos.alimentos7,sumas.Alimento7)}}</td>
+
+        <td>{{sumaCategoria(tipos.educacion7,sumas.Educacion7)}}</td>
+
+        <td>{{sumaCategoria(tipos.vivienda7,sumas.Vivienda7)}}</td>
+
+        <td>{{sumaCategoria(tipos.vestido7,sumas.Vestido7)}}</td>
+
+        <td>{{sumaCategoria(tipos.salud7,sumas.Salud7)}}</td>
+
+        <td>{{sumaCategoria(tipos.otros7,sumas.Otros7)}}</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Agosto</td>
+
+        <td>{{sumaCategoria(tipos.alimentos8,sumas.Alimento8)}}</td>
+
+        <td>{{sumaCategoria(tipos.educacion8,sumas.Educacion8)}}</td>
+
+        <td>{{sumaCategoria(tipos.vivienda8,sumas.Vivienda8)}}</td>
+
+        <td>{{sumaCategoria(tipos.vestido8,sumas.Vestido8)}}</td>
+
+        <td>{{sumaCategoria(tipos.salud8,sumas.Salud8)}}</td>
+
+        <td>{{sumaCategoria(tipos.otros8,sumas.Otros8)}}</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Septiembre</td>
+
+        <td>{{sumaCategoria(tipos.alimentos9,sumas.Alimento9)}}</td>
+
+        <td>{{sumaCategoria(tipos.educacion9,sumas.Educacion9)}}</td>
+
+        <td>{{sumaCategoria(tipos.vivienda9,sumas.Vivienda9)}}</td>
+
+        <td>{{sumaCategoria(tipos.vestido9,sumas.Vestido9)}}</td>
+
+        <td>{{sumaCategoria(tipos.salud9,sumas.Salud9)}}</td>
+
+        <td>{{sumaCategoria(tipos.otros9,sumas.Otros9)}}</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Octubre</td>
+
+        <td>{{sumaCategoria(tipos.alimentos10,sumas.Alimento10)}}</td>
+
+        <td>{{sumaCategoria(tipos.educacion10,sumas.Educacion10)}}</td>
+
+        <td>{{sumaCategoria(tipos.vivienda10,sumas.Vivienda10)}}</td>
+
+        <td>{{sumaCategoria(tipos.vestido10,sumas.Vestido10)}}</td>
+
+        <td>{{sumaCategoria(tipos.salud10,sumas.Salud10)}}</td>
+
+        <td>{{sumaCategoria(tipos.otros10,sumas.Otros10)}}</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Noviembre</td>
+
+        <td>{{sumaCategoria(tipos.alimentos11,sumas.Alimento11)}}</td>
+
+        <td>{{sumaCategoria(tipos.educacion11,sumas.Educacion11)}}</td>
+
+        <td>{{sumaCategoria(tipos.vivienda11,sumas.Vivienda11)}}</td>
+
+        <td>{{sumaCategoria(tipos.vestido11,sumas.Vestido11)}}</td>
+
+        <td>{{sumaCategoria(tipos.salud11,sumas.Salud11)}}</td>
+
+        <td>{{sumaCategoria(tipos.otros11,sumas.Otros11)}}</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Diciembre</td>
+
+        <td>{{sumaCategoria(tipos.alimentos12,sumas.Alimento12)}}</td>
+
+        <td>{{sumaCategoria(tipos.educacion12,sumas.Educacion12)}}</td>
+
+        <td>{{sumaCategoria(tipos.vivienda12,sumas.Vivienda12)}}</td>
+
+        <td>{{sumaCategoria(tipos.vestido12,sumas.Vestido12)}}</td>
+
+        <td>{{sumaCategoria(tipos.salud12,sumas.Salud12)}}</td>
+
+        <td>{{sumaCategoria(tipos.otros12,sumas.Otros12)}}</td>
+
+      </tr>
+
+
+
+
+
+      <!--<tr>-->
+
+      <!--<td>Vestido</td>-->
+
+      <!--<td>{{sumaCategoria(tipos.vestido,sumas.Vestido)}}</td>-->
+
+      <!--<td>{{limites.vestido}}</td>-->
+
+      <!--<td>{{diferencia(-->
+
+      <!--limites.vestido,-->
+
+      <!--sumaCategoria(tipos.vestido,sumas.Vestido),-->
+
+      <!--diferenciaLimite.Vestido)}}</td>-->
+
+      <!--</tr>-->
+
+
+
+
+
+      </tbody>
+
+    </table>
+
+
+
+
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-4">
+
+      <button class="btn btn-info" type="button" ng-click="nuevaBusqueda()">nueva busqueda</button>
+
+    </div>
+
+    <div class="col-md-2"></div>
+
+    <div class="col-md-4">
+
+      <button class="btn btn-info"  type="button" ng-click="exportarGP(
+
+            sumaCategoria(tipos.educacion,sumas.Educacion),
+
+            diferencia(
+
+                    limites.educacion,
+
+                    sumaCategoria(tipos.educacion,sumas.Educacion),
+
+                    diferenciaLimite.Educacion),
+
+            sumaCategoria(tipos.vivienda,sumas.Vivienda),
+
+            diferencia(
+
+                    limites.vivienda,
+
+                    sumaCategoria(tipos.vivienda,sumas.Vivienda),
+
+                    diferenciaLimite.Vivienda),
+
+            sumaCategoria(tipos.salud,sumas.Salud),
+
+            diferencia(
+
+                    limites.salud,
+
+                    sumaCategoria(tipos.salud,sumas.Salud),
+
+                    diferenciaLimite.Salud),
+
+
+
+            sumaCategoria(tipos.alimentos,sumas.Alimento),
+
+            diferencia(
+
+                    limites.alimentacion,
+
+                    sumaCategoria(tipos.alimentos,sumas.Alimento),
+
+                    diferenciaLimite.Alimento),
+
+            sumaCategoria(tipos.otros,sumas.Otros),
+
+            sumaCategoria(tipos.otros,sumas.Otros),
+
+            sumaCategoria(tipos.vestido,sumas.Vestido),
+
+            diferencia(
+
+                    limites.vestido,
+
+                    sumaCategoria(tipos.vestido,sumas.Vestido),
+
+                    diferenciaLimite.Vestido),
+
+
+
+             facturas[0].idComprador.nombre+facturas[0].idComprador.apellido
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            )">Exportar Excel</button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+<div class="container">
+
+  <div class="row">
+
+    <!--facturas por periodo-->
+
+    <!--<br>-->
+
+    <!--{{factXperiodo}}-->
+
+    <!--<br><br><br>-->
+
+    <!--facturas por tipo-->
+
+    <!--{{factXtipo}}-->
+
+    <!--<br><br><br>-->
+
+
+
+    <!--<br> tipos-->
+
+    <!--<br> {{tipos}}-->
+
+    <!--tipo alimentos enero-->
+
+    <!--<br>-->
+
+    <!--{{tipo.alimentos1}}-->
+
+    <!--<br><br><br>-->
+
+    <!--facturas por tipo febrero-->
+
+    <!--{{factXtipo.Febrero}}-->
+
+    <!--<br><br><br>-->
+
+    <!--tipo otros febrero-->
+
+    <!--<br>-->
+
+    <!--{{tipos.otros1}}-->
+
+
+
+    <!--Suma categoria por mes total-->
+
+    <!--<br>-->
+
+    <!--{{sumas.Otros}}-->
+
+    <!--<br>-->
+
+    btn en div
+
+    <!--<div class="btn " ng-click="arregloCategoria(factXperiodo,'Febrero',factXtipo.Febrero,tipos.otros1)">prueba</div>-->
+
+    <!--<br>-->
+
+
+
+    <!--{{sumaCategoria(tipos.otros1,sumas.Otros)}}-->
+
+  </div>
+
+</div>
+
+
+
+<!--<h2>nada-->
+<!--</h2>-->
+<!--{{grupo}}-->
+
+
+<!--<button ng-click="facturasEnPeriodo(Facturas,'2017')">presionar</button>-->

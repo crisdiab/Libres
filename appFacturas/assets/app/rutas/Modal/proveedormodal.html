@@ -1,0 +1,160 @@
+<div class="modal-header">
+  <h3 class="modal-title" id="modal-title">Proveedores</h3>
+</div>
+<div class="modal-body" id="modal-body">
+
+
+  <!-- -->
+
+
+  <!--   -->
+  <!--inicio1-->
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseDisponible" aria-expanded="false" aria-controls="collapseDisponible" >
+    Proveedores existentes
+  </button>
+  <div class="collapse" id="collapseDisponible">
+    <div class="row">
+      <ul>
+
+        <div style="  height: 300px; overflow-y: scroll;">
+
+<!---->
+
+<!---->
+          <p>Buscar
+            <input type="text" ng-model="filtroProveedor">
+          </p>
+          <table class="table table-bordered table-hover table-condensed">
+
+            <tr style="font-weight: bold; text-align: center;">
+              <td>Razon Social</td>
+
+            </tr>
+            <tr ng-repeat="proveedor in proveedores| filter: filtroProveedor">
+              <td>{{proveedor.nombre}}</td>
+              <td> <button ng-click="seleccionarProveedor(proveedor)">Seleccionar</button></td>
+
+            </tr>
+
+          </table>
+        </div>
+
+      </ul>
+
+
+    </div>
+  </div>
+  <!--  fin1-->
+  <!--inicio2-->
+
+
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseCrear" aria-expanded="false" aria-controls="collapseCrear" >
+    Crear Nuevo
+  </button>
+  <div class="collapse" id="collapseCrear">
+    <div class="row" >
+      <form ng-submit="crearProveedorCerrar()" name="proveedorModal">
+        <!--          NOMBRE-->
+        <div ng-show="proveedorModal.$submitted || proveedorModal.nombre.$touched">
+          <div ng-show="proveedorModal.nombre.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> Ingrese un Nombre.
+          </div>
+          <div ng-show="(proveedorModal.nombre.$error.minlength || proveedorModal.nombre.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> El nombre debe de tener de 4 a 20 caracteres.
+          </div>
+
+        </div>
+
+        <!--          ruc-->
+        <div ng-show="proveedorModal.$submitted || proveedorModal.Ruc.$touched">
+          <div ng-show="proveedorModal.Ruc.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> Ingrese un RUC.
+          </div>
+          <div ng-show="( proveedorModal.Ruc.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> El Ruc deber tener 13 digitos.
+          </div>
+
+        </div>
+
+        <!--          direccion-->
+        <div ng-show="proveedorModal.$submitted || proveedorModal.direccion.$touched">
+          <div ng-show="proveedorModal.direccion.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> Debe ingresar una direccion.
+          </div>
+          <div ng-show="( proveedorModal.direccion.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> La direccion no debe exceder de los 20 caracteres.
+          </div>
+
+        </div>
+        <!--telefono-->
+
+        <div ng-show="proveedorModal.$submitted || proveedorModal.telefono.$touched">
+          <div ng-show="proveedorModal.telefono.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> Ingresar un numero de telefono.
+          </div>
+          <div ng-show="( proveedorModal.telefono.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+            <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+            <span class="sr-only">Error:</span> El telefono no debe exceder de 10 digitos.
+          </div>
+
+        </div>
+        <!--Nombre-->
+        <div class="form-group">
+          <label for="nombre">Nombre Proveedor</label>
+          <input required ng-minlength="4" ng-maxlength="20" name="nombre" type="text" ng-model=" nuevoProveedor.nombre" class="form-control" aria-describedby="ayuda" placeholder="Ingrese Nombre Proveedor">
+          <small id="ayuda" class="form-text text-muted">Nombre del Proveedor.</small>
+        </div>
+        <!--          RUC-->
+        <div class="form-group">
+          <label for="cedula">RUC</label>
+          <input required ng-maxlength="13" name="nombre" ng-keyup="validarRuc(nuevoProveedor.Ruc)" type="text" ng-model=" nuevoProveedor.Ruc" class="form-control"  aria-describedby="ayudaCed" placeholder="Ingresar RUC">
+          <small id="ayudaCed" class="form-text text-muted"> RUC.</small>
+        </div>
+        <!--direccion-->
+        <div class="form-group">
+          <label for="dir">Direccion Proveedor</label>
+          <input required ng-maxlength="40" name="dir" type="text" ng-model=" nuevoProveedor.direccion" class="form-control"  aria-describedby="ayudap" placeholder="Ingrese direccion">
+          <small id="ayudap" class="form-text text-muted">Direccion del Proveedor</small>
+        </div>
+        <!--          telefono-->
+        <div class="form-group">
+          <label for="telefono"> Telefono</label>
+          <input required type="text" ng-pattern="/^[0-9]*$/" name="telefono" ng-model=" nuevoProveedor.telefono" class="form-control"  aria-describedby="at" placeholder="Ingrese telefono">
+          <small id="at" class="form-text text-muted">Telefono</small>
+        </div>
+
+
+
+
+
+        <button ng-disabled="proveedorModal.$invalid" type="submit" class="btn btn-primary btn-block">Crear Proveedor</button>
+
+
+
+      </form>
+
+    </div>
+  </div>
+
+
+
+
+  <!--fin2-->
+
+</div>
+
+
+<div class="modal-footer">
+  <!--  <button class="btn btn-primary" type="button" ng-click="$ok()">OK</button>-->
+  <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+
+
+
+</div>

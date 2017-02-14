@@ -1,0 +1,203 @@
+<!--
+
+{{valorIva.iva}}
+
+
+-->
+<!--gastos negocio-->
+<!--{{gastosNegocio}}-->
+<!--productos {{productos}}-->
+<!--<br>-->
+<!--{{nuevoDetalle||JSON}}-->
+
+
+
+
+<!--{{nuevoDetalle||JSON}}-->
+
+
+<h3>Valor total de la Factura={{valorTotalFactura}}</h3>
+
+
+
+
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#GP" aria-expanded="false" aria-controls="GP" ng-disabled="bloquearGP" ng-click="BloquearGN()">
+ Gastos Personales
+</button>
+
+<div class="collapse" id="GP">
+  <div class="well">
+    <div class="form-group container">
+
+
+      <form class="animated fadeInRight" name="detalleFacturaForm" ng-submit="crearDetalleFactura()">
+
+        <div   class="form-group">
+          <p>Ingrese la cantidad del producto</p>
+          <input type="text" ng-model="nuevoDetalle.cantidad">
+        </div>
+
+        <div>
+          <div class="form-group">
+            <p>Categorias</p>
+
+            <select class="form-control" ng-model="nuevoDetalle.idProducto">
+              <option ng-repeat="producto in productos" value="{{producto.id}}">{{producto.nombre}} </option>
+            </select>
+
+          </div>
+
+        </div>
+
+
+
+
+        <div class="form-group">
+          <label for="valor">Valor Individual</label>
+          <input required  type="text" name="valor" ng-model=" nuevoDetalle.valor" class="form-control" id="nombreCliente" aria-describedby="ayuda" placeholder="valor del producto">
+          <small id="ayuda" class="form-text text-muted">Valor individual del producto.</small>
+        </div>
+
+
+        <div class="form-group">
+          <label for="valor">IVA</label>
+          <input required  type="text" name="valord" ng-model=" valorIva.iva" class="form-control" id="iva" aria-describedby="ayudaffd" placeholder="valor del iva">
+          <small id="ivag" class="form-text text-muted">Valor individual del producto.</small>
+        </div>
+
+
+
+
+        <!--    <input type="text" name="lname" value="" disabled><br>-->
+
+        <p ng-model="calcularprecio(nuevoDetalle.valor,nuevoDetalle.cantidad,valorIva.iva)"></p>
+
+        <br>
+
+        <br>
+        <!--<p ng-model="precioSinIva(nuevoDetalle.valor,nuevoDetalle.cantidad)"></p>-->
+
+        <button  type="submit" class="btn btn-primary "  ng-disabled="bloquearCrearDet">Crear Detalle</button>
+        <!--    <button ng-disabled="clienteForm.$invalid||cedulaDisabled" type="submit" class="btn btn-primary btn-block">Crear Cliente</button>-->
+      </form>
+
+      <br>
+      <div class="row">
+        <table class="table table-bordered table-hover animated fadeInUp">
+          <tr>
+
+            <th>Tipo</th>
+            <th>Cantidad</th>
+            <th>Fecha Emision Factura</th>
+            <th>Valor Individual</th>
+            <th>Valor Sin Iva</th>
+            <th>Valor Total </th>
+          </tr>
+          <tr ng-repeat="detFactura in detallefacturas">
+
+            <td>{{detFactura.idProducto.nombre}}</td>
+            <td>{{detFactura.cantidad}} unidades</td>
+            <td>{{detFactura.idFacturaProd.fechaEmision | date:'dd/MM/yyyy'}}</td>
+            <td>{{detFactura.valor  | currency }}</td>
+            <td>{{detFactura.valorSinIva  | currency }}</td>
+            <td>{{detFactura.valorConIva  | currency }}</td>
+          </tr>
+        </table>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#GN" aria-expanded="false" aria-controls="GN" ng-disabled="bloquearGN" ng-click="BloquearGP()">
+
+  Gastos de Negocio
+</button>
+<div class="collapse" id="GN">
+  <div class="row" >
+    <div class="form-group container">
+      <h1>Gastos de Negocio</h1>
+      <form class="animated fadeInRight" name="detalleFacturaForm" ng-submit="crearDetalleFactura()">
+
+        <div   class="form-group">
+          <p>Ingrese la cantidad del producto</p>
+          <input type="text" ng-model="nuevoDetalle.cantidad">
+        </div>
+
+        <div>
+
+          <div class="form-group">
+            <p>Categorias</p>
+
+            <select class="form-control" ng-model="nuevoDetalle.idProducto">
+              <option ng-repeat="gastosN in gastosNegocio" value="{{gastosN.id}}">{{gastosN.nombre}} </option>
+            </select>
+
+          </div>
+        </div>
+
+
+
+
+        <div class="form-group">
+          <label for="valor">Valor Individual</label>
+          <input required  type="text" name="valor" ng-model=" nuevoDetalle.valor" class="form-control" id="nombreCliente" aria-describedby="ayuda" placeholder="valor del producto">
+          <small id="ayuda" class="form-text text-muted">Valor individual del producto.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="valor">IVA</label>
+          <input required  type="text" name="valord" ng-model=" valorIva.iva" class="form-control" id="iva" aria-describedby="ayudaffd" placeholder="valor del iva">
+          <small id="ivag" class="form-text text-muted">Valor individual del producto.</small>
+        </div>
+
+
+        <!--    <input type="text" name="lname" value="" disabled><br>-->
+
+        <p ng-model="calcularprecio(nuevoDetalle.valor,nuevoDetalle.cantidad,valorIva.iva)"></p>
+
+        <br>
+
+        <br>
+
+
+        <button  type="submit" class="btn btn-primary "  ng-disabled="bloquearCrearDet">Crear Detalle</button>
+        <!--    <button ng-disabled="clienteForm.$invalid||cedulaDisabled" type="submit" class="btn btn-primary btn-block">Crear Cliente</button>-->
+      </form>
+
+      <br>
+      <div class="row">
+        <table class="table table-bordered table-hover animated fadeInUp">
+          <tr>
+
+            <th>Tipo</th>
+            <th>Cantidad</th>
+            <th>Fecha Emision Factura</th>
+            <th>Valor Individual</th>
+            <th>Valor Sin Iva</th>
+            <th>Valor Total </th>
+          </tr>
+          <tr ng-repeat="detFactura in detallefacturas">
+
+            <td>{{detFactura.idProducto.nombre}}</td>
+            <td>{{detFactura.cantidad}} unidades</td>
+            <td>{{detFactura.idFacturaProd.fechaEmision | date:'dd/MM/yyyy'}}</td>
+            <td>{{detFactura.valor  | currency }}</td>
+            <td>{{detFactura.valorSinIva  | currency }}</td>
+            <td>{{detFactura.valorConIva  | currency }}</td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+

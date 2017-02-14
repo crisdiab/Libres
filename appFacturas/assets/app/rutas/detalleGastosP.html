@@ -1,0 +1,75 @@
+<div class="container">
+
+  <div class="row">
+
+
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="input-group">
+          <input type="text" ng-model="periodo"class="form-control" placeholder="Buscar periodo...">
+          <span class="input-group-btn">
+        <button ng-hide="bloquearBuscar" class="btn btn-success" type="button" ng-click="buscarPorPeriodo(periodo,facturas)" >Buscar</button>
+
+
+      </span>
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+    </div>
+
+
+    <br><br><br>
+
+    <p>Filtro  <input type="text" ng-model="busqueda"></p><br><br>
+
+    <h2>Resultados</h2>
+    <br><br>
+    <table class="table table-bordered table-hover table-condensed">
+
+      <tr style="font-weight: bold; text-align: center;">
+        <td>Numero de Factura</td>
+        <td>Proveedor</td>
+        <td>Mes</td>
+        <td>Fecha emision</td>
+        <td>Vivienda</td>
+        <td>Alimentacion</td>
+        <td>Salud</td>
+        <td>Educacion</td>
+        <td>Vestimenta</td>
+        <td>Otros</td>
+        <td>Total sin Iva</td>
+        <td>Total con Iva</td>
+
+      </tr>
+      <tr ng-repeat="factura in facturaDetalles | filter: busqueda">
+        <td>{{factura.numFactura }}</td>
+        <td>{{factura.idProveedor.nombre}}</td>
+        <td>{{factura.mes}}</td>
+        <td>{{factura.fechaEmision| date:'dd/MM/yyyy'}}</td>
+        <td>{{factura.vivienda | currency}}</td>
+        <td>{{factura.alimentos | currency}}</td>
+        <td>{{factura.salud | currency}}</td>
+        <td>{{factura.educacion | currency}}</td>
+        <td>{{factura.vestimenta | currency}}</td>
+        <td>{{factura.otros | currency}}</td>
+
+        <td>{{factura.TotalSinIva | currency}}</td>
+        <td>{{factura.valorFactura | currency}}</td>
+
+
+    </tr>
+
+
+
+
+
+
+
+
+    </table>
+
+    <button ng-click="Limpiar()" class="btn">Nueva Busqueda</button>
+    <button ng-show="bloquearBuscar" ng-mousedown="exportarDetallesGp(facturaDetalles)">exportar</button>
+  </div>
+</div>

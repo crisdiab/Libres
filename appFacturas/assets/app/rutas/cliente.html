@@ -1,0 +1,145 @@
+<div class="container">
+  <center>
+    <h1>Registrarse</h1>
+  </center>
+  <hr>
+  <div class="row">
+
+    <center>
+      <img src="http://docs.ispconfig.org/wp-content/uploads/2010/10/user-group-icon.png" alt="Smiley face" height="187" width="164">
+    </center>
+
+
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+
+
+
+
+
+    <div class="col-md-12">
+      <div class="container">
+        <div class="row">
+          <form ng-submit="crearCliente() " name="clienteForm">
+            <!--          Usuario-->
+            <div ng-show="clienteForm.$submitted || clienteForm.usuario.$touched">
+              <div ng-show="clienteForm.usuario.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+                <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                <span class="sr-only">Error:</span> Necesita ingresar nombre de usuario.
+              </div>
+
+
+            </div>
+            <!--          Password-->
+            <div ng-show="clienteForm.$submitted || clienteForm.password.$touched">
+              <div ng-show="clienteForm.password.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+                <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                <span class="sr-only">Error:</span> Ingrese contraseña.
+              </div>
+
+
+            </div>
+
+            <!--          NOMBRE-->
+            <div ng-show="clienteForm.$submitted || clienteForm.nombre.$touched">
+              <div ng-show="clienteForm.nombre.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+                <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                <span class="sr-only">Error:</span> Ingrese una Nombre.
+              </div>
+              <div ng-show="(clienteForm.nombre.$error.minlength || clienteForm.nombre.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+                <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                <span class="sr-only">Error:</span> El nombre debe de tener de 4 a 20 caracteres.
+              </div>
+
+            </div>
+
+            <!--          APELLIDO-->
+            <div ng-show="clienteForm.$submitted || clienteForm.apellido.$touched">
+              <div ng-show="clienteForm.apellido.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+                <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                <span class="sr-only">Error:</span> Ingrese una Apellido.
+              </div>
+              <div ng-show="(clienteForm.apellido.$error.minlength || clienteForm.apellido.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+                <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                <span class="sr-only">Error:</span> El apellido debe de tener de 4 a 100 caracteres.
+              </div>
+
+            </div>
+
+            <!--          CEDULA-->
+            <div ng-show="clienteForm.$submitted || clienteForm.cedula.$touched">
+              <div ng-show="clienteForm.cedula.$error.required" class="alert alert-danger animated bounceIn" role="alert">
+                <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                <span class="sr-only">Error:</span> Ingrese una cedula.
+              </div>
+              <div ng-show="( clienteForm.cedula.$error.maxlength)" class="alert alert-warning animated bounceIn" role="alert">
+                <span aria-hidden="true"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                <span class="sr-only">Error:</span> La cedula debe tener al menos 10 digitos.
+              </div>
+
+            </div>
+            <!--Usuario-->
+            <div class="form-group">
+              <label for="usuario">Nombre de Usuario</label>
+              <input required ng-minlength="2" ng-maxlength="20" type="text" name="usuario" ng-model=" nuevoCliente.usuario" class="form-control" id="nombreUsuario" aria-describedby="ayuda" placeholder="Nombre de usuario">
+              <small id="ayuda" class="form-text text-muted">Nombre del usuario.</small>
+            </div>
+            <!--Password-->
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input required ng-minlength="2" ng-maxlength="20" type="password" name="password" ng-model=" nuevoCliente.password" class="form-control" id="password" aria-describedby="ayuda" placeholder="contraseña">
+              <small id="ayuda" class="form-text text-muted">Password.</small>
+            </div>
+
+            <h3>Datos Personales</h3>
+            <!--Nombre-->
+            <div class="form-group">
+              <label for="nombre">Nombre </label>
+              <input required ng-minlength="2" ng-maxlength="100" type="text" name="nombre" ng-model=" nuevoCliente.nombre" class="form-control" id="nombreCliente" aria-describedby="ayuda" placeholder="Ingrese Nombre">
+              <small id="ayuda" class="form-text text-muted">Nombre del cliente.</small>
+            </div>
+
+<!--         apellido-->
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input required ng-minlength="2" ng-maxlength="100" type="text" name="apellido" ng-model=" nuevoCliente.apellido" class="form-control" id="apellido" aria-describedby="ty" placeholder="Ingrese apellido">
+              <small id="ty" class="form-text text-muted">Apellido del cliente.</small>
+            </div>
+
+            <!--Cedula-->
+            <div class="form-group">
+              <label for="cedula">Cedula</label>
+              <input required ng-maxlength="13" ng-keyup="validarCedula(nuevoCliente.cedula)" name="cedula" type="text" ng-model=" nuevoCliente.cedula" class="form-control" id="cedula" aria-describedby="ayudaCed" placeholder="Ingresar Cedula">
+              <small id="ayudaCed" class="form-text text-muted">Cedula o RUC.</small>
+            </div>
+
+
+
+
+
+            <div class="form-actions">
+              <button type="submit" ng-disabled="clienteForm.$invalid " class="btn btn-primary">Registrarse</button>
+
+              <a href="#/login" class="btn btn-link">Cancelar</a>
+            </div>
+
+
+          </form>
+
+        </div>
+
+
+      </div>
+
+      <hr>
+
+
+
+
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
