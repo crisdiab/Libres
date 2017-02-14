@@ -10,1028 +10,411 @@ aplicacion.controller('consultaGpmensualCtrl', [
     'facturafactory',
     function ($scope,ConsultasFactory, $http,$cookies,limiteFactory,facturafactory) {
 
-//       //variables
-//       $scope.idUsuario = $cookies.get('UsuarioId')
-//       $scope.Facturas=[];
-//       $scope.grupo={
-//         enero:{
-//           nombre:'Enero',
-//           vector:[],
-//           detalles:{
-//             alimentos:[],
-//             vivienda:[],
-//             educacion:[],
-//             vestido:[],
-//             salud:[],
-//             otros:[]
-//           },
-//           totalMes:{
-//             alimentos:0,
-//             vivienda:0,
-//             educacion:0,
-//             vestido:0,
-//             salud:0,
-//             otros:0
-//           }
-//
-//         },
-//         febrero:{
-//           nombre:'Febrero',
-//           vector:[],
-//           detalles:{
-//             alimentos:[],
-//             vivienda:[],
-//             educacion:[],
-//             vestido:[],
-//             salud:[],
-//             otros:[]
-//           },
-//           totalMes:{
-//             alimentos:0,
-//             vivienda:0,
-//             educacion:0,
-//             vestido:0,
-//             salud:0,
-//             otros:0
-//           }
-//         },
-//         marzo:{
-//           vector:[],
-//           nombre:'Marzo',
-//           detalles:{
-//             alimentos:[],
-//             vivienda:[],
-//             educacion:[],
-//             vestido:[],
-//             salud:[],
-//             otros:[]
-//           },
-//           totalMes:{
-//             alimentos:0,
-//             vivienda:0,
-//             educacion:0,
-//             vestido:0,
-//             salud:0,
-//             otros:0
-//           }
-//         },
-//         abril:{
-//           vector:[],
-//           nombre:'Abril',
-//           detalles:{
-//             alimentos:[],
-//             vivienda:[],
-//             educacion:[],
-//             vestido:[],
-//             salud:[],
-//             otros:[]
-//           },
-//           totalMes:{
-//             alimentos:0,
-//             vivienda:0,
-//             educacion:0,
-//             vestido:0,
-//             salud:0,
-//             otros:0
-//           }
-//         },
-//         mayo:{
-//           vector:[],
-//           nombre:'Mayo',
-//           detalles:{
-//             alimentos:[],
-//             vivienda:[],
-//             educacion:[],
-//             vestido:[],
-//             salud:[],
-//             otros:[]
-//           },
-//           totalMes:{
-//             alimentos:0,
-//             vivienda:0,
-//             educacion:0,
-//             vestido:0,
-//             salud:0,
-//             otros:0
-//           }
-//         },
-//         junio:{
-//           vector:[],
-//           nombre:'Junio',
-//           detalles:{
-//             alimentos:[],
-//             vivienda:[],
-//             educacion:[],
-//             vestido:[],
-//             salud:[],
-//             otros:[]
-//           },
-//           totalMes:{
-//             alimentos:0,
-//             vivienda:0,
-//             educacion:0,
-//             vestido:0,
-//             salud:0,
-//             otros:0
-//           }
-//         },
-//         julio:{
-//           vector:[],
-//           nombre:'Julio',
-//           detalles:{
-//             alimentos:[],
-//             vivienda:[],
-//             educacion:[],
-//             vestido:[],
-//             salud:[],
-//             otros:[]
-//           },
-//           totalMes:{
-//             alimentos:0,
-//             vivienda:0,
-//             educacion:0,
-//             vestido:0,
-//             salud:0,
-//             otros:0
-//           }
-//         },
-//         agosto:{
-//           vector:[],
-//           nombre:'Agosto',
-//           detalles:{
-//             alimentos:[],
-//             vivienda:[],
-//             educacion:[],
-//             vestido:[],
-//             salud:[],
-//             otros:[]
-//           },
-//           totalMes:{
-//             alimentos:0,
-//             vivienda:0,
-//             educacion:0,
-//             vestido:0,
-//             salud:0,
-//             otros:0
-//           }
-//         },
-//         septiembre:{
-//           vector:[],
-//           nombre:'Septiembre',
-//           detalles:{
-//             alimentos:[],
-//             vivienda:[],
-//             educacion:[],
-//             vestido:[],
-//             salud:[],
-//             otros:[]
-//           },
-//           totalMes:{
-//             alimentos:0,
-//             vivienda:0,
-//             educacion:0,
-//             vestido:0,
-//             salud:0,
-//             otros:0
-//           }
-//         },
-//         octubre:{
-//           vector:[],
-//           nombre:'Octubre',
-//           detalles:{
-//             alimentos:[],
-//             vivienda:[],
-//             educacion:[],
-//             vestido:[],
-//             salud:[],
-//             otros:[]
-//           },
-//           totalMes:{
-//             alimentos:0,
-//             vivienda:0,
-//             educacion:0,
-//             vestido:0,
-//             salud:0,
-//             otros:0
-//           }
-//         },
-//         noviembre:{
-//           vector:[],
-//           nombre:'Noviembre',
-//           detalles:{
-//             alimentos:[],
-//             vivienda:[],
-//             educacion:[],
-//             vestido:[],
-//             salud:[],
-//             otros:[]
-//           },
-//           totalMes:{
-//             alimentos:0,
-//             vivienda:0,
-//             educacion:0,
-//             vestido:0,
-//             salud:0,
-//             otros:0
-//           }
-//         },
-//         diciembre:{
-//           vector:[],
-//           nombre:'Diciembre',
-//           detalles:{
-//             alimentos:[],
-//             vivienda:[],
-//             educacion:[],
-//             vestido:[],
-//             salud:[],
-//             otros:[]
-//           },
-//           totalMes:{
-//             alimentos:0,
-//             vivienda:0,
-//             educacion:0,
-//             vestido:0,
-//             salud:0,
-//             otros:0
-//           }
-//         },
-//       }
-//       $scope.facturasenPer= [];
-//
-//
-//
-//       //funciones
-//
-//       $scope.agregarMesaFactura=function (facturas) {
-//
-//
-//
-//           for(var i =0;i<facturas.length;i++){
-//
-//             $scope.aux=$scope.entregarMes(facturas[i].fechaEmision)
-//               switch($scope.aux){
-//                   case '01':
-//                       facturafactory
-//                           .actualizar({
-//                               id: facturas[i].id
-//                           }, {
-//                               mes : 'Enero'
-//                           })
-//                           .$promise
-//                           .then(
-//                               function (respuesta) {
-//
-//                               console.log('actualizo enero')
-//
-//                               },
-//                               function (error) {
-//                                   console.log(error);
-//                               });
-//                       break;
-//                   case '02':
-//                       facturafactory
-//                           .actualizar({
-//                               id: facturas[i].id
-//                           }, {
-//                               mes : 'Febrero'
-//                           })
-//                           .$promise
-//                           .then(
-//                               function (respuesta) {
-//
-//                                   console.log('actualizo febreo')
-//
-//                               },
-//                               function (error) {
-//                                   console.log(error);
-//                               });
-//                       break;
-//                   case '03':
-//                       facturafactory
-//                           .actualizar({
-//                               id: facturas[i].id
-//                           }, {
-//                               mes : 'Marzo'
-//                           })
-//                           .$promise
-//                           .then(
-//                               function (respuesta) {
-//
-//                                   console.log('actualizo marzo')
-//
-//                               },
-//                               function (error) {
-//                                   console.log(error);
-//                               });
-//                       break;
-//                   case '04':
-//                       facturafactory
-//                           .actualizar({
-//                               id: facturas[i].id
-//                           }, {
-//                               mes : 'Abril'
-//                           })
-//                           .$promise
-//                           .then(
-//                               function (respuesta) {
-//
-//                                   console.log('actualizo abril')
-//
-//                               },
-//                               function (error) {
-//                                   console.log(error);
-//                               });
-//                       break;
-//                   case '05':
-//                       facturafactory
-//                           .actualizar({
-//                               id: facturas[i].id
-//                           }, {
-//                               mes : 'Mayo'
-//                           })
-//                           .$promise
-//                           .then(
-//                               function (respuesta) {
-//
-//                                   console.log('actualizo mayo')
-//
-//                               },
-//                               function (error) {
-//                                   console.log(error);
-//                               });
-//                       break;
-//                   case '06':
-//                       facturafactory
-//                           .actualizar({
-//                               id: facturas[i].id
-//                           }, {
-//                               mes : 'Junio'
-//                           })
-//                           .$promise
-//                           .then(
-//                               function (respuesta) {
-//
-//                                   console.log('actualizo Junio')
-//
-//                               },
-//                               function (error) {
-//                                   console.log(error);
-//                               });
-//                       break;
-//                   case '07':
-//                       facturafactory
-//                           .actualizar({
-//                               id: facturas[i].id
-//                           }, {
-//                               mes : 'Julio'
-//                           })
-//                           .$promise
-//                           .then(
-//                               function (respuesta) {
-//
-//                                   console.log('actualizo lulio')
-//
-//                               },
-//                               function (error) {
-//                                   console.log(error);
-//                               });
-//                       break;
-//                   case '08':
-//                       facturafactory
-//                           .actualizar({
-//                               id: facturas[i].id
-//                           }, {
-//                               mes : 'Agosto'
-//                           })
-//                           .$promise
-//                           .then(
-//                               function (respuesta) {
-//
-//                                   console.log('actualizo Agosto')
-//
-//                               },
-//                               function (error) {
-//                                   console.log(error);
-//                               });
-//                       break;
-//                   case '09':
-//                       facturafactory
-//                           .actualizar({
-//                               id: facturas[i].id
-//                           }, {
-//                               mes : 'Septiembre'
-//                           })
-//                           .$promise
-//                           .then(
-//                               function (respuesta) {
-//
-//                                   console.log('actualizo septiembre')
-//
-//                               },
-//                               function (error) {
-//                                   console.log(error);
-//                               });
-//                       break;
-//                   case '10':
-//                       facturafactory
-//                           .actualizar({
-//                               id: facturas[i].id
-//                           }, {
-//                               mes : 'Octubre'
-//                           })
-//                           .$promise
-//                           .then(
-//                               function (respuesta) {
-//
-//                                   console.log('actualizo Octubre')
-//
-//                               },
-//                               function (error) {
-//                                   console.log(error);
-//                               });
-//                       break;
-//                   case '11':
-//                       facturafactory
-//                           .actualizar({
-//                               id: facturas[i].id
-//                           }, {
-//                               mes : 'Noviembre'
-//                           })
-//                           .$promise
-//                           .then(
-//                               function (respuesta) {
-//
-//                                   console.log('actualizo noviembre')
-//
-//                               },
-//                               function (error) {
-//                                   console.log(error);
-//                               });
-//                       break;
-//                   case '12':
-//                       facturafactory
-//                           .actualizar({
-//                               id: facturas[i].id
-//                           }, {
-//                               mes : 'Diciembre'
-//                           })
-//                           .$promise
-//                           .then(
-//                               function (respuesta) {
-//
-//                                   console.log('actualizo diciembre')
-//
-//                               },
-//                               function (error) {
-//                                   console.log(error);
-//                               });
-//                       break;
-//
-//               }
-//
-//           }
-//
-//       };
-//       $scope.entregarMes= function(fecha){
-//         $scope.splitfecha= fecha
-//         $scope.year = fecha.split('-')
-//         fecha= $scope.year[1];
-//         console.log('mes',fecha)
-//         return fecha;
-//
-//       };
-//       $scope.FacturasXusuario= function () {
-//         ConsultasFactory
-//           .buscarFacturaXid({
-//             idComprador: $scope.idUsuario
-//           })
-//           .$promise
-//           .then(
-//             function (respuesta) {
-//               $scope.Facturas=respuesta
-//               console.log('facturas por cliente',respuesta)
-//               // console.log('facturas por cliente',$scope.facturas)
-//               $scope.agregarMesaFactura($scope.Facturas)
-//             },
-//             function (error) {
-//               console.log(error);
-//             });
-//       };
-//       $scope.FacturasXusuario();
-//       $scope.facturasEnPeriodo=function (facturas,periodo) {
-//
-//         if(periodo==''){
-//           toastr.error("Debe ingresar un periodo")
-//         }else{
-//           //todas las factuas en un perido
-//           for(var i = 0 ; i< facturas.length ; i++){
-//             if(periodo==facturas[i].periodo){
-//               $scope.facturasenPer.push(facturas[i]);
-//
-//             }
-//           }
-//           console.log('fac en periodo',$scope.facturasenPer)
-//           //llenar facturas en mes
-//
-//           for(var i = 0; i<$scope.facturasenPer.length;i++){
-//             switch($scope.facturasenPer[i].mes){
-//               case 'Enero':
-//                 $scope.grupo.enero.vector.push($scope.facturasenPer[i].facturas);
-//                 console.log('vector enero', $scope.grupo.enero.vector)
-//
-//                   for(var i=0;i<  $scope.grupo.enero.vector.length;i++){
-//                     for(var j=0;j<  $scope.grupo.enero.vector[i].length;j++){
-//                       if($scope.grupo.enero.vector[i].length==0){}
-//                       // switch (  $scope.grupo.enero.vector)
-//                     }
-//                   }
-//
-//                 break;
-//               case 'Febrero':
-//                 break;
-//               case 'Marzo':
-//                 break;
-//               case 'Abril':
-//                 break;
-//               case 'Mayo':
-//                 break;
-//               case 'Junio':
-//                 break;
-//               case 'Julio':
-//                 break;
-//               case 'Agosto':
-//                 break;
-//               case 'Septiembre':
-//                 break;
-//               case 'Octubre':
-//                 break;
-//               case 'Noviembre':
-//                 break;
-//               case 'Diciembre':
-//                 break;
-//
-//
-//
-//
-//             }
-//           }
-//
-//
-//
-//
-//         }
-//
-//       }
-
-//fin ontro
-
-
-
-
-
-
-
-
 
       $scope.idUsuario = $cookies.get('UsuarioId')
       $scope.Facturas=[];
         $scope.factXperiodo=[]
-        $scope.factXtipo={
-            Enero:[],
-            Febrero:[],
-            Marzo:[],
-            Abril:[],
-            Mayo:[],
-            Junio:[],
-            Julio:[],
-            Agosto:[],
-            Septiembre:[],
-            Octubre:[],
-            Noviembre:[],
-            Diciembre:[]
-        };
-        $scope.factXmes=[]
+        
+      
         console.log('consultas')
         $scope.periodo='';
-        $scope.sumas = {
-            Alimento:0,
-            Vivienda:0,
-            Vestido:0,
-            Salud:0,
-            Educacion:0,
-            Otros:0,
-            Alimento1:0,
-            Vivienda1:0,
-            Vestido1:0,
-            Salud1:0,
-            Educacion1:0,
-            Otros1:0,
-            Alimento2:0,
-            Vivienda2:0,
-            Vestido2:0,
-            Salud2:0,
-            Educacion2:0,
-            Otros2:0,
-            Alimento3:0,
-            Vivienda3:0,
-            Vestido3:0,
-            Salud3:0,
-            Educacion3:0,
-            Otros3:0,
-            Alimento4:0,
-            Vivienda4:0,
-            Vestido4:0,
-            Salud4:0,
-            Educacion4:0,
-            Otros4:0,
-            Alimento5:0,
-            Vivienda5:0,
-            Vestido5:0,
-            Salud5:0,
-            Educacion5:0,
-            Otros5:0,
-            Alimento6:0,
-            Vivienda6:0,
-            Vestido6:0,
-            Salud6:0,
-            Educacion6:0,
-            Otros6:0,
-            Alimento7:0,
-            Vivienda7:0,
-            Vestido7:0,
-            Salud7:0,
-            Educacion7:0,
-            Otros7:0,
-            Alimento8:0,
-            Vivienda8:0,
-            Vestido8:0,
-            Salud8:0,
-            Educacion8:0,
-            Otros8:0,
-            Alimento9:0,
-            Vivienda9:0,
-            Vestido9:0,
-            Salud9:0,
-            Educacion9:0,
-            Otros9:0,
-            Alimento10:0,
-            Vivienda10:0,
-            Vestido10:0,
-            Salud10:0,
-            Educacion10:0,
-            Otros10:0,
-            Alimento11:0,
-            Vivienda11:0,
-            Vestido11:0,
-            Salud11:0,
-            Educacion11:0,
-            Otros11:0,
-            Alimento12:0,
-            Vivienda12:0,
-            Vestido12:0,
-            Salud12:0,
-            Educacion12:0,
-            Otros12:0
-
-
+     
+       
+        $scope.grupo={
+            Enero:{
+                nombre:'Enero',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Febrero:{
+                nombre:'Febrero',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Marzo:{
+                nombre:'Marzo',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },     
+            Abril:{
+                nombre:'Abril',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Mayo:{
+                nombre:'Mayo',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Junio:{nombre:'Junio',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }},
+            Julio:{
+                nombre:'Julio',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Agosto:{
+                nombre:'Agosto',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Septiembre:{
+                nombre:'Septiembre',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Octubre:{
+                nombre:'Octubre',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Noviembre:{
+                nombre:'Noviembre',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Diciembre:{
+                nombre:'Diciembre',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Total:{
+                nombre:'Total',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            }
+            
         }
-        $scope.tipos={
-            alimentos1:[],
-            vivienda1:[],
-            vestido1:[],
-            salud1:[],
-            educacion1:[],
-            otros1:[],
-            alimentos2:[],
-            vivienda2:[],
-            vestido2:[],
-            salud2:[],
-            educacion2:[],
-            otros2:[],
-            alimentos3:[],
-            vivienda3:[],
-            vestido3:[],
-            salud3:[],
-            educacion3:[],
-            otros3:[],
-            alimentos4:[],
-            vivienda4:[],
-            vestido4:[],
-            salud4:[],
-            educacion4:[],
-            otros4:[],
-            alimentos5:[],
-            vivienda5:[],
-            vestido5:[],
-            salud5:[],
-            educacion5:[],
-            otros5:[],
-            alimentos6:[],
-            vivienda6:[],
-            vestido6:[],
-            salud6:[],
-            educacion6:[],
-            otros6:[],
-            alimentos7:[],
-            vivienda7:[],
-            vestido7:[],
-            salud7:[],
-            educacion7:[],
-            otros7:[],
-            alimentos8:[],
-            vivienda8:[],
-            vestido8:[],
-            salud8:[],
-            educacion8:[],
-            otros8:[],
-            alimentos9:[],
-            vivienda9:[],
-            vestido9:[],
-            salud9:[],
-            educacion9:[],
-            otros9:[],
-            alimentos10:[],
-            vivienda10:[],
-            vestido10:[],
-            salud10:[],
-            educacion10:[],
-            otros10:[],
-            alimentos11:[],
-            vivienda11:[],
-            vestido11:[],
-            salud11:[],
-            educacion11:[],
-            otros11:[],
-            alimentos12:[],
-            vivienda12:[],
-            vestido12:[],
-            salud12:[],
-            educacion12:[],
-            otros12:[],
-            alimentos:[],
-            vivienda:[],
-            vestido:[],
-            salud:[],
-            educacion:[],
-            otros:[]
+        $scope.mostrar=true;
+      
 
-        }
-        $scope.limites = {
-            mensaje: '',
-            alimentacion: 0,
-            salud:0,
-            vivienda:0,
-            educacion:0,
-            otros:0,
-            vestido:0
-
-        }
-
-        $scope.bloquearBuscar= false;
-        $scope.ocultarDetalles=true;
-        $scope.ocultarBusqueda=false;
-        $scope.ocultarNC=false;
-
-
-
-      $scope.agregarMesaFactura=function (facturas) {
-              console.log('llego facturas',facturas)
-
-
-          for(var i =0;i<facturas.length;i++){
-              console.log('este el al fecha emison',facturas[i].fechaEmision)
-            $scope.aux=$scope.entregarMes(facturas[i].fechaEmision)
-              switch($scope.aux){
-                  case '01':
-                      facturafactory
-                          .actualizar({
-                              id: facturas[i].id
-                          }, {
-                              mes : 'Enero'
-                          })
-                          .$promise
-                          .then(
-                              function (respuesta) {
-
-                              console.log('actualizo enero')
-
-                              },
-                              function (error) {
-                                  console.log(error);
-                              });
-                      break;
-                  case '02':
-                      facturafactory
-                          .actualizar({
-                              id: facturas[i].id
-                          }, {
-                              mes : 'Febrero'
-                          })
-                          .$promise
-                          .then(
-                              function (respuesta) {
-
-                                  console.log('actualizo febreo')
-
-                              },
-                              function (error) {
-                                  console.log(error);
-                              });
-                      break;
-                  case '03':
-                      facturafactory
-                          .actualizar({
-                              id: facturas[i].id
-                          }, {
-                              mes : 'Marzo'
-                          })
-                          .$promise
-                          .then(
-                              function (respuesta) {
-
-                                  console.log('actualizo marzo')
-
-                              },
-                              function (error) {
-                                  console.log(error);
-                              });
-                      break;
-                  case '04':
-                      facturafactory
-                          .actualizar({
-                              id: facturas[i].id
-                          }, {
-                              mes : 'Abril'
-                          })
-                          .$promise
-                          .then(
-                              function (respuesta) {
-
-                                  console.log('actualizo abril')
-
-                              },
-                              function (error) {
-                                  console.log(error);
-                              });
-                      break;
-                  case '05':
-                      facturafactory
-                          .actualizar({
-                              id: facturas[i].id
-                          }, {
-                              mes : 'Mayo'
-                          })
-                          .$promise
-                          .then(
-                              function (respuesta) {
-
-                                  console.log('actualizo mayo')
-
-                              },
-                              function (error) {
-                                  console.log(error);
-                              });
-                      break;
-                  case '06':
-                      facturafactory
-                          .actualizar({
-                              id: facturas[i].id
-                          }, {
-                              mes : 'Junio'
-                          })
-                          .$promise
-                          .then(
-                              function (respuesta) {
-
-                                  console.log('actualizo Junio')
-
-                              },
-                              function (error) {
-                                  console.log(error);
-                              });
-                      break;
-                  case '07':
-                      facturafactory
-                          .actualizar({
-                              id: facturas[i].id
-                          }, {
-                              mes : 'Julio'
-                          })
-                          .$promise
-                          .then(
-                              function (respuesta) {
-
-                                  console.log('actualizo lulio')
-
-                              },
-                              function (error) {
-                                  console.log(error);
-                              });
-                      break;
-                  case '08':
-                      facturafactory
-                          .actualizar({
-                              id: facturas[i].id
-                          }, {
-                              mes : 'Agosto'
-                          })
-                          .$promise
-                          .then(
-                              function (respuesta) {
-
-                                  console.log('actualizo Agosto')
-
-                              },
-                              function (error) {
-                                  console.log(error);
-                              });
-                      break;
-                  case '09':
-                      facturafactory
-                          .actualizar({
-                              id: facturas[i].id
-                          }, {
-                              mes : 'Septiembre'
-                          })
-                          .$promise
-                          .then(
-                              function (respuesta) {
-
-                                  console.log('actualizo septiembre')
-
-                              },
-                              function (error) {
-                                  console.log(error);
-                              });
-                      break;
-                  case '10':
-                      facturafactory
-                          .actualizar({
-                              id: facturas[i].id
-                          }, {
-                              mes : 'Octubre'
-                          })
-                          .$promise
-                          .then(
-                              function (respuesta) {
-
-                                  console.log('actualizo Octubre')
-
-                              },
-                              function (error) {
-                                  console.log(error);
-                              });
-                      break;
-                  case '11':
-                      facturafactory
-                          .actualizar({
-                              id: facturas[i].id
-                          }, {
-                              mes : 'Noviembre'
-                          })
-                          .$promise
-                          .then(
-                              function (respuesta) {
-
-                                  console.log('actualizo noviembre')
-
-                              },
-                              function (error) {
-                                  console.log(error);
-                              });
-                      break;
-                  case '12':
-                      facturafactory
-                          .actualizar({
-                              id: facturas[i].id
-                          }, {
-                              mes : 'Diciembre'
-                          })
-                          .$promise
-                          .then(
-                              function (respuesta) {
-
-                                  console.log('actualizo diciembre')
-
-                              },
-                              function (error) {
-                                  console.log(error);
-                              });
-                      break;
-
-              }
-
-          }
-
-      };
-      $scope.entregarMes= function(fecha){
-        $scope.splitfecha= fecha
-        $scope.year = fecha.split('-')
-        fecha= $scope.year[1];
-        console.log('mes',fecha)
-        return fecha;
-
-      };
+    
       $scope.FacturasXusuario= function () {
         ConsultasFactory
           .buscarFacturaXid({
@@ -1040,852 +423,1002 @@ aplicacion.controller('consultaGpmensualCtrl', [
           .$promise
           .then(
             function (respuesta) {
-              $scope.facturas=respuesta
+              $scope.Facturas=respuesta
               console.log('facturas por cliente',respuesta)
               // console.log('facturas por cliente',$scope.facturas)
-              $scope.agregarMesaFactura($scope.facturas)
+             
             },
             function (error) {
               console.log(error);
             });
       };
       $scope.FacturasXusuario();
-
-
-
-
-        $scope.FacturasXPeriodo = function (facturasIn,periodo) {
-
-            $scope.ocultarBusqueda=true;
-            $scope.ocultarDetalles=false;
-
-
-            if(periodo == ''){
-                toastr.error('Debe ingresar un periodo')
+        $scope.FacturasXPeriodo = function (facturas,periodo) {
+            $scope.mostrar=false;
+            if(periodo==''){
+                toastr.warning('Debe ingresar un periodo')
+                $scope.nuevaBusqueda();
             }else{
-
-                for(var i=0; i<facturasIn.length; i++){
-                    if(facturasIn[i].periodo==periodo){
-
-
-                        $scope.factXperiodo.push(facturasIn[i]);
-                        // console.log('facturas por peridoo ingresado',$scope.factXperiodo)
-                        // $scope.factXtipo.push(facturasIn[i].facturas)
-                        // console.log('ingresp facxtipo',$scope.factXtipo)
-
-
+                for(var i = 0; i<facturas.length;i++){
+                    if(facturas[i].periodo==periodo&&facturas[i].tipoFactura==1){
+                         $scope.factXperiodo.push(facturas[i])
                     }
                 }
-                if($scope.factXperiodo.length==0){
-                    console.log ('no hay facturas en el periodo')
-                    toastr.warning('No existen facturas en el periodo ingresado')
+                console.log('facturas por periodo', $scope.factXperiodo)
+                
+                if( $scope.factXperiodo.length==0){
+                    console.log('no hay facturas en periodo')
+                    toastr.warning("No hay facturas en el periodo")
+                     $scope.nuevaBusqueda();
                 }else{
-
-                    for(var k=0;k<$scope.factXperiodo.length; k++){
-                        switch($scope.factXperiodo[k].mes){
-                            case 'Enero':
-                                $scope.factXtipo.Enero.push($scope.factXperiodo[k].facturas)
+                    //agregar todos los alimentos a un vector
+                    for(var i=0;i< $scope.factXperiodo.length;i++){
+                        $scope.grupo.Total.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Total.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Total.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Total.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Total.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Total.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                        
+                        switch ($scope.factXperiodo[i].mes) {
+                            case "Enero":
+                                // code
+                        $scope.grupo.Enero.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Enero.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Enero.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Enero.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Enero.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Enero.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
                                 break;
-                            case 'Febrero':
-                                $scope.factXtipo.Febrero.push($scope.factXperiodo[k].facturas)
+                            case "Febrero":
+                                // code
+                        $scope.grupo.Febrero.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Febrero.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Febrero.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Febrero.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Febrero.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Febrero.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
                                 break;
-                            case 'Marzo':
-                                $scope.factXtipo.Marzo.push($scope.factXperiodo[k].facturas)
+                            case "Marzo":
+                                // code
+                        $scope.grupo.Marzo.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Marzo.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Marzo.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Marzo.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Marzo.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Marzo.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                                
                                 break;
-                            case 'Abril':
-                                $scope.factXtipo.Abril.push($scope.factXperiodo[k].facturas)
+                            case "Abril":
+                                // 
+                        $scope.grupo.Abril.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Abril.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Abril.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Abril.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Abril.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Abril.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                                break;    
+                            case "Mayo":
+                                // code
+                        $scope.grupo.Mayo.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Mayo.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Mayo.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Mayo.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Mayo.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Mayo.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
                                 break;
-                            case 'Mayo':
-                                $scope.factXtipo.Mayo.push($scope.factXperiodo[k].facturas)
+                            case "Junio":
+                                // code
+                        $scope.grupo.Junio.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Junio.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Junio.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Junio.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Junio.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Junio.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                                break;    
+                            case "Julio":
+                                // code
+                        $scope.grupo.Julio.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Julio.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Julio.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Julio.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Julio.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Julio.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
                                 break;
-
-                            case 'Junio':
-                                $scope.factXtipo.Junio.push($scope.factXperiodo[k].facturas)
+                            case "Agosto":
+                                // code
+                        $scope.grupo.Agosto.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Agosto.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Agosto.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Agosto.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Agosto.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Agosto.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
                                 break;
-                            case 'Julio':
-                                $scope.factXtipo.Julio.push($scope.factXperiodo[k].facturas)
+                            case "Septiembre":
+                                // code
+                        $scope.grupo.Septiembre.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Septiembre.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Septiembre.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Septiembre.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Septiembre.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Septiembre.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
                                 break;
-                            case 'Agosto':
-                                $scope.factXtipo.Agosto.push($scope.factXperiodo[k].facturas)
+                            case "Octubre":
+                                // code
+                        $scope.grupo.Octubre.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Octubre.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Octubre.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Octubre.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Octubre.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Octubre.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
                                 break;
-                            case 'Septiembre':
-                                $scope.factXtipo.Septiembre.push($scope.factXperiodo[k].facturas)
+                            case "Noviembre":
+                                // code
+                        $scope.grupo.Noviembre.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Noviembre.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Noviembre.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Noviembre.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Noviembre.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Noviembre.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
                                 break;
-                            case 'Octubre':
-                                $scope.factXtipo.Octubre.push($scope.factXperiodo[k].facturas)
-                                break;
-                            case'Noviembre':
-                                $scope.factXtipo.Noviembre.push($scope.factXperiodo[k].facturas)
-                                break;
-                            case 'Diciembre':
-                                $scope.factXtipo.Diciembre.push($scope.factXperiodo[k].facturas)
-                                break;
+                            case "Diciembre":
+                                // code
+                        $scope.grupo.Diciembre.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
+                        $scope.grupo.Diciembre.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
+                        $scope.grupo.Diciembre.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
+                        $scope.grupo.Diciembre.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
+                        $scope.grupo.Diciembre.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Diciembre.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                                break;    
+                            default:
+                                // code
                         }
-
-
-
+                        
                     }
-                    console.log('factX tipo preba',$scope.factXtipo)
-
-
-                    for(var a=0;a<$scope.factXtipo.Enero.length;a++){
-                        if($scope.factXtipo.Enero.length==0){
-                            console.log('no hay detalles')
-                        }else{
-                            for(var i=0;i<$scope.factXtipo.Enero.length;i++){
-
-                                for(var j = 0; j<$scope.factXtipo.Enero[i].length;j++){
-                                    if($scope.factXtipo.Enero[i].length==0){
-                                        console.log('no hay nada')
-                                    }else{
-
-                                        switch ($scope.factXtipo.Enero[i][j].idProducto){
-                                            case 2:
-                                                $scope.tipos.alimentos1.push($scope.factXtipo.Enero[i][j].valorConIva);
-                                                break;
-                                            case 4:
-                                                $scope.tipos.vivienda1.push($scope.factXtipo.Enero[i][j].valorConIva);
-                                                break;
-                                            case 5:
-                                                $scope.tipos.vestido1.push($scope.factXtipo.Enero[i][j].valorConIva);
-                                                break;
-                                            case 1:
-                                                $scope.tipos.salud1.push($scope.factXtipo.Enero[i][j].valorConIva);
-                                                break;
-                                            case 3:
-                                                $scope.tipos.educacion1.push($scope.factXtipo.Enero[i][j].valorConIva);
-                                                break;
-                                            case 6:
-                                                $scope.tipos.otros1.push($scope.factXtipo.Enero[i][j].valorConIva);
-
-                                                break;
-
-                                        }
-                                    }
-
-                                }
-
-
-
-                            }
-                        }
+                    
+                    //sumar los vectores
+                    //alimentos
+                    for(var i=0;i<$scope.grupo.Enero.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Enero.tipo.alimentos.total+=$scope.grupo.Enero.tipo.alimentos.vector[i];
+                       
                     }
-                    for(var d=0;d<$scope.factXtipo.Febrero.length;d++){
-                        if($scope.factXtipo.Febrero.length==0){
-                            console.log('no hay detalles')
-                        }else{
-                            for(var i=0;i<$scope.factXtipo.Febrero.length;i++){
-
-                                for(var j = 0; j<$scope.factXtipo.Febrero[i].length;j++){
-                                    if($scope.factXtipo.Febrero[i].length==0){
-                                        console.log('no hay nada')
-                                    }else{
-                                        console.log('que mierdas hace',$scope.factXtipo.Febrero[i][j].idProducto)
-                                        switch ($scope.factXtipo.Febrero[i][j].idProducto){
-                                            case 2:
-                                                $scope.tipos.alimentos2.push($scope.factXtipo.Febrero[i][j].valorConIva);
-                                                break;
-                                            case 4:
-                                                $scope.tipos.vivienda2.push($scope.factXtipo.Febrero[i][j].valorConIva);
-                                                break;
-                                            case 5:
-                                                $scope.tipos.vestido2.push($scope.factXtipo.Febrero[i][j].valorConIva);
-                                                break;
-                                            case 1:
-                                                $scope.tipos.salud2.push($scope.factXtipo.Febrero[i][j].valorConIva);
-                                                break;
-                                            case 3:
-                                                $scope.tipos.educacion2.push($scope.factXtipo.Febrero[i][j].valorConIva);
-                                                break;
-                                            case 6:
-                                                $scope.tipos.otros2.push($scope.factXtipo.Febrero[i][j].valorConIva);
-
-                                                break;
-
-                                        }
-                                    }
-
-                                }
-
-
-
-                            }
-                        }
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.alimentos.total+=$scope.grupo.Febrero.tipo.alimentos.vector[i];
+                       
                     }
-                    for(var c=0;c<$scope.factXtipo.Marzo.length;c++){
-                        if($scope.factXtipo.Marzo.length==0){
-                            console.log('no hay detalles')
-                        }else{
-                            for(var i=0;i<$scope.factXtipo.Marzo.length;i++){
-
-                                for(var j = 0; j<$scope.factXtipo.Marzo[i].length;j++){
-                                    if($scope.factXtipo.Marzo[i].length==0){
-                                        console.log('no hay nada')
-                                    }else{
-
-                                        switch ($scope.factXtipo.Marzo[i][j].idProducto){
-                                            case 2:
-                                                $scope.tipos.alimentos3.push($scope.factXtipo.Marzo[i][j].valorConIva);
-                                                break;
-                                            case 4:
-                                                $scope.tipos.vivienda3.push($scope.factXtipo.Marzo[i][j].valorConIva);
-                                                break;
-                                            case 5:
-                                                $scope.tipos.vestido3.push($scope.factXtipo.Marzo[i][j].valorConIva);
-                                                break;
-                                            case 1:
-                                                $scope.tipos.salud3.push($scope.factXtipo.Marzo[i][j].valorConIva);
-                                                break;
-                                            case 3:
-                                                $scope.tipos.educacion3.push($scope.factXtipo.Marzo[i][j].valorConIva);
-                                                break;
-                                            case 6:
-                                                $scope.tipos.otros3.push($scope.factXtipo.Marzo[i][j].valorConIva);
-
-                                                break;
-
-                                        }
-                                    }
-
-                                }
-
-
-
-                            }
-                        }
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.alimentos.total+=$scope.grupo.Marzo.tipo.alimentos.vector[i];
+                       
                     }
-                    for(var d=0;d<$scope.factXtipo.Abril.length;d++){
-                        if($scope.factXtipo.Abril.length==0){
-                            console.log('no hay detalles')
-                        }else{
-                            for(var i=0;i<$scope.factXtipo.Abril.length;i++){
-
-                                for(var j = 0; j<$scope.factXtipo.Abril[i].length;j++){
-                                    if($scope.factXtipo.Abril[i].length==0){
-                                        console.log('no hay nada')
-                                    }else{
-
-                                        switch ($scope.factXtipo.Abril[i][j].idProducto){
-                                            case 2:
-                                                $scope.tipos.alimentos4.push($scope.factXtipo.Abril[i][j].valorConIva);
-                                                break;
-                                            case 4:
-                                                $scope.tipos.vivienda4.push($scope.factXtipo.Abril[i][j].valorConIva);
-                                                break;
-                                            case 5:
-                                                $scope.tipos.vestido4.push($scope.factXtipo.Abril[i][j].valorConIva);
-                                                break;
-                                            case 1:
-                                                $scope.tipos.salud4.push($scope.factXtipo.Abril[i][j].valorConIva);
-                                                break;
-                                            case 3:
-                                                $scope.tipos.educacion4.push($scope.factXtipo.Abril[i][j].valorConIva);
-                                                break;
-                                            case 6:
-                                                $scope.tipos.otros4.push($scope.factXtipo.Abril[i][j].valorConIva);
-
-                                                break;
-
-                                        }
-                                    }
-
-                                }
-
-
-
-                            }
-                        }
+                    for(var i=0;i<$scope.grupo.Abril.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Abril.tipo.alimentos.total+=$scope.grupo.Abril.tipo.alimentos.vector[i];
+                       
                     }
-                    for(var d=0;d<$scope.factXtipo.Mayo.length;d++){
-                        if($scope.factXtipo.Mayo.length==0){
-                            console.log('no hay detalles')
-                        }else{
-                            for(var i=0;i<$scope.factXtipo.Mayo.length;i++){
-
-                                for(var j = 0; j<$scope.factXtipo.Mayo[i].length;j++){
-                                    if($scope.factXtipo.Mayo[i].length==0){
-                                        console.log('no hay nada')
-                                    }else{
-
-                                        switch ($scope.factXtipo.Mayo[i][j].idProducto){
-                                            case 2:
-                                                $scope.tipos.alimentos5.push($scope.factXtipo.Mayo[i][j].valorConIva);
-                                                break;
-                                            case 4:
-                                                $scope.tipos.vivienda5.push($scope.factXtipo.Mayo[i][j].valorConIva);
-                                                break;
-                                            case 5:
-                                                $scope.tipos.vestido5.push($scope.factXtipo.Mayo[i][j].valorConIva);
-                                                break;
-                                            case 1:
-                                                $scope.tipos.salud5.push($scope.factXtipo.Mayo[i][j].valorConIva);
-                                                break;
-                                            case 3:
-                                                $scope.tipos.educacion5.push($scope.factXtipo.Mayo[i][j].valorConIva);
-                                                break;
-                                            case 6:
-                                                $scope.tipos.otros5.push($scope.factXtipo.Mayo[i][j].valorConIva);
-
-                                                break;
-
-                                        }
-                                    }
-
-                                }
-
-
-
-                            }
-                        }
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.alimentos.total+=$scope.grupo.Mayo.tipo.alimentos.vector[i];
+                       
                     }
-                    for(var d=0;d<$scope.factXtipo.Junio.length;d++){
-                        if($scope.factXtipo.Junio.length==0){
-                            console.log('no hay detalles')
-                        }else{
-                            for(var i=0;i<$scope.factXtipo.Junio.length;i++){
-
-                                for(var j = 0; j<$scope.factXtipo.Junio[i].length;j++){
-                                    if($scope.factXtipo.Junio[i].length==0){
-                                        console.log('no hay nada')
-                                    }else{
-
-                                        switch ($scope.factXtipo.Junio[i][j].idProducto){
-                                            case 2:
-                                                $scope.tipos.alimentos6.push($scope.factXtipo.Junio[i][j].valorConIva);
-                                                break;
-                                            case 4:
-                                                $scope.tipos.vivienda6.push($scope.factXtipo.Junio[i][j].valorConIva);
-                                                break;
-                                            case 5:
-                                                $scope.tipos.vestido6.push($scope.factXtipo.Junio[i][j].valorConIva);
-                                                break;
-                                            case 1:
-                                                $scope.tipos.salud6.push($scope.factXtipo.Junio[i][j].valorConIva);
-                                                break;
-                                            case 3:
-                                                $scope.tipos.educacion6.push($scope.factXtipo.Junio[i][j].valorConIva);
-                                                break;
-                                            case 6:
-                                                $scope.tipos.otros6.push($scope.factXtipo.Junio[i][j].valorConIva);
-
-                                                break;
-
-                                        }
-                                    }
-
-                                }
-
-
-
-                            }
-                        }
+                    for(var i=0;i<$scope.grupo.Junio.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Junio.tipo.alimentos.total+=$scope.grupo.Junio.tipo.alimentos.vector[i];
+                       
                     }
-                    for(var d=0;d<$scope.factXtipo.Julio.length;d++){
-                        if($scope.factXtipo.Julio.length==0){
-                            console.log('no hay detalles')
-                        }else{
-                            for(var i=0;i<$scope.factXtipo.Julio.length;i++){
-
-                                for(var j = 0; j<$scope.factXtipo.Julio[i].length;j++){
-                                    if($scope.factXtipo.Junio[i].length==0){
-                                        console.log('no hay nada')
-                                    }else{
-
-                                        switch ($scope.factXtipo.Julio[i][j].idProducto){
-                                            case 2:
-                                                $scope.tipos.alimentos7.push($scope.factXtipo.Julio[i][j].valorConIva);
-                                                break;
-                                            case 4:
-                                                $scope.tipos.vivienda7.push($scope.factXtipo.Julio[i][j].valorConIva);
-                                                break;
-                                            case 5:
-                                                $scope.tipos.vestido7.push($scope.factXtipo.Julio[i][j].valorConIva);
-                                                break;
-                                            case 1:
-                                                $scope.tipos.salud7.push($scope.factXtipo.Julio[i][j].valorConIva);
-                                                break;
-                                            case 3:
-                                                $scope.tipos.educacion7.push($scope.factXtipo.Julio[i][j].valorConIva);
-                                                break;
-                                            case 6:
-                                                $scope.tipos.otros7.push($scope.factXtipo.Julio[i][j].valorConIva);
-
-                                                break;
-
-                                        }
-                                    }
-
-                                }
-
-
-
-                            }
-                        }
+                    for(var i=0;i<$scope.grupo.Julio.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Julio.tipo.alimentos.total+=$scope.grupo.Julio.tipo.alimentos.vector[i];
+                       
                     }
-                    for(var d=0;d<$scope.factXtipo.Agosto.length;d++){
-                        if($scope.factXtipo.Agosto.length==0){
-                            console.log('no hay detalles')
-                        }else{
-                            for(var i=0;i<$scope.factXtipo.Agosto.length;i++){
-
-                                for(var j = 0; j<$scope.factXtipo.Agosto[i].length;j++){
-                                    if($scope.factXtipo.Agosto[i].length==0){
-                                        console.log('no hay nada')
-                                    }else{
-
-                                        switch ($scope.factXtipo.Agosto[i][j].idProducto){
-                                            case 2:
-                                                $scope.tipos.alimentos8.push($scope.factXtipo.Agosto[i][j].valorConIva);
-                                                break;
-                                            case 4:
-                                                $scope.tipos.vivienda8.push($scope.factXtipo.Agosto[i][j].valorConIva);
-                                                break;
-                                            case 5:
-                                                $scope.tipos.vestido8.push($scope.factXtipo.Agosto[i][j].valorConIva);
-                                                break;
-                                            case 1:
-                                                $scope.tipos.salud8.push($scope.factXtipo.Agosto[i][j].valorConIva);
-                                                break;
-                                            case 3:
-                                                $scope.tipos.educacion8.push($scope.factXtipo.Agosto[i][j].valorConIva);
-                                                break;
-                                            case 6:
-                                                $scope.tipos.otros8.push($scope.factXtipo.Agosto[i][j].valorConIva);
-
-                                                break;
-
-                                        }
-                                    }
-
-                                }
-
-
-
-                            }
-                        }
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.alimentos.total+=$scope.grupo.Agosto.tipo.alimentos.vector[i];
+                       
                     }
-                    for(var d=0;d<$scope.factXtipo.Septiembre.length;d++){
-                        if($scope.factXtipo.Septiembre.length==0){
-                            console.log('no hay detalles')
-                        }else{
-                            for(var i=0;i<$scope.factXtipo.Septiembre.length;i++){
-
-                                for(var j = 0; j<$scope.factXtipo.Septiembre[i].length;j++){
-                                    if($scope.factXtipo.Septiembre[i].length==0){
-                                        console.log('no hay nada')
-                                    }else{
-
-                                        switch ($scope.factXtipo.Septiembre[i][j].idProducto){
-                                            case 2:
-                                                $scope.tipos.alimentos9.push($scope.factXtipo.Septiembre[i][j].valorConIva);
-                                                break;
-                                            case 4:
-                                                $scope.tipos.vivienda9.push($scope.factXtipo.Septiembre[i][j].valorConIva);
-                                                break;
-                                            case 5:
-                                                $scope.tipos.vestido9.push($scope.factXtipo.Septiembre[i][j].valorConIva);
-                                                break;
-                                            case 1:
-                                                $scope.tipos.salud9.push($scope.factXtipo.Septiembre[i][j].valorConIva);
-                                                break;
-                                            case 3:
-                                                $scope.tipos.educacion9.push($scope.factXtipo.Septiembre[i][j].valorConIva);
-                                                break;
-                                            case 6:
-                                                $scope.tipos.otros9.push($scope.factXtipo.Septiembre[i][j].valorConIva);
-
-                                                break;
-
-                                        }
-                                    }
-
-                                }
-
-
-
-                            }
-                        }
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.alimentos.total+=$scope.grupo.Septiembre.tipo.alimentos.vector[i];
+                       
                     }
-                    for(var d=0;d<$scope.factXtipo.Octubre.length;d++){
-                        if($scope.factXtipo.Octubre.length==0){
-                            console.log('no hay detalles')
-                        }else{
-                            for(var i=0;i<$scope.factXtipo.Octubre.length;i++){
-
-                                for(var j = 0; j<$scope.factXtipo.Octubre[i].length;j++){
-                                    if($scope.factXtipo.Octubre[i].length==0){
-                                        console.log('no hay nada')
-                                    }else{
-
-                                        switch ($scope.factXtipo.Octubre[i][j].idProducto){
-                                            case 2:
-                                                $scope.tipos.alimentos10.push($scope.factXtipo.Octubre[i][j].valorConIva);
-                                                break;
-                                            case 4:
-                                                $scope.tipos.vivienda10.push($scope.factXtipo.Octubre[i][j].valorConIva);
-                                                break;
-                                            case 5:
-                                                $scope.tipos.vestido10.push($scope.factXtipo.Octubre[i][j].valorConIva);
-                                                break;
-                                            case 1:
-                                                $scope.tipos.salud10.push($scope.factXtipo.Octubre[i][j].valorConIva);
-                                                break;
-                                            case 3:
-                                                $scope.tipos.educacion10.push($scope.factXtipo.Octubre[i][j].valorConIva);
-                                                break;
-                                            case 6:
-                                                $scope.tipos.otros10.push($scope.factXtipo.Octubre[i][j].valorConIva);
-
-                                                break;
-
-                                        }
-                                    }
-
-                                }
-
-
-
-                            }
-                        }
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.alimentos.total+=$scope.grupo.Octubre.tipo.alimentos.vector[i];
+                       
                     }
-                    for(var d=0;d<$scope.factXtipo.Noviembre.length;d++){
-                        if($scope.factXtipo.Noviembre.length==0){
-                            console.log('no hay detalles')
-                        }else{
-                            for(var i=0;i<$scope.factXtipo.Noviembre.length;i++){
-
-                                for(var j = 0; j<$scope.factXtipo.Noviembre[i].length;j++){
-                                    if($scope.factXtipo.Noviembre[i].length==0){
-                                        console.log('no hay nada')
-                                    }else{
-
-                                        switch ($scope.factXtipo.Noviembre[i][j].idProducto){
-                                            case 2:
-                                                $scope.tipos.alimentos11.push($scope.factXtipo.Noviembre[i][j].valorConIva);
-                                                break;
-                                            case 4:
-                                                $scope.tipos.vivienda11.push($scope.factXtipo.Noviembre[i][j].valorConIva);
-                                                break;
-                                            case 5:
-                                                $scope.tipos.vestido11.push($scope.factXtipo.Noviembre[i][j].valorConIva);
-                                                break;
-                                            case 1:
-                                                $scope.tipos.salud11.push($scope.factXtipo.Noviembre[i][j].valorConIva);
-                                                break;
-                                            case 3:
-                                                $scope.tipos.educacion11.push($scope.factXtipo.Noviembre[i][j].valorConIva);
-                                                break;
-                                            case 6:
-                                                $scope.tipos.otros11.push($scope.factXtipo.Noviembre[i][j].valorConIva);
-
-                                                break;
-
-                                        }
-                                    }
-
-                                }
-
-
-
-                            }
-                        }
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.alimentos.total+=$scope.grupo.Noviembre.tipo.alimentos.vector[i];
+                       
                     }
-                    for(var d=0;d<$scope.factXtipo.Diciembre.length;d++){
-                        if($scope.factXtipo.Diciembre.length==0){
-                            console.log('no hay detalles')
-                        }else{
-                            for(var i=0;i<$scope.factXtipo.Diciembre.length;i++){
-
-                                for(var j = 0; j<$scope.factXtipo.Diciembre[i].length;j++){
-                                    if($scope.factXtipo.Diciembre[i].length==0){
-                                        console.log('no hay nada')
-                                    }else{
-
-                                        switch ($scope.factXtipo.Diciembre[i][j].idProducto){
-                                            case 2:
-                                                $scope.tipos.alimentos12.push($scope.factXtipo.Diciembre[i][j].valorConIva);
-                                                break;
-                                            case 4:
-                                                $scope.tipos.vivienda12.push($scope.factXtipo.Diciembre[i][j].valorConIva);
-                                                break;
-                                            case 5:
-                                                $scope.tipos.vestido12.push($scope.factXtipo.Diciembre[i][j].valorConIva);
-                                                break;
-                                            case 1:
-                                                $scope.tipos.salud12.push($scope.factXtipo.Diciembre[i][j].valorConIva);
-                                                break;
-                                            case 3:
-                                                $scope.tipos.educacion12.push($scope.factXtipo.Diciembre[i][j].valorConIva);
-                                                break;
-                                            case 6:
-                                                $scope.tipos.otros12.push($scope.factXtipo.Diciembre[i][j].valorConIva);
-
-                                                break;
-
-                                        }
-                                    }
-
-                                }
-
-
-
-                            }
-                        }
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.alimentos.total+=$scope.grupo.Diciembre.tipo.alimentos.vector[i];
+                       
                     }
-
-
-
-
-
-
+                    for(var i=0;i<$scope.grupo.Total.tipo.alimentos.vector.length;i++){
+                        $scope.grupo.Total.tipo.alimentos.total+=$scope.grupo.Total.tipo.alimentos.vector[i];
+                       
+                    }
+                    //salud
+                    for(var i=0;i<$scope.grupo.Enero.tipo.salud.vector.length;i++){
+                        $scope.grupo.Enero.tipo.salud.total+=$scope.grupo.Enero.tipo.salud.vector[i];
+                      
+                    }
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.salud.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.salud.total+=$scope.grupo.Febrero.tipo.salud.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.salud.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.salud.total+=$scope.grupo.Marzo.tipo.salud.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Abril.tipo.salud.vector.length;i++){
+                        $scope.grupo.Abril.tipo.salud.total+=$scope.grupo.Abril.tipo.salud.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.salud.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.salud.total+=$scope.grupo.Mayo.tipo.salud.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Junio.tipo.salud.vector.length;i++){
+                        $scope.grupo.Junio.tipo.salud.total+=$scope.grupo.Junio.tipo.salud.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Julio.tipo.salud.vector.length;i++){
+                        $scope.grupo.Julio.tipo.salud.total+=$scope.grupo.Julio.tipo.salud.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.salud.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.salud.total+=$scope.grupo.Agosto.tipo.salud.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.salud.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.salud.total+=$scope.grupo.Septiembre.tipo.salud.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.salud.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.salud.total+=$scope.grupo.Octubre.tipo.salud.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.salud.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.salud.total+=$scope.grupo.Noviembre.tipo.salud.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.salud.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.salud.total+=$scope.grupo.Diciembre.tipo.salud.vector[i];
+                       
+                    }
+                     for(var i=0;i<$scope.grupo.Total.tipo.salud.vector.length;i++){
+                        $scope.grupo.Total.tipo.salud.total+=$scope.grupo.Total.tipo.salud.vector[i];
+                       
+                    }
+                    
+                    //vivienda
+                    for(var i=0;i<$scope.grupo.Enero.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Enero.tipo.vivienda.total+=$scope.grupo.Enero.tipo.vivienda.vector[i];
+                      
+                    }
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.vivienda.total+=$scope.grupo.Febrero.tipo.vivienda.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.vivienda.total+=$scope.grupo.Marzo.tipo.vivienda.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Abril.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Abril.tipo.vivienda.total+=$scope.grupo.Abril.tipo.vivienda.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.vivienda.total+=$scope.grupo.Mayo.tipo.vivienda.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Junio.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Junio.tipo.vivienda.total+=$scope.grupo.Junio.tipo.vivienda.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Julio.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Julio.tipo.vivienda.total+=$scope.grupo.Julio.tipo.vivienda.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.vivienda.total+=$scope.grupo.Agosto.tipo.vivienda.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.vivienda.total+=$scope.grupo.Septiembre.tipo.vivienda.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.vivienda.total+=$scope.grupo.Octubre.tipo.vivienda.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.vivienda.total+=$scope.grupo.Noviembre.tipo.vivienda.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.vivienda.total+=$scope.grupo.Diciembre.tipo.vivienda.vector[i];
+                       
+                    }
+                     for(var i=0;i<$scope.grupo.Total.tipo.vivienda.vector.length;i++){
+                        $scope.grupo.Total.tipo.vivienda.total+=$scope.grupo.Total.tipo.vivienda.vector[i];
+                       
+                    }
+                    
+                    //educacion
+                     for(var i=0;i<$scope.grupo.Enero.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Enero.tipo.educacion.total+=$scope.grupo.Enero.tipo.educacion.vector[i];
+                      
+                    }
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.educacion.total+=$scope.grupo.Febrero.tipo.educacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.educacion.total+=$scope.grupo.Marzo.tipo.educacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Abril.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Abril.tipo.educacion.total+=$scope.grupo.Abril.tipo.educacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.educacion.total+=$scope.grupo.Mayo.tipo.educacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Junio.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Junio.tipo.educacion.total+=$scope.grupo.Junio.tipo.vivienda.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Julio.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Julio.tipo.educacion.total+=$scope.grupo.Julio.tipo.educacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.educacion.total+=$scope.grupo.Agosto.tipo.educacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.educacion.total+=$scope.grupo.Septiembre.tipo.educacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.educacion.total+=$scope.grupo.Octubre.tipo.educacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.educacion.total+=$scope.grupo.Noviembre.tipo.educacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.educacion.total+=$scope.grupo.Diciembre.tipo.educacion.vector[i];
+                       
+                    }
+                     for(var i=0;i<$scope.grupo.Total.tipo.educacion.vector.length;i++){
+                        $scope.grupo.Total.tipo.educacion.total+=$scope.grupo.Total.tipo.educacion.vector[i];
+                       
+                    }
+                    
+                    //vestimenta
+                    
+                     for(var i=0;i<$scope.grupo.Enero.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Enero.tipo.vestimenta.total+=$scope.grupo.Enero.tipo.vestimenta.vector[i];
+                      
+                    }
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.vestimenta.total+=$scope.grupo.Febrero.tipo.vestimenta.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.vestimenta.total+=$scope.grupo.Marzo.tipo.vestimenta.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Abril.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Abril.tipo.vestimenta.total+=$scope.grupo.Abril.tipo.vestimenta.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.vestimenta.total+=$scope.grupo.Mayo.tipo.vestimenta.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Junio.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Junio.tipo.vestimenta.total+=$scope.grupo.Junio.tipo.vestimenta.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Julio.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Julio.tipo.vestimenta.total+=$scope.grupo.Julio.tipo.vestimenta.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.vestimenta.total+=$scope.grupo.Agosto.tipo.vestimenta.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.vestimenta.total+=$scope.grupo.Septiembre.tipo.vestimenta.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.vestimenta.total+=$scope.grupo.Octubre.tipo.vestimenta.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.vestimenta.total+=$scope.grupo.Noviembre.tipo.vestimenta.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.vestimenta.total+=$scope.grupo.Diciembre.tipo.vestimenta.vector[i];
+                       
+                    }
+                     for(var i=0;i<$scope.grupo.Total.tipo.vestimenta.vector.length;i++){
+                        $scope.grupo.Total.tipo.vestimenta.total+=$scope.grupo.Total.tipo.vestimenta.vector[i];
+                       
+                    }
+                    //otros
+                    for(var i=0;i<$scope.grupo.Enero.tipo.otros.vector.length;i++){
+                        $scope.grupo.Enero.tipo.otros.total+=$scope.grupo.Enero.tipo.otros.vector[i];
+                      
+                    }
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.otros.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.otros.total+=$scope.grupo.Febrero.tipo.otros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.otros.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.otros.total+=$scope.grupo.Marzo.tipo.otros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Abril.tipo.otros.vector.length;i++){
+                        $scope.grupo.Abril.tipo.otros.total+=$scope.grupo.Abril.tipo.otros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.otros.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.otros.total+=$scope.grupo.Mayo.tipo.otros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Junio.tipo.otros.vector.length;i++){
+                        $scope.grupo.Junio.tipo.otros.total+=$scope.grupo.Junio.tipo.otros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Julio.tipo.otros.vector.length;i++){
+                        $scope.grupo.Julio.tipo.otros.total+=$scope.grupo.Julio.tipo.otros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.otros.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.otros.total+=$scope.grupo.Agosto.tipo.otros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.otros.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.otros.total+=$scope.grupo.Septiembre.tipo.otros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.otros.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.otros.total+=$scope.grupo.Octubre.tipo.otros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.otros.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.otros.total+=$scope.grupo.Noviembre.tipo.otros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.otros.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.otros.total+=$scope.grupo.Diciembre.tipo.otros.vector[i];
+                       
+                    }
+                     for(var i=0;i<$scope.grupo.Total.tipo.otros.vector.length;i++){
+                        $scope.grupo.Total.tipo.otros.total+=$scope.grupo.Total.tipo.otros.vector[i];
+                       
+                    }
+                   
                 }
-
-
-
             }
-
-            console.log('facturas por periodo',$scope.factXperiodo)
-
-
+            
+            
+            
         }
-
 
         $scope.nuevaBusqueda= function () {
 
           console.log('entro e nueva busqueda')
-          $scope.factXtipo={
-            Enero:[],
-            Febrero:[],
-            Marzo:[],
-            Abril:[],
-            Mayo:[],
-            Junio:[],
-            Julio:[],
-            Agosto:[],
-            Septiembre:[],
-            Octubre:[],
-            Noviembre:[],
-            Diciembre:[]
-          };
-          $scope.limites = {
-            mensaje: '',
-            alimentacion: 0,
-            salud:0,
-            vivienda:0,
-            educacion:0,
-            otros:0,
-            vestido:0
-
-          }
-          $scope.sumas = {
-            Alimento:0,
-            Vivienda:0,
-            Vestido:0,
-            Salud:0,
-            Educacion:0,
-            Otros:0,
-            Alimento1:0,
-            Vivienda1:0,
-            Vestido1:0,
-            Salud1:0,
-            Educacion1:0,
-            Otros1:0,
-            Alimento2:0,
-            Vivienda2:0,
-            Vestido2:0,
-            Salud2:0,
-            Educacion2:0,
-            Otros2:0,
-            Alimento3:0,
-            Vivienda3:0,
-            Vestido3:0,
-            Salud3:0,
-            Educacion3:0,
-            Otros3:0,
-            Alimento4:0,
-            Vivienda4:0,
-            Vestido4:0,
-            Salud4:0,
-            Educacion4:0,
-            Otros4:0,
-            Alimento5:0,
-            Vivienda5:0,
-            Vestido5:0,
-            Salud5:0,
-            Educacion5:0,
-            Otros5:0,
-            Alimento6:0,
-            Vivienda6:0,
-            Vestido6:0,
-            Salud6:0,
-            Educacion6:0,
-            Otros6:0,
-            Alimento7:0,
-            Vivienda7:0,
-            Vestido7:0,
-            Salud7:0,
-            Educacion7:0,
-            Otros7:0,
-            Alimento8:0,
-            Vivienda8:0,
-            Vestido8:0,
-            Salud8:0,
-            Educacion8:0,
-            Otros8:0,
-            Alimento9:0,
-            Vivienda9:0,
-            Vestido9:0,
-            Salud9:0,
-            Educacion9:0,
-            Otros9:0,
-            Alimento10:0,
-            Vivienda10:0,
-            Vestido10:0,
-            Salud10:0,
-            Educacion10:0,
-            Otros10:0,
-            Alimento11:0,
-            Vivienda11:0,
-            Vestido11:0,
-            Salud11:0,
-            Educacion11:0,
-            Otros11:0,
-            Alimento12:0,
-            Vivienda12:0,
-            Vestido12:0,
-            Salud12:0,
-            Educacion12:0,
-            Otros12:0
-
-
-          }
-          $scope.tipos={
-            alimentos1:[],
-            vivienda1:[],
-            vestido1:[],
-            salud1:[],
-            educacion1:[],
-            otros1:[],
-            alimentos2:[],
-            vivienda2:[],
-            vestido2:[],
-            salud2:[],
-            educacion2:[],
-            otros2:[],
-            alimentos3:[],
-            vivienda3:[],
-            vestido3:[],
-            salud3:[],
-            educacion3:[],
-            otros3:[],
-            alimentos4:[],
-            vivienda4:[],
-            vestido4:[],
-            salud4:[],
-            educacion4:[],
-            otros4:[],
-            alimentos5:[],
-            vivienda5:[],
-            vestido5:[],
-            salud5:[],
-            educacion5:[],
-            otros5:[],
-            alimentos6:[],
-            vivienda6:[],
-            vestido6:[],
-            salud6:[],
-            educacion6:[],
-            otros6:[],
-            alimentos7:[],
-            vivienda7:[],
-            vestido7:[],
-            salud7:[],
-            educacion7:[],
-            otros7:[],
-            alimentos8:[],
-            vivienda8:[],
-            vestido8:[],
-            salud8:[],
-            educacion8:[],
-            otros8:[],
-            alimentos9:[],
-            vivienda9:[],
-            vestido9:[],
-            salud9:[],
-            educacion9:[],
-            otros9:[],
-            alimentos10:[],
-            vivienda10:[],
-            vestido10:[],
-            salud10:[],
-            educacion10:[],
-            otros10:[],
-            alimentos11:[],
-            vivienda11:[],
-            vestido11:[],
-            salud11:[],
-            educacion11:[],
-            otros11:[],
-            alimentos12:[],
-            vivienda12:[],
-            vestido12:[],
-            salud12:[],
-            educacion12:[],
-            otros12:[],
-            alimentos:[],
-            vivienda:[],
-            vestido:[],
-            salud:[],
-            educacion:[],
-            otros:[]
-
-          }
-          $scope.factXmes=[]
-
+         
+            $scope.mostrar=true;
           $scope.periodo='';
-          $scope.factXperiodo=[]
-        }
-
-        $scope.sumaCategoria = function(vector,sumarTipo) {
-            // console.log('lelgo vector',vector)
-            // console.log('llego sumartipo',sumarTipo)
-            console.log('llego vecto',vector)
-            if(vector.length == 0){
-                return sumarTipo=sumarTipo;
-            }else{
-                for(var i=0; i<vector.length; i++){
-                    sumarTipo+=vector[i];
+          $scope.factXperiodo=[];
+           $scope.grupo={
+            Enero:{
+                nombre:'Enero',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
                 }
-                return sumarTipo=sumarTipo;
+            },
+            Febrero:{
+                nombre:'Febrero',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Marzo:{
+                nombre:'Marzo',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },     
+            Abril:{
+                nombre:'Abril',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Mayo:{
+                nombre:'Mayo',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Junio:{nombre:'Junio',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }},
+            Julio:{
+                nombre:'Julio',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Agosto:{
+                nombre:'Agosto',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Septiembre:{
+                nombre:'Septiembre',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Octubre:{
+                nombre:'Octubre',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Noviembre:{
+                nombre:'Noviembre',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Diciembre:{
+                nombre:'Diciembre',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
+            },
+            Total:{
+                nombre:'Total',
+                tipo:{
+                    alimentos:{
+                        vector:[],
+                        total:0
+                    },
+                    salud:{
+                        vector:[],
+                        total:0
+                    },
+                    vivienda:{
+                        vector:[],
+                        total:0
+                    },
+                    educacion:{
+                        vector:[],
+                        total:0
+                    },
+                    vestimenta:{
+                        vector:[],
+                        total:0
+                    },
+                    otros:{
+                        vector:[],
+                        total:0
+                    },
+                    
+                }
             }
+            
         }
-        $scope.diferencia = function (limite,valor,tipodif) {
-
-
-            if(valor>limite){
-                // $scope.limites.mensaje='Excedio los limites'
-                return tipodif=0;
-            }else{
-                // $scope.limites.mensaje='Dentro del los limites'
-                tipodif=limite-valor;
-                return tipodif=tipodif;
-            }
-
-
         }
-        $scope.exportarGP= function(Se,De,Sv,Dv,Ss,Ds,Sa,Da,So,Do,Sves,Dves,nombre){
+
+      
+        $scope.exportarGP= function(){
 
 
             var data = [
-                [' -----  ','Resumen de Gastos Personales',' ------','---'],
-                ['Año',$scope.periodo,'Usuario',nombre],
-                ['Categoria','Total','Limite','Diferencia'],
-                ['Educacion',roundEd,$scope.limites.educacion,roundDe],
-                ['Vivienda',roundV,$scope.limites.vivienda,roundDv],
-                ['Salud',roundS,$scope.limites.salud,roundDs],
-                ['Alimentacion',rounda,$scope.limites.alimentacion,roundDa],
-                ['Vestido',roundves,$scope.limites.vestido,roundDves],
-                ['Otros',roundo,$scope.limites.otros,roundDo],
+                [' -----  ','Resumen de Gastos Personales Mensual',' ------','---'],
+                ['Periodo',$scope.periodo,'Usuario',$scope.Facturas[0].idComprador.nombre+' ' + $scope.Facturas[0].idComprador.apellido ],
+                ['Mes','Alimentos','Salud','Vivienda','Educacion','Vestimenta','Otros'],
+                [$scope.grupo.Enero.nombre,
+                $scope.grupo.Enero.tipo.alimentos.total,
+                $scope.grupo.Enero.tipo.salud.total,
+                $scope.grupo.Enero.tipo.vivienda.total,
+                $scope.grupo.Enero.tipo.educacion.total,
+                $scope.grupo.Enero.tipo.vestimenta.total,
+                $scope.grupo.Enero.tipo.otros.total],
+                
+                [$scope.grupo.Febrero.nombre,
+                $scope.grupo.Febrero.tipo.alimentos.total,
+                $scope.grupo.Febrero.tipo.salud.total,
+                $scope.grupo.Febrero.tipo.vivienda.total,
+                $scope.grupo.Febrero.tipo.educacion.total,
+                $scope.grupo.Febrero.tipo.vestimenta.total,
+                $scope.grupo.Febrero.tipo.otros.total],
+                
+                [$scope.grupo.Marzo.nombre,
+                $scope.grupo.Marzo.tipo.alimentos.total,
+                $scope.grupo.Marzo.tipo.salud.total,
+                $scope.grupo.Marzo.tipo.vivienda.total,
+                $scope.grupo.Marzo.tipo.educacion.total,
+                $scope.grupo.Marzo.tipo.vestimenta.total,
+                $scope.grupo.Marzo.tipo.otros.total],
+                
+                [$scope.grupo.Abril.nombre,
+                $scope.grupo.Abril.tipo.alimentos.total,
+                $scope.grupo.Abril.tipo.salud.total,
+                $scope.grupo.Abril.tipo.vivienda.total,
+                $scope.grupo.Abril.tipo.educacion.total,
+                $scope.grupo.Abril.tipo.vestimenta.total,
+                $scope.grupo.Abril.tipo.otros.total],
+                
+                [$scope.grupo.Mayo.nombre,
+                $scope.grupo.Mayo.tipo.alimentos.total,
+                $scope.grupo.Mayo.tipo.salud.total,
+                $scope.grupo.Mayo.tipo.vivienda.total,
+                $scope.grupo.Mayo.tipo.educacion.total,
+                $scope.grupo.Mayo.tipo.vestimenta.total,
+                $scope.grupo.Mayo.tipo.otros.total],
+                
+                [$scope.grupo.Junio.nombre,
+                $scope.grupo.Junio.tipo.alimentos.total,
+                $scope.grupo.Junio.tipo.salud.total,
+                $scope.grupo.Junio.tipo.vivienda.total,
+                $scope.grupo.Junio.tipo.educacion.total,
+                $scope.grupo.Junio.tipo.vestimenta.total,
+                $scope.grupo.Junio.tipo.otros.total],
+                
+                [$scope.grupo.Julio.nombre,
+                $scope.grupo.Julio.tipo.alimentos.total,
+                $scope.grupo.Julio.tipo.salud.total,
+                $scope.grupo.Julio.tipo.vivienda.total,
+                $scope.grupo.Julio.tipo.educacion.total,
+                $scope.grupo.Julio.tipo.vestimenta.total,
+                $scope.grupo.Julio.tipo.otros.total],
+                
+                [$scope.grupo.Agosto.nombre,
+                $scope.grupo.Agosto.tipo.alimentos.total,
+                $scope.grupo.Agosto.tipo.salud.total,
+                $scope.grupo.Agosto.tipo.vivienda.total,
+                $scope.grupo.Agosto.tipo.educacion.total,
+                $scope.grupo.Agosto.tipo.vestimenta.total,
+                $scope.grupo.Agosto.tipo.otros.total],
+                
+                [$scope.grupo.Septiembre.nombre,
+                $scope.grupo.Septiembre.tipo.alimentos.total,
+                $scope.grupo.Septiembre.tipo.salud.total,
+                $scope.grupo.Septiembre.tipo.vivienda.total,
+                $scope.grupo.Septiembre.tipo.educacion.total,
+                $scope.grupo.Septiembre.tipo.vestimenta.total,
+                $scope.grupo.Septiembre.tipo.otros.total],
+                
+                [$scope.grupo.Octubre.nombre,
+                $scope.grupo.Octubre.tipo.alimentos.total,
+                $scope.grupo.Octubre.tipo.salud.total,
+                $scope.grupo.Octubre.tipo.vivienda.total,
+                $scope.grupo.Octubre.tipo.educacion.total,
+                $scope.grupo.Octubre.tipo.vestimenta.total,
+                $scope.grupo.Octubre.tipo.otros.total],
+                
+                [$scope.grupo.Noviembre.nombre,
+                $scope.grupo.Noviembre.tipo.alimentos.total,
+                $scope.grupo.Noviembre.tipo.salud.total,
+                $scope.grupo.Noviembre.tipo.vivienda.total,
+                $scope.grupo.Noviembre.tipo.educacion.total,
+                $scope.grupo.Noviembre.tipo.vestimenta.total,
+                $scope.grupo.Noviembre.tipo.otros.total],
+                
+                [$scope.grupo.Diciembre.nombre,
+                $scope.grupo.Diciembre.tipo.alimentos.total,
+                $scope.grupo.Diciembre.tipo.salud.total,
+                $scope.grupo.Diciembre.tipo.vivienda.total,
+                $scope.grupo.Diciembre.tipo.educacion.total,
+                $scope.grupo.Diciembre.tipo.vestimenta.total,
+                $scope.grupo.Diciembre.tipo.otros.total],
+                
+                [$scope.grupo.Total.nombre,
+                $scope.grupo.Total.tipo.alimentos.total,
+                $scope.grupo.Total.tipo.salud.total,
+                $scope.grupo.Total.tipo.vivienda.total,
+                $scope.grupo.Total.tipo.educacion.total,
+                $scope.grupo.Total.tipo.vestimenta.total,
+                $scope.grupo.Total.tipo.otros.total],
+                
             ];
             var csvContent = '';
             data.forEach(function (infoArray, index) {

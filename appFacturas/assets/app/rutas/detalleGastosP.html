@@ -7,21 +7,28 @@
     <div class="row">
 
       <div class="col-md-4">
-        <div class="input-group">
+        <div ng-hide="bloquearBuscar">
+            <div class="input-group">
           <input type="text" ng-model="periodo"class="form-control" placeholder="Buscar periodo...">
           <span class="input-group-btn">
-        <button ng-hide="bloquearBuscar" class="btn btn-success" type="button" ng-click="buscarPorPeriodo(periodo,facturas)" >Buscar</button>
+        <button  class="btn btn-success" type="button" ng-click="buscarPorPeriodo(periodo,facturas)" >Buscar</button>
 
 
       </span>
+     
         </div><!-- /input-group -->
+        </div>
+      
+        <br>
+        <div ng-show="bloquearBuscar"><p>Filtro  <input type="text" ng-model="busqueda"></p><br><br></div>
+
+    
       </div><!-- /.col-lg-6 -->
+      
     </div>
 
 
-    <br><br><br>
-
-    <p>Filtro  <input type="text" ng-model="busqueda"></p><br><br>
+    
 
     <h2>Resultados</h2>
     <br><br>
@@ -42,7 +49,7 @@
         <td>Total con Iva</td>
 
       </tr>
-      <tr ng-repeat="factura in facturaDetalles | filter: busqueda">
+      <tr ng-repeat="factura in facturaPorPeriodo | filter: busqueda">
         <td>{{factura.numFactura }}</td>
         <td>{{factura.idProveedor.nombre}}</td>
         <td>{{factura.mes}}</td>
@@ -54,7 +61,7 @@
         <td>{{factura.vestimenta | currency}}</td>
         <td>{{factura.otros | currency}}</td>
 
-        <td>{{factura.TotalSinIva | currency}}</td>
+        <td>{{factura.totalSinIva | currency}}</td>
         <td>{{factura.valorFactura | currency}}</td>
 
 
@@ -69,7 +76,7 @@
 
     </table>
 
-    <button ng-click="Limpiar()" class="btn">Nueva Busqueda</button>
-    <button ng-show="bloquearBuscar" ng-mousedown="exportarDetallesGp(facturaDetalles)">exportar</button>
+    <button ng-show="bloquearBuscar" ng-click="Limpiar()" class="btn btn-info">Nueva Busqueda</button>
+    <button ng-show="bloquearBuscar" ng-mousedown="exportarDetallesGp(facturaPorPeriodo)  " class="btn btn-success">exportar</button>
   </div>
 </div>

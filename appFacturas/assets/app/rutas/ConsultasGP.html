@@ -3,13 +3,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      Ingrese un Periodo
-      <br>
+      
 
-      <div class="input-group">
+      <div ng-hide="ocultar" class="input-group">
+        <h3>Ingrese un Periodo</h3>
+      <br>
         <input type="text" ng-model="periodo"class="form-control" placeholder="Buscar periodo...">
         <span class="input-group-btn">
-        <button ng-hide="bloquearBuscar" class="btn btn-success" type="button" ng-click="facturasPorPeriodo(facturas,periodo)" >Buscar</button>
+        <button  class="btn btn-success" type="button" ng-click="facturasPorPeriodo(facturas,periodo)" >Buscar</button>
 
 
       </span>
@@ -81,7 +82,7 @@
         <button ng-show="ocultar" class="btn btn-info" ng-click="exportarGP()">Exportar</button>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-info" ng-click="limpiarTodo()">Nueva Busqueda</button>
+        <button ng-show="ocultar" class="btn btn-info" ng-click="limpiarTodo()">Nueva Busqueda</button>
       </div>
       <div class="col-md-4"></div>
     </div>

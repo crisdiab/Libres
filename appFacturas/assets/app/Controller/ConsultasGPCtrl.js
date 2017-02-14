@@ -183,6 +183,8 @@ aplicacion.controller('ConsultasGPCtrl', [
             console.log('facts perido',$scope.factsXPeriodo)
             if($scope.factsXPeriodo.length==0){
               console.log('no hay facturas de este tipo')
+              toastr.info("No existen facturas para el periodo ingresado")
+               $scope.limpiarTodo();
             }else{
               
               for(var i =0 ; i<$scope.factsXPeriodo.length;i++){
@@ -243,7 +245,7 @@ aplicacion.controller('ConsultasGPCtrl', [
       $scope.calcularDiferencia=function(elementos){
         console.log('llego elementost2',elementos.alimentos.limite)
         console.log('llego elemento total',elementos.alimentos.total)
-         $scope.elementos.alimentos.diferencia=elementos.alimentos.limite - elementos.alimentos.total;
+        $scope.elementos.alimentos.diferencia=elementos.alimentos.limite - elementos.alimentos.total;
         $scope.elementos.educacion.diferencia=elementos.educacion.limite - elementos.educacion.total;
         $scope.elementos.vestido.diferencia=elementos.vestido.limite - elementos.vestido.total;
         $scope.elementos.vivienda.diferencia=elementos.vivienda.limite - elementos.vivienda.total;

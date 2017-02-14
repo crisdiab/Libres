@@ -12,23 +12,14 @@ aplicacion.controller('detalleGastosPctrl', [
 
   //variables
     $scope.busqueda=''
-    $scope.periodo=''
+   
     $scope.idUsuario = $cookies.get('UsuarioId')
     $scope.facturas=[]
-    $scope.meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
-    $scope.tipos={
-      alimento:0,
-      vivienda:0,
-      salud:0,
-      educacion:0,
-      vestimenta:0,
-      otros:0
 
-    }
-    $scope.iva=0
-    $scope.totSinIva=0
-
-    $scope.facturaDetalles=[]
+    
+   
+     $scope.periodo=''
+    $scope.facturaPorPeriodo=[];
 
 
     $scope.bloquearBuscar=false;
@@ -38,244 +29,7 @@ aplicacion.controller('detalleGastosPctrl', [
 
     //funciones
 
-    $scope.agregarMesaFactura=function (facturas) {
-      console.log('llego facturas',facturas)
-
-
-      for(var i =0;i<facturas.length;i++){
-        console.log('este el al fecha emison',facturas[i].fechaEmision)
-        $scope.aux=$scope.entregarMes(facturas[i].fechaEmision)
-        switch($scope.aux){
-          case '01':
-            facturafactory
-              .actualizar({
-                id: facturas[i].id
-              }, {
-                mes : 'Enero'
-              })
-              .$promise
-              .then(
-                function (respuesta) {
-
-                  console.log('actualizo enero')
-
-                },
-                function (error) {
-                  console.log(error);
-                });
-            break;
-          case '02':
-            facturafactory
-              .actualizar({
-                id: facturas[i].id
-              }, {
-                mes : 'Febrero'
-              })
-              .$promise
-              .then(
-                function (respuesta) {
-
-                  console.log('actualizo febreo')
-
-                },
-                function (error) {
-                  console.log(error);
-                });
-            break;
-          case '03':
-            facturafactory
-              .actualizar({
-                id: facturas[i].id
-              }, {
-                mes : 'Marzo'
-              })
-              .$promise
-              .then(
-                function (respuesta) {
-
-                  console.log('actualizo marzo')
-
-                },
-                function (error) {
-                  console.log(error);
-                });
-            break;
-          case '04':
-            facturafactory
-              .actualizar({
-                id: facturas[i].id
-              }, {
-                mes : 'Abril'
-              })
-              .$promise
-              .then(
-                function (respuesta) {
-
-                  console.log('actualizo abril')
-
-                },
-                function (error) {
-                  console.log(error);
-                });
-            break;
-          case '05':
-            facturafactory
-              .actualizar({
-                id: facturas[i].id
-              }, {
-                mes : 'Mayo'
-              })
-              .$promise
-              .then(
-                function (respuesta) {
-
-                  console.log('actualizo mayo')
-
-                },
-                function (error) {
-                  console.log(error);
-                });
-            break;
-          case '06':
-            facturafactory
-              .actualizar({
-                id: facturas[i].id
-              }, {
-                mes : 'Junio'
-              })
-              .$promise
-              .then(
-                function (respuesta) {
-
-                  console.log('actualizo Junio')
-
-                },
-                function (error) {
-                  console.log(error);
-                });
-            break;
-          case '07':
-            facturafactory
-              .actualizar({
-                id: facturas[i].id
-              }, {
-                mes : 'Julio'
-              })
-              .$promise
-              .then(
-                function (respuesta) {
-
-                  console.log('actualizo lulio')
-
-                },
-                function (error) {
-                  console.log(error);
-                });
-            break;
-          case '08':
-            facturafactory
-              .actualizar({
-                id: facturas[i].id
-              }, {
-                mes : 'Agosto'
-              })
-              .$promise
-              .then(
-                function (respuesta) {
-
-                  console.log('actualizo Agosto')
-
-                },
-                function (error) {
-                  console.log(error);
-                });
-            break;
-          case '09':
-            facturafactory
-              .actualizar({
-                id: facturas[i].id
-              }, {
-                mes : 'Septiembre'
-              })
-              .$promise
-              .then(
-                function (respuesta) {
-
-                  console.log('actualizo septiembre')
-
-                },
-                function (error) {
-                  console.log(error);
-                });
-            break;
-          case '10':
-            facturafactory
-              .actualizar({
-                id: facturas[i].id
-              }, {
-                mes : 'Octubre'
-              })
-              .$promise
-              .then(
-                function (respuesta) {
-
-                  console.log('actualizo Octubre')
-
-                },
-                function (error) {
-                  console.log(error);
-                });
-            break;
-          case '11':
-            facturafactory
-              .actualizar({
-                id: facturas[i].id
-              }, {
-                mes : 'Noviembre'
-              })
-              .$promise
-              .then(
-                function (respuesta) {
-
-                  console.log('actualizo noviembre')
-
-                },
-                function (error) {
-                  console.log(error);
-                });
-            break;
-          case '12':
-            facturafactory
-              .actualizar({
-                id: facturas[i].id
-              }, {
-                mes : 'Diciembre'
-              })
-              .$promise
-              .then(
-                function (respuesta) {
-
-                  console.log('actualizo diciembre')
-
-                },
-                function (error) {
-                  console.log(error);
-                });
-            break;
-
-        }
-
-      }
-
-    }
-    $scope.entregarMes= function(fecha){
-      $scope.splitfecha= fecha
-      $scope.year = fecha.split('-')
-      fecha= $scope.year[1];
-      console.log('mes',fecha)
-      return fecha;
-
-    }
+    
     $scope.FacturasXusuario= function () {
       ConsultasFactory
         .buscarFacturaXid({
@@ -287,9 +41,8 @@ aplicacion.controller('detalleGastosPctrl', [
             $scope.facturas=respuesta
             console.log('facturas por cliente',respuesta)
             // console.log('facturas por cliente',$scope.facturas)
-            $scope.agregarMesaFactura($scope.facturas)
-            $scope.precioPorTipo($scope.facturas)
-            $scope.calcularTotal($scope.facturas)
+           
+           
 
           },
           function (error) {
@@ -298,191 +51,36 @@ aplicacion.controller('detalleGastosPctrl', [
     }
     $scope.FacturasXusuario();
 
-    $scope.precioPorTipo=function (facturas) {
-
-     for(var i =0 ; i<facturas.length;i++){
-
-       for(var j=0;j<facturas[i].facturas.length;j++){
-         switch(facturas[i].facturas[j].idProducto){
-           case 1:
-             facturafactory
-               .actualizar({
-                 id: facturas[i].id
-               }, {
-                 salud : facturas[i].facturas[j].valorSinIva
-               })
-               .$promise
-               .then(
-                 function (respuesta) {
-
-                   console.log('actualizo salud')
-
-                 },
-                 function (error) {
-                   console.log(error);
-                 });
-
-             break;
-           case 2:
-             facturafactory
-               .actualizar({
-                 id: facturas[i].id
-               }, {
-                 alimentos : facturas[i].facturas[j].valorSinIva
-               })
-               .$promise
-               .then(
-                 function (respuesta) {
-
-                   console.log('actualizo alimentos')
-
-                 },
-                 function (error) {
-                   console.log(error);
-                 });
-
-             break;
-           case 3:
-             facturafactory
-               .actualizar({
-                 id: facturas[i].id
-               }, {
-                 educacion : facturas[i].facturas[j].valorSinIva
-               })
-               .$promise
-               .then(
-                 function (respuesta) {
-
-                   console.log('actualizo educacion')
-
-                 },
-                 function (error) {
-                   console.log(error);
-                 });
-
-             break;
-           case 4:
-             facturafactory
-               .actualizar({
-                 id: facturas[i].id
-               }, {
-                 vivienda : facturas[i].facturas[j].valorSinIva
-               })
-               .$promise
-               .then(
-                 function (respuesta) {
-
-                   console.log('actualizo vivienda')
-
-                 },
-                 function (error) {
-                   console.log(error);
-                 });
-
-             break;
-           case 5:
-             facturafactory
-               .actualizar({
-                 id: facturas[i].id
-               }, {
-                 vestimenta : facturas[i].facturas[j].valorSinIva
-               })
-               .$promise
-               .then(
-                 function (respuesta) {
-
-                   console.log('actualizo vestimenta')
-
-                 },
-                 function (error) {
-                   console.log(error);
-                 });
-
-             break;
-           case 6:
-             facturafactory
-               .actualizar({
-                 id: facturas[i].id
-               }, {
-                 otros : facturas[i].facturas[j].valorSinIva
-               })
-               .$promise
-               .then(
-                 function (respuesta) {
-
-                   console.log('actualizo otros')
-
-                 },
-                 function (error) {
-                   console.log(error);
-                 });
-
-             break;
-         }
-       }
-     }
-
-
-    }
+   
 
 
     $scope.buscarPorPeriodo=function (periodo,facturas) {
 
       $scope.bloquearBuscar=true;
-      for(var i=0  ;i<facturas.length;i++){
-        if(periodo==facturas[i].periodo){
-
-          $scope.facturaDetalles.push(facturas[i]);
-        }
-        else{
-          toastr.warning("No existen facturas del periodo ingresado");
-        }
-      }
+     if(periodo==''){
+       toastr.warning('Debe ingresar un periodo')
+       $scope.Limpiar();
+     }else{
+       for(var i = 0;i<facturas.length;i++){
+         if(facturas[i].periodo==periodo&& facturas[i].tipoFactura==1){
+           
+            $scope.facturaPorPeriodo.push(facturas[i]);
+         }
+       }
+       if( $scope.facturaPorPeriodo.length==0){
+         toastr.info('No existen facturas en el periodo ingresado')
+         $scope.Limpiar();
+       }
+     }
 
     }
-    $scope.calcularTotal = function (facturas) {
-
-      for(var i=0;i<facturas.length;i++){
-
-       $scope.totSinIva = facturas[i].alimentos+facturas[i].educacion+facturas[i].vivienda+facturas[i].salud+facturas[i].vestimenta+facturas[i].otros;
-       $scope.iva= facturas[i].valorFactura - $scope.totSinIva;
-        facturafactory
-          .actualizar({
-            id: facturas[i].id
-          }, {
-            TotalSinIva : $scope.totSinIva,
-            Iva : $scope.iva
-
-          })
-          .$promise
-          .then(
-            function (respuesta) {
-
-              console.log('actualizo ')
-
-            },
-            function (error) {
-              console.log(error);
-            });
-      }
-    }
+    
     $scope.Limpiar=function () {
-      $scope.bloquearBuscar=false;
-      $scope.tipos={
-        alimento:0,
-        vivienda:0,
-        salud:0,
-        educacion:0,
-        vestimenta:0,
-        otros:0
+   $scope.periodo=''
+    $scope.facturaPorPeriodo=[];
 
-      }
-      $scope.iva=0
-      $scope.totSinIva=0
 
-      $scope.facturaDetalles=[]
-      $scope.busqueda=''
-      $scope.periodo=''
+    $scope.bloquearBuscar=false;
     }
 
     $scope.exportarDetallesGp= function(factura){
