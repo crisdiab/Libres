@@ -5,12 +5,13 @@
 
 -->
 
-
+<!--{{tipofact}}-->
+<!--{{tipGasto}}-->
 
  <div class="container">
   <div class="row">
     <center>
-      <h1>Factura</h1>
+      <h1>Factura </h1>
     </center>
 
     <center>
@@ -46,25 +47,220 @@
         <input type="date" ng-model=" nuevaFactura.fechaEmision" class="form-control" id="fecha" aria-describedby="ayuda" placeholder="fecha yyyy-mm-dd">
         <small id="ayuda" class="form-text text-muted">Fecha.</small>
       </div>
+      
 
+ <p>Tipo de Gasto</p>
+
+    <select class="form-control" ng-model="tipGasto">
+
+      <option ng-disabled="ocultargp" ng-repeat="tipo in tipoDeGasto" value="{{tipo}}">{{tipo}} </option>
+
+    </select>
+    {{verificartipoFact(tipGasto);}}
+       
+       <div ng-hide="ocultargp">
+         <h2>Gastos Personales</h2>
+         <div class="row">
+           <div class="col-md-4"><div class="row">
+           <div class="form-group">
+        <label for="alimentos">Alimentos</label>
+        <input type="float" ng-model=" nuevaFactura.alimentos" class="form-control" id="alimentos" aria-describedby="ayuda">
+       
+      </div>
+         </div></div>
+           <div class="col-md-4"><div class="row">
+            <div class="form-group">
+        <label for="educacion">Educacion</label>
+        <input type="float" ng-model=" nuevaFactura.educacion" class="form-control" id="alimentos" aria-describedby="ayuda" >
+       
+      </div>
+         </div></div>
+           <div class="col-md-4"><div class="row">
+            <div class="form-group">
+        <label for="salud">Salud</label>
+        <input type="float" ng-model=" nuevaFactura.salud" class="form-control" id="salud" aria-describedby="ayuda">
+       
+      </div>
+         </div></div>
+         </div>
+         
+      
+      <br><br>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="row">
+            <div class="form-group">
+        <label for="vivienda">Vivienda</label>
+        <input type="float" ng-model=" nuevaFactura.vivienda" class="form-control" id="vivienda" aria-describedby="ayuda" >
+       
+      </div>
+         </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+           <div class="form-group">
+        <label for="vestimenta">Vestimenta</label>
+        <input type="float" ng-model=" nuevaFactura.vestimenta" class="form-control" id="vestimenta" aria-describedby="ayuda" >
+       
+      </div>
+         </div>
+        </div>
+        <div class="col-md-4">
+          
+         <div class="row">
+           <div class="form-group">
+        <label for="otros">Otros</label>
+        <input type="float" ng-model=" nuevaFactura.otros" class="form-control" id="otros" aria-describedby="ayuda" >
+       
+      </div>
+         </div>
+        </div>
+      </div>
+      
+    
+         
+         
+         
+         
+         
+         
+         
+       </div>
+       <div ng-show="ocultargp">
+        
+         <h2>Gastos de Negocio</h2>
+         <div class="row">
+           <div class="col-md-4"><div class="row">
+            <div class="form-group">
+        <label for="mercaderia">mercaderia</label>
+        <input type="float" ng-model=" nuevaFactura.mercaderia" class="form-control" id="mercaderia" aria-describedby="ayuda" >
+       
+      </div>
+         </div></div>
+           <div class="col-md-4"><div class="row">
+            <div class="form-group">
+        <label for="arriendo">arriendo</label>
+        <input type="float" ng-model=" nuevaFactura.arriendo" class="form-control" id="arriendo" aria-describedby="ayuda">
+       
+      </div>
+         </div></div>
+           <div class="col-md-4"> 
+         <div class="row">
+            <div class="form-group">
+        <label for="serviciosBasicos">servicios Basicos</label>
+        <input type="float" ng-model=" nuevaFactura.serviciosBasicos" class="form-control" id="serviciosBasicos" aria-describedby="ayuda" >
+       
+      </div>
+         </div></div>
+         </div>
+         <div class="row">
+           <div class="col-md-4"><div class="row">
+           <div class="form-group">
+        <label for="sueldos">sueldos</label>
+        <input type="float" ng-model=" nuevaFactura.sueldos" class="form-control" id="sueldos" aria-describedby="ayuda" >
+       
+      </div>
+         </div></div>
+           <div class="col-md-4"> 
+         <div class="row">
+           <div class="form-group">
+        <label for="movilizacion">movilizacion</label>
+        <input type="float" ng-model=" nuevaFactura.movilizacion" class="form-control" id="movilizacion" aria-describedby="ayuda" >
+       
+      </div>
+         </div></div>
+           <div class="col-md-4"><div class="row">
+           <div class="form-group">
+        <label for="viaticos">viaticos</label>
+        <input type="float" ng-model=" nuevaFactura.viaticos" class="form-control" id="viaticos" aria-describedby="ayuda" >
+       
+      </div>
+         </div></div>
+         </div>
+         <div class="row">
+           <div class="col-md-4">
+             <div class="row">
+           <div class="form-group">
+        <label for="capacitacion">capacitacion</label>
+        <input type="float" ng-model=" nuevaFactura.capacitacion" class="form-control" id="capacitacion" aria-describedby="ayuda" >
+       
+      </div>
+         </div>
+           </div>
+           <div class="col-md-4"> <div class="row">
+           <div class="form-group">
+        <label for="herramientas">herramientas</label>
+        <input type="float" ng-model=" nuevaFactura.herramientas" class="form-control" id="herramientas" aria-describedby="ayuda" >
+       
+      </div>
+         </div></div>
+           <div class="col-md-4">
+              <div class="row">
+           <div class="form-group">
+        <label for="otros">Otros</label>
+        <input type="float" ng-model=" nuevaFactura.otros" class="form-control" id="otros" aria-describedby="ayuda" >
+       
+      </div>
+         </div>
+           </div>
+         </div>
+         
+        <div class="row">
+          <div class="col-md-4"><div class="row">
+           <div class="form-group">
+        <label for="suministros">suministros</label>
+        <input type="float" ng-model=" nuevaFactura.suministros" class="form-control" id="suministros" aria-describedby="ayuda" >
+       
+      </div>
+         </div></div>
+        </div>
+        
+         
+         
+        
+        
+         
+       </div>
+
+
+        {{CalcularSubtotal(nuevaFactura,nuevaFactura.tipoFactura)}}
 
       <div class="form-group">
+        <label for="totalSinIva">SubTotal</label>
+        <input ng-disabled="true" type="float" ng-model=" nuevaFactura.totalSinIva" class="form-control" id="totalSinIva" aria-describedby="ayuda" placeholder="Valor total factura">
+       
+      </div>
+      
+      <div class="row">
+        <div class="col-md-4"><div class="form-group">
+        <label for="iva">iva</label>
+        <input type="float" ng-model=" iva" class="form-control" id="iva" aria-describedby="ayuda" >
+       
+      </div></div>
+      </div>
+      
+      {{calcularTotal(nuevaFactura.totalSinIva,iva)}}
+   
+      <div class="form-group">
         <label for="VT">Valor Total</label>
-        <input type="float" ng-model=" nuevaFactura.valorFactura" class="form-control" id="VT" aria-describedby="ayuda" placeholder="Valor total factura">
+        <input type="float" ng-disabled="true" ng-model=" nuevaFactura.valorFactura" class="form-control" id="VT" aria-describedby="ayuda" placeholder="Valor total factura">
         <small id="ayuda" class="form-text text-muted">Valor total ej 12.43.</small>
       </div>
+      
+       
+      
 
 
       <div class="form-actions">
         <button type="submit"  ng-disabled="facturaForm.$invalid " class="btn btn-primary">Crear Factura</button>
 
-        <a href="#/consultar" class="btn btn-link">Consultar Facturas</a>
+        <button ng-click="limpiarFact()" class="btn btn-success">Limpiar Campos</button>
       </div>
 
     </form>
 
 
-
+<!--{{nuevaFactura||JSON}}-->
 
 
   </div>
