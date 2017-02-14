@@ -1,0 +1,90 @@
+<div class="container">
+
+  <div class="row">
+
+
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <div ng-hide="bloquearBuscar">
+            <div class="input-group">
+          <input type="text" ng-model="periodo"class="form-control" placeholder="Buscar periodo...">
+          <span class="input-group-btn">
+        <button  class="btn btn-success" type="button" ng-click="buscarPorPeriodo(periodo,facturas)" >Buscar</button>
+
+
+      </span>
+     
+        </div><!-- /input-group -->
+        </div>
+      
+        <br>
+        <div ng-show="bloquearBuscar"><p>Filtro  <input type="text" ng-model="busqueda"></p><br><br></div>
+
+    
+      </div><!-- /.col-lg-6 -->
+      
+    </div>
+
+
+    
+
+    <h2>Resultados</h2>
+    <br><br>
+    <table class="table table-bordered table-hover table-condensed">
+
+      <tr style="font-weight: bold; text-align: center;">
+        <td>Numero de Factura</td>
+        <td>Proveedor</td>
+        <td>Mes</td>
+        <td>Fecha emision</td>
+        <td>Mercaderia</td>
+        <td>Arriendo</td>
+        <td>Servicios Basicos</td>
+        <td>Sueldos</td>
+        <td>Movilizacion</td>
+        <td>Viaticos</td>
+        <td>Capacitacion</td>
+        <td>Suministros</td>
+        <td>Herramientas</td>
+        <td>Otros</td>
+        <td>Total sin Iva</td>
+        <td>Total con Iva</td>
+
+      </tr>
+      <tr ng-repeat="factura in facturaPorPeriodo | filter: busqueda">
+        <td>{{factura.numFactura }}</td>
+        <td>{{factura.idProveedor.nombre}}</td>
+        <td>{{factura.mes}}</td>
+        <td>{{factura.fechaEmision| date:'dd/MM/yyyy'}}</td>
+        <td>{{factura.mercaderia | currency}}</td>
+        <td>{{factura.arriendo | currency}}</td>
+        <td>{{factura.serviciosBasicos | currency}}</td>
+        <td>{{factura.sueldos | currency}}</td>
+        <td>{{factura.movilizacion | currency}}</td>
+        <td>{{factura.viaticos | currency}}</td>
+        <td>{{factura.capacitacion | currency}}</td>
+        <td>{{factura.suministros | currency}}</td>
+        <td>{{factura.herramientas | currency}}</td>
+        <td>{{factura.otros | currency}}</td>
+
+        <td>{{factura.totalSinIva | currency}}</td>
+        <td>{{factura.valorFactura | currency}}</td>
+
+
+    </tr>
+
+
+
+
+
+
+
+
+    </table>
+
+    <button ng-show="bloquearBuscar" ng-click="Limpiar()" class="btn btn-info">Nueva Busqueda</button>
+    <button ng-show="bloquearBuscar" ng-mousedown="exportarDetallesGp(facturaPorPeriodo)  " class="btn btn-success">exportar</button>
+  </div>
+</div>

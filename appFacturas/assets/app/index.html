@@ -46,20 +46,40 @@
 
 
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consultas <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consultar <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#/consultar">Consultar Todas las facturas</a></li>
-              <li><a href="#/consultasgp">Gastos Personales por periodo</a></li>
-              <li><a href="#/gpmensual">Gastos Personales detalle Mensual</a></li>
-              <li><a href="#/detallegp">Detalle de Gastos Personales</a></li>
-              <li><a href="#/gnmensual">Gastos de Negocio Mensual</a></li>
-              <li><a href="#/gnmensual">Detalle de Gastos de Negocio </a></li>
+              <li><a href="#/consultar">Facturas Sin Asignar</a></li>
+              <li><a href="#/fgn">Facturas de Gastos de Negocio</a></li>
+              <li><a href="#/fgp">Facturas de Gastos Personales</a></li>
+              
+              
 
 
 
 
             </ul>
           </li>
+          
+          
+          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reportes <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+              <li><a href="#/consultasgp">Gastos Personales por periodo</a></li>
+              <li><a href="#/gpmensual">Gastos Personales detalle Mensual</a></li>
+              <li><a href="#/detallegp">Detalle de Gastos Personales</a></li>
+              <li><a href="#/gnmensual">Gastos de Negocio Mensual</a></li>
+              <li><a href="#/gndetalle">Detalle de Gastos de Negocio </a></li>
+
+
+
+
+            </ul>
+          </li>
+          
+          
+          
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ingresar <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -132,6 +152,9 @@
   <script type="text/javascript" src="Factories/limiteFactory.js"></script>
   <script type="text/javascript" src="Factories/ConsultasGPFactory.js"></script>
   <!--CONTROLADORES-->
+  <script type="text/javascript" src="Controller/FacturasGnCtrl.js"></script>
+  <script type="text/javascript" src="Controller/FacturasGpCtrl.js"></script>
+  <script type="text/javascript" src="Controller/gastosNegocioDetalleCtrl.js"></script>
   <script type="text/javascript" src="Controller/gastosNegocioMensualCtrl.js"></script>
   <script type="text/javascript" src="Controller/detalleGastosPctrl.js"></script>
   <script type="text/javascript" src="Controller/consultaGpmensualCtrl.js"></script>

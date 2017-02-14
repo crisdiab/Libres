@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<autorizacion>
+	<estado>AUTORIZADO</estado>
+	<numeroAutorizacion>0102201701200101100332005217912875411</numeroAutorizacion>
+	<fechaAutorizacion>Wed Feb 01 08:19:37 ECT 2017</fechaAutorizacion>
+	<ambiente>PRODUCCION</ambiente>
+	<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.0.0">
+  <infoTributaria>
+    <ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>MEGADATOS SA</razonSocial>
+    <nombreComercial>MEGADATOS SA</nombreComercial>
+    <ruc>1791287541001</ruc>
+    <claveAcceso>0102201701179128754100120010110033200521777686911</claveAcceso><codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>011</ptoEmi>
+    <secuencial>003320052</secuencial>
+    <dirMatriz>Nunez de Vela E313 y Atahualpa Edificio torre del Puente 2do Piso</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>01/02/2017</fechaEmision>
+    <dirEstablecimiento>Avenida Rodrigo de Chavez  Parque Empresarial Colon  Edificio Coloncorp  Torre 6  Locales 4 y 5</dirEstablecimiento>
+    <contribuyenteEspecial>0176</contribuyenteEspecial>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>05</tipoIdentificacionComprador>
+    <razonSocialComprador>CRISTIAN RAUL LARA BALAREZO</razonSocialComprador>
+    <identificacionComprador>1717465569</identificacionComprador>
+    <totalSinImpuestos>34.99</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>3</codigoPorcentaje>
+        <baseImponible>34.99</baseImponible>
+        <valor>4.90</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina> 0.00</propina>
+    <importeTotal>39.89</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>39.89</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>HOME1AH</codigoPrincipal>
+      <descripcion>FTTH Hogar UAV Starter 20Mbps AH.NA Consumo: FEBRUARY /2017, Fecha de Activacion: 09-AUG-16 09.01.41.000000 PM</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>34.99</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>34.99</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>3</codigoPorcentaje>
+          <tarifa>14</tarifa>
+          <baseImponible>34.99</baseImponible>
+          <valor>4.90</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="emailCliente">cristian89lara@gmail.com</campoAdicional>
+    <campoAdicional nombre="dirCliente">CALLE GERONA N24-388 Y VIZCAYA SECTOR LA FLORESTA</campoAdicional>
+    <campoAdicional nombre="telfCliente">023227944;023227944;0983500247;0992880665;0983500247;0992880665</campoAdicional>
+    <campoAdicional nombre="ciudadCliente">QUITO</campoAdicional>
+    <campoAdicional nombre="numeroCliente">003320052</campoAdicional>
+    <campoAdicional nombre="consumoCliente">FEBRERO</campoAdicional>
+    <campoAdicional nombre="loginCliente">md-uiocrlarab1</campoAdicional>
+    <campoAdicional nombre="contratoCliente">001-001-0094185</campoAdicional>
+  </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature341938">
+<ds:SignedInfo Id="Signature-SignedInfo306547">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID11327" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature341938-SignedProperties7823">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>MrzQVik3Oct4eFPpub+SKhR2L1c=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1479659">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>RLvem98NFxBJgHuVyvj9Eitj/fM=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-414977" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>w8JYW+WZ55S4+KoZ0rrqH9BVsF4=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue19425">
+oMoudcHYd1BL0kYBrWHIG/X3lLgJWdG0C6suKyjKyJFQ8p9Hg4cj77v4IHyS9R+lgkOlLkpKi/NU
+otFry8cF5zOc483zj781XA5wO+ktfn9K2qhfCApiq4c6dQ+guChJ8Z6FABWp7l0SqggfiEyUihmr
+I7AeKWhPODBAY+X0u7w3gyFtjxff1nn08EQKvRGeTcuvc2qkOjBiYyLARw/pJgV4YIj0We4UUlRQ
+ViMA6Oa9hiURqxd06pVDcFrTZ/7kgkMlngli5A9ufhx/nkI46ttHT70uzuzfYIr5MDDcZOmqriON
+EmKk1pIHU0J2N7ktezVVbpxG2GCaa9cvHXzOfA==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1479659">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJqTCCCJGgAwIBAgIEVM5GKjANBgkqhkiG9w0BAQsFADCBkzELMAkGA1UEBhMCRUMxGzAZBgNV
+BAoTElNFQ1VSSVRZIERBVEEgUy5BLjEwMC4GA1UECxMnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9O
+IERFIElORk9STUFDSU9OMTUwMwYDVQQDEyxBVVRPUklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUIg
+U0VDVVJJVFkgREFUQTAeFw0xNjA2MjAyMTA5NThaFw0xODA2MjAyMTM5NThaMIGeMQswCQYDVQQG
+EwJFQzEbMBkGA1UEChMSU0VDVVJJVFkgREFUQSBTLkEuMTAwLgYDVQQLEydFTlRJREFEIERFIENF
+UlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04xQDATBgNVBAUTDDIwMDYxNjE2Mjk1MTApBgNVBAMT
+IldBU0hJTkdUT04gRlJBTkNJU0NPIEJBTEFSRVpPIFBPWk8wggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQDGk837JSKjYtBACiSvbhlvcf69/WU2JSkh9oHy3E5v1vgcOQqIEjXHNcpNn6BZ
+PaYN4T9Ot0by+OjbV/3Q6tKlJ5T5aZIweAmUbbj4oZchrzJqwifAlUdObamPreM5OrmOjWNkqS+y
+wsCsMlGk0Ulho9Nd34/mj2opMIYjA14R1yTOtamXcWDJjeARrbfo/KwgWP8iEDuwA3RgE2iTBNSA
+QtX3srmOdV3mwtVKsfb31Q54UFxFGFfzgimWMChzf47ke2YBe9aHuRMaZz3K0Fn+YMhPjp6vRB/g
+1eXhH/+ltSnjUcJiIfiyGDrYKUw88dJx5Vb/syeBWI1VojXIQ64bAgMBAAGjggX2MIIF8jALBgNV
+HQ8EBAMCBeAwWQYIKwYBBQUHAQEETTBLMEkGCCsGAQUFBzABhj1odHRwOi8vb2NzcGd3LnNlY3Vy
+aXR5ZGF0YS5uZXQuZWMvZWpiY2EvcHVibGljd2ViL3N0YXR1cy9vY3NwMIHMBgNVHSAEgcQwgcEw
+QAYKKwYBBAGCpnICCTAyMDAGCCsGAQUFBwICMCQaIkNlcnRpZmljYWRvIGRlIFJlcHJlc2VudGFu
+dGUgTGVnYWwwfQYKKwYBBAGCpnICAzBvMG0GCCsGAQUFBwIBFmFodHRwczovL3d3dy5zZWN1cml0
+eWRhdGEubmV0LmVjL2xleWVzX25vcm1hdGl2YXMvUG9saXRpY2FzIGRlIENlcnRpZmljYWRvIFJl
+cHJlc2VudGFudGUgTGVnYWwucGRmMB4GCisGAQQBgqZyAwoEEBMOTUVHQURBVE9TIFMuQS4wHQYK
+KwYBBAGCpnIDCwQPEw0xNzkxMjg3NTQxMDAxMBoGCisGAQQBgqZyAwEEDBMKMTcwNDA4MzI5MjAk
+BgorBgEEAYKmcgMCBBYTFFdBU0hJTkdUT04gRlJBTkNJU0NPMBgGCisGAQQBgqZyAwMEChMIQkFM
+QVJFWk8wFAYKKwYBBAGCpnIDBAQGEwRQT1pPMB8GCisGAQQBgqZyAwUEERMPR0VSRU5URSBHRU5F
+UkFMMC8GCisGAQQBgqZyAwcEIRMfTlVORVogREUgVkVMQSBFMy0xMyBZIEFUQUhVQUxQQTAbBgor
+BgEEAYKmcgMIBA0TCzU5MzIyMjY1MDUwMBUGCisGAQQBgqZyAwkEBxMFUVVJVE8wFwYKKwYBBAGC
+pnIDDAQJEwdFQ1VBRE9SMB8GCisGAQQBgqZyAyAEERMPMDAyMDAxMDAwMDEwNTE4MBMGCisGAQQB
+gqZyAyEEBRMDUEZYMCMGA1UdEQQcMBqBGGdiYWxhcmV6b0BuZXRsaWZlLm5ldC5lYzCCAnkGA1Ud
+HwSCAnAwggJsMIICaKCCAmSgggJghj1odHRwOi8vb2NzcGd3LnNlY3VyaXR5ZGF0YS5uZXQuZWMv
+ZWpiY2EvcHVibGljd2ViL3N0YXR1cy9vY3NwhoHUbGRhcDovL2RpcmVjdC5zZWN1cml0eWRhdGEu
+bmV0LmVjL2NuPUNSTDg2LGNuPUFVVE9SSURBRCUyMERFJTIwQ0VSVElGSUNBQ0lPTiUyMFNVQiUy
+MFNFQ1VSSVRZJTIwREFUQSxvdT1FTlRJREFEJTIwREUlMjBDRVJUSUZJQ0FDSU9OJTIwREUlMjBJ
+TkZPUk1BQ0lPTixvPVNFQ1VSSVRZJTIwREFUQSUyMFMuQS4sYz1FQz9jZXJ0aWZpY2F0ZVJldm9j
+YXRpb25MaXN0P2Jhc2WGgZ5odHRwczovL2RpcmVjdC5zZWN1cml0eWRhdGEubmV0LmVjL35jcmwv
+YXV0b3JpZGFkX2RlX2NlcnRpZmljYWNpb25fc3ViX3NlY3VyaXR5X2RhdGFfZW50aWRhZF9kZV9j
+ZXJ0aWZpY2FjaW9uX2RlX2luZm9ybWFjaW9uX2N1cml0eV9kYXRhX3MuYS5fY19lY19jcmxmaWxl
+LmNybKSBpjCBozELMAkGA1UEBhMCRUMxGzAZBgNVBAoTElNFQ1VSSVRZIERBVEEgUy5BLjEwMC4G
+A1UECxMnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OMTUwMwYDVQQDEyxB
+VVRPUklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUIgU0VDVVJJVFkgREFUQTEOMAwGA1UEAxMFQ1JM
+ODYwKwYDVR0QBCQwIoAPMjAxNjA2MjAyMTA5NThagQ8yMDE4MDYyMDIxMzk1OFowHwYDVR0jBBgw
+FoAU9y9M4HXnYqN4llsGti5xO8xsP5AwHQYDVR0OBBYEFCdhPNwONHXvBMuvGbj807e7DKitMAkG
+A1UdEwQCMAAwGQYJKoZIhvZ9B0EABAwwChsEVjguMQMCA6gwDQYJKoZIhvcNAQELBQADggEBAH4q
+qbuZVowC+mvHgyPzXAKI7xK/EiDfRChPnVCzR1F+rZKw2npYm558qnd33Eebe/A9F3AxKmeqXh7i
+2PczGfWBaO7APV6g51ziyZstgPVV0N+R7P8iIskN8FNXGiuy48Rq9HRL/WeTZjjvwRkRKJ0lutis
+LRMaQRaUl/lxyLhRu/lbJ2LUc5LLf+gUcsD1NpXo3Z2e8C8HSD9RAA/sWcKbKGTyza2b2WcA9dlm
+SP9CzNBjEO2DRNlq5RN6CLGenJRrvW7Sg3R9L7Shz/7AHEELCJGNqRD17L0iI2XEcwUcQclRnIgP
+ohCNQXUr1AWhdkVWyn+tNOlVUaKwoTY5mZs=
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+xpPN+yUio2LQQAokr24Zb3H+vf1lNiUpIfaB8txOb9b4HDkKiBI1xzXKTZ+gWT2mDeE/TrdG8vjo
+21f90OrSpSeU+WmSMHgJlG24+KGXIa8yasInwJVHTm2pj63jOTq5jo1jZKkvssLArDJRpNFJYaPT
+Xd+P5o9qKTCGIwNeEdckzrWpl3FgyY3gEa236PysIFj/IhA7sAN0YBNokwTUgELV97K5jnVd5sLV
+SrH299UOeFBcRRhX84IpljAoc3+O5HtmAXvWh7kTGmc9ytBZ/mDIT46er0Qf4NXl4R//pbUp41HC
+YiH4shg62ClMPPHSceVW/7MngViNVaI1yEOuGw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature341938-Object16360"><etsi:QualifyingProperties Target="#Signature341938"><etsi:SignedProperties Id="Signature341938-SignedProperties7823"><etsi:SignedSignatureProperties><etsi:SigningTime>2017-02-01T03:58:51-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>Etz6JJpRCqNNP/hHC1apTSd3jGE=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUB SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A.,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1422804522</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-414977"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante>
+	<mensajes></mensajes>
+</autorizacion>

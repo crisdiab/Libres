@@ -1,4 +1,4 @@
-aplicacion.controller('ConsultarCtrl', [
+aplicacion.controller('FacturasGnCtrl', [
   '$scope',
 'ConsultasFactory',
   'detalleFactory',
@@ -39,7 +39,7 @@ $scope.asignar=function(facturas){
   console.log('entro en facturas por asignar')
   for(var i=0; i<facturas.length;i++){
    
-    if(facturas[i].tipoFactura==0){
+    if(facturas[i].tipoFactura==2){
       $scope.facturasSinAsignar.push(facturas[i]);
     }
   }

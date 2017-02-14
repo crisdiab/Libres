@@ -8,10 +8,9 @@
 
   <div style="  height: 300px; overflow-y: scroll;">
 
-    <h2>Facturas sin Asignar </h2>
+    <h2>Facturas Factura de Gastos Personales </h2>
 
-    <h5>NOTA: Factura tipo 1 = Gastos Personales</h5>
-    <h5>Factura tipo 2 = Gastos de Negocio</h5>
+  
     <!--<button ng-click="verFacturas()">ver Tabla</button>-->
     
     
@@ -23,8 +22,14 @@
               <td>Proveedor</td>
               <td>Numero de Factura</td>
               <td>Fecha de Emision</td>
-                <td>Valor de Factura</td>
-                <td>Tipo de Factura</td>
+                <td>Alimentos</td>
+                <td>Salud</td>
+                <td>Vivienda</td>
+                <td>Educacion</td>
+                <td>Vestimenta</td>
+                <td>otros</td>
+                <td>Valor Factura</td>
+                
             </tr>
             <tr ng-repeat="factura in facturasSinAsignar">
               <td>
@@ -51,17 +56,50 @@
    {{ factura.fechaEmision | date:'dd/MM/yyyy' }}
                 
               </td>
+              <td>
+
+                <span editable-textarea="factura.alimentos" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.alimentos || 'Vacio' }}
+                </span>
+              </td>
+              
+              <td>
+
+                <span editable-textarea="factura.salud" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.salud  || '0' }}
+                </span>
+              </td>
+               <td>
+
+                <span editable-textarea="factura.vivienda" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.vivienda  || '0' }}
+                </span>
+                
+              </td>
+               <td>
+
+                <span editable-textarea="factura.educacion" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.educacion  || '0' }}
+                </span>
+              </td>
+               <td>
+
+                <span editable-textarea="factura.vestimenta" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.vestimenta  || '0' }}
+                </span>
+              </td>
+               <td>
+
+                <span editable-textarea="factura.otros" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.otros  || '0' }}
+                </span>
+              </td>
                <td>
 {{ factura.valorFactura |  currency }}
                 
               </td>
               
-               <td>
-
-                <span editable-textarea="factura.tipoFactura" e-name="telefono" e-form="editFactura" e-required>
-                  {{ factura.tipoFactura || '0' }}
-                </span>
-              </td>
+               
             
               <td style="white-space: nowrap">
                 <div ng-show="editFactura.$visible">

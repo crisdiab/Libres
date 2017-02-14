@@ -1,0 +1,168 @@
+
+
+<div class="container">
+
+
+
+  
+
+  <div style="  height: 300px; overflow-y: scroll;">
+
+    <h2>Facturas Factura de Gastos Negocio </h2>
+
+  
+    <!--<button ng-click="verFacturas()">ver Tabla</button>-->
+    
+    
+     <table class="table table-bordered table-hover table-condensed">
+
+            <tr style="font-weight: bold; text-align: center;">
+              <td>Nombre</td>
+              <td>Apellido</td>
+              <td>Proveedor</td>
+              <td>Numero de Factura</td>
+              <td>Fecha de Emision</td>
+                <td>Mercaderia</td>
+                <td>Arriendo</td>
+                <td>Servicios Basicos</td>
+                <td>Sueldos</td>
+                <td>Movilizacion</td>
+                <td>Viaticos</td>
+                <td>Capacitacion</td>
+                <td>Suministros</td>
+                <td>Herramientas</td>
+                <td>otros</td>
+                <td>Valor Factura</td>
+                
+            </tr>
+            <tr ng-repeat="factura in facturasSinAsignar">
+              <td>
+ {{ factura.idComprador.nombre  }}
+               
+
+              </td>
+              <td>
+
+{{ factura.idComprador.apellido  }}
+                
+
+              </td>
+              <td>
+{{ factura.idProveedor.nombre  }}
+                
+
+              </td>
+              <td>
+ {{ factura.numFactura  }}
+                
+              </td>
+              <td>
+   {{ factura.fechaEmision | date:'dd/MM/yyyy' }}
+                
+              </td>
+              <td>
+
+                <span editable-textarea="factura.mercaderia" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.mercaderia  || 'Vacio' }}
+                </span>
+              </td>
+              
+              <td>
+
+                <span editable-textarea="factura.arriendo" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.arriendo  || '0' }}
+                </span>
+              </td>
+               <td>
+
+                <span editable-textarea="factura.serviciosBasicos" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.serviciosBasicos || '0' }}
+                </span>
+                
+              </td>
+               <td>
+
+                <span editable-textarea="factura.sueldos" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.sueldos  || '0' }}
+                </span>
+              </td>
+               <td>
+
+                <span editable-textarea="factura.movilizacion" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.movilizacion  || '0' }}
+                </span>
+              </td>
+               <td>
+
+                <span editable-textarea="factura.viaticos" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.viaticos  || '0' }}
+                </span>
+              </td>
+               <td>
+
+                <span editable-textarea="factura.capacitacion" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.capacitacion || '0' }}
+                </span>
+              </td>
+              
+               <td>
+
+                <span editable-textarea="factura.suministros" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.suministros  || '0' }}
+                </span>
+              </td>
+               <td>
+
+                <span editable-textarea="factura.herramientas" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.herramientas  || '0' }}
+                </span>
+              </td>
+              
+               <td>
+
+                <span editable-textarea="factura.otros" e-name="telefono" e-form="editFactura" e-required>
+                  {{ factura.otros  || '0' }}
+                </span>
+              </td>
+               <td>
+{{ factura.valorFactura |  currency }}
+                
+              </td>
+              
+               
+            
+              <td style="white-space: nowrap">
+                <div ng-show="editFactura.$visible">
+                  <form editable-form name="editFactura" class="form-buttons form-inline" shown="inserted == factura" onaftersave="actualizarfactura(factura)">
+                    <button type="submit" ng-disabled="editFactura.$waiting" class="btn btn-primary btn-xs">
+                      <i class="fa fa-check" aria-hidden="true"></i>
+                    </button>
+
+                  </form>
+                  <button class="btn btn-danger btn-xs" ng-disabled="editFactura.$waiting" ng-click="borrarfactura(factura.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+
+                  <button type="button" ng-disabled="editFactura.$waiting" ng-click="editFactura.$cancel()" class="btn btn-default btn-xs">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                  </button>
+                </div>
+
+                <div class="buttons" ng-show="!editFactura.$visible">
+                  <button class="btn btn-primary btn-xs" ng-click="editFactura.$show()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+
+                </div>
+              </td>
+            </tr>
+
+          </table>
+
+
+  </div>
+
+  <br>
+  <!--<p>Si desesa consultar sus gastos por periodo clik en <a  href="#/gastos">Consultar gastos</a> </p>-->
+
+
+</div>
+
+
+

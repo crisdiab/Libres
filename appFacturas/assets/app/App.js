@@ -174,6 +174,33 @@ aplicacion.config(['$stateProvider','$urlRouterProvider', function($stateProvide
         loginRequerido: true
       }
     })
+    .state('gndetalle', {
+      url: "/gndetalle",
+      templateUrl: "rutas/gastosNegocioDetalle.html",
+      controller:'gastosNegocioDetalleCtrl',
+      data: {
+        nivelAcceso: 1,
+        loginRequerido: true
+      }
+    })
+    .state('facturasGN', {
+      url: "/fgn",
+      templateUrl: "rutas/FacturasGN.html",
+      controller:'FacturasGnCtrl',
+      data: {
+        nivelAcceso: 1,
+        loginRequerido: true
+      }
+    })
+    .state('facturasGP', {
+      url: "/fgp",
+      templateUrl: "rutas/FacturasGP.html",
+      controller:'FacturasGpCtrl',
+      data: {
+        nivelAcceso: 1,
+        loginRequerido: true
+      }
+    })
 
 
   ;

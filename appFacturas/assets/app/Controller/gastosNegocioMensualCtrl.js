@@ -26,24 +26,40 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
         $scope.grupo={
             Enero:{
                 nombre:'Enero',
-                tipo:{
-                    alimentos:{
+         tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -57,23 +73,39 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             Febrero:{
                 nombre:'Febrero',
                 tipo:{
-                    alimentos:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -87,23 +119,39 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             Marzo:{
                 nombre:'Marzo',
                 tipo:{
-                    alimentos:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -116,24 +164,40 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             },     
             Abril:{
                 nombre:'Abril',
-                tipo:{
-                    alimentos:{
+            tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -146,24 +210,40 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             },
             Mayo:{
                 nombre:'Mayo',
-                tipo:{
-                    alimentos:{
+               tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -176,23 +256,39 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             },
             Junio:{nombre:'Junio',
                 tipo:{
-                    alimentos:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -201,27 +297,45 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
                         total:0
                     },
                     
-                }},
+                }
+              
+            },
             Julio:{
                 nombre:'Julio',
-                tipo:{
-                    alimentos:{
+             tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -234,24 +348,40 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             },
             Agosto:{
                 nombre:'Agosto',
-                tipo:{
-                    alimentos:{
+             tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -264,24 +394,40 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             },
             Septiembre:{
                 nombre:'Septiembre',
-                tipo:{
-                    alimentos:{
+              tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -295,23 +441,39 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             Octubre:{
                 nombre:'Octubre',
                 tipo:{
-                    alimentos:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -324,24 +486,40 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             },
             Noviembre:{
                 nombre:'Noviembre',
-                tipo:{
-                    alimentos:{
+              tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -355,23 +533,39 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             Diciembre:{
                 nombre:'Diciembre',
                 tipo:{
-                    alimentos:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -385,23 +579,39 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             Total:{
                 nombre:'Total',
                 tipo:{
-                    alimentos:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -454,124 +664,176 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
                     toastr.warning("No hay facturas en el periodo")
                      $scope.nuevaBusqueda();
                 }else{
-                    //agregar todos los alimentos a un vector
+                    //agregar todos los mercaderia a un vector
                     for(var i=0;i< $scope.factXperiodo.length;i++){
-                        $scope.grupo.Total.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Total.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Total.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Total.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Total.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Total.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Total.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Total.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Total.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Total.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Total.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Total.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Total.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Total.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Total.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                         
                         switch ($scope.factXperiodo[i].mes) {
                             case "Enero":
                                 // code
-                        $scope.grupo.Enero.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Enero.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Enero.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Enero.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Enero.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Enero.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Enero.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Enero.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Enero.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Enero.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Enero.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Enero.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Enero.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Enero.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Enero.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                                 break;
                             case "Febrero":
                                 // code
-                        $scope.grupo.Febrero.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Febrero.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Febrero.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Febrero.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Febrero.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Febrero.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Febrero.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Febrero.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Febrero.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Febrero.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Febrero.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Febrero.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Febrero.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Febrero.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Febrero.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                                 break;
                             case "Marzo":
                                 // code
-                        $scope.grupo.Marzo.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Marzo.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Marzo.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Marzo.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Marzo.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Marzo.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Marzo.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Marzo.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Marzo.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Marzo.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Marzo.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Marzo.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Marzo.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Marzo.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Marzo.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                                 
                                 break;
                             case "Abril":
                                 // 
-                        $scope.grupo.Abril.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Abril.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Abril.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Abril.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Abril.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Abril.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Abril.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Abril.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Abril.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Abril.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Abril.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Abril.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Abril.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Abril.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Abril.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                                 break;    
                             case "Mayo":
                                 // code
-                        $scope.grupo.Mayo.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Mayo.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Mayo.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Mayo.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Mayo.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Mayo.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Mayo.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Mayo.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Mayo.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Mayo.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Mayo.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Mayo.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Mayo.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Mayo.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Mayo.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                                 break;
                             case "Junio":
                                 // code
-                        $scope.grupo.Junio.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Junio.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Junio.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Junio.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Junio.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Junio.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Junio.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Junio.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Junio.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Junio.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Junio.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Junio.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Junio.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Junio.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Junio.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                                 break;    
                             case "Julio":
                                 // code
-                        $scope.grupo.Julio.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Julio.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Julio.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Julio.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Julio.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Julio.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Julio.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Julio.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Julio.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Julio.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Julio.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Julio.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Julio.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Julio.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Julio.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                                 break;
                             case "Agosto":
                                 // code
-                        $scope.grupo.Agosto.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Agosto.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Agosto.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Agosto.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Agosto.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Agosto.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Agosto.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Agosto.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Agosto.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Agosto.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Agosto.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Agosto.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Agosto.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Agosto.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Agosto.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                                 break;
                             case "Septiembre":
                                 // code
-                        $scope.grupo.Septiembre.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Septiembre.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Septiembre.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Septiembre.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Septiembre.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Septiembre.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Septiembre.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Septiembre.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Septiembre.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Septiembre.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Septiembre.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Septiembre.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Septiembre.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Septiembre.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Septiembre.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                                 break;
                             case "Octubre":
                                 // code
-                        $scope.grupo.Octubre.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Octubre.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Octubre.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Octubre.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Octubre.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Octubre.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Octubre.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Octubre.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Octubre.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Octubre.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Octubre.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Octubre.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Octubre.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Octubre.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Octubre.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                                 break;
                             case "Noviembre":
                                 // code
-                        $scope.grupo.Noviembre.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Noviembre.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Noviembre.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Noviembre.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Noviembre.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Noviembre.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Noviembre.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Noviembre.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Noviembre.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Noviembre.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Noviembre.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Noviembre.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Noviembre.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Noviembre.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Noviembre.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                                 break;
                             case "Diciembre":
                                 // code
-                        $scope.grupo.Diciembre.tipo.alimentos.vector.push( $scope.factXperiodo[i].alimentos);
-                        $scope.grupo.Diciembre.tipo.salud.vector.push( $scope.factXperiodo[i].salud);
-                        $scope.grupo.Diciembre.tipo.vivienda.vector.push( $scope.factXperiodo[i].vivienda);
-                        $scope.grupo.Diciembre.tipo.educacion.vector.push( $scope.factXperiodo[i].educacion);
-                        $scope.grupo.Diciembre.tipo.vestimenta.vector.push( $scope.factXperiodo[i].vestimenta);
+                        $scope.grupo.Diciembre.tipo.mercaderia.vector.push( $scope.factXperiodo[i].mercaderia);
+                        $scope.grupo.Diciembre.tipo.arriendo.vector.push( $scope.factXperiodo[i].arriendo);
+                        $scope.grupo.Diciembre.tipo.serviciosBasicos.vector.push( $scope.factXperiodo[i].serviciosBasicos);
+                        $scope.grupo.Diciembre.tipo.sueldos.vector.push( $scope.factXperiodo[i].sueldos);
+                        $scope.grupo.Diciembre.tipo.movilizacion.vector.push( $scope.factXperiodo[i].movilizacion);
                         $scope.grupo.Diciembre.tipo.otros.vector.push( $scope.factXperiodo[i].otros);
+                          $scope.grupo.Diciembre.tipo.viaticos.vector.push( $scope.factXperiodo[i].viaticos);
+                        $scope.grupo.Diciembre.tipo.capacitacion.vector.push( $scope.factXperiodo[i].capacitacion);
+                        $scope.grupo.Diciembre.tipo.suministros.vector.push( $scope.factXperiodo[i].suministros);
+                        $scope.grupo.Diciembre.tipo.herramientas.vector.push( $scope.factXperiodo[i].herramientas);
                                 break;    
                             default:
                                 // code
@@ -580,273 +842,273 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
                     }
                     
                     //sumar los vectores
-                    //alimentos
-                    for(var i=0;i<$scope.grupo.Enero.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Enero.tipo.alimentos.total+=$scope.grupo.Enero.tipo.alimentos.vector[i];
+                    //mercaderia
+                    for(var i=0;i<$scope.grupo.Enero.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Enero.tipo.mercaderia.total+=$scope.grupo.Enero.tipo.mercaderia.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Febrero.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Febrero.tipo.alimentos.total+=$scope.grupo.Febrero.tipo.alimentos.vector[i];
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.mercaderia.total+=$scope.grupo.Febrero.tipo.mercaderia.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Marzo.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Marzo.tipo.alimentos.total+=$scope.grupo.Marzo.tipo.alimentos.vector[i];
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.mercaderia.total+=$scope.grupo.Marzo.tipo.mercaderia.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Abril.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Abril.tipo.alimentos.total+=$scope.grupo.Abril.tipo.alimentos.vector[i];
+                    for(var i=0;i<$scope.grupo.Abril.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Abril.tipo.mercaderia.total+=$scope.grupo.Abril.tipo.mercaderia.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Mayo.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Mayo.tipo.alimentos.total+=$scope.grupo.Mayo.tipo.alimentos.vector[i];
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.mercaderia.total+=$scope.grupo.Mayo.tipo.mercaderia.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Junio.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Junio.tipo.alimentos.total+=$scope.grupo.Junio.tipo.alimentos.vector[i];
+                    for(var i=0;i<$scope.grupo.Junio.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Junio.tipo.mercaderia.total+=$scope.grupo.Junio.tipo.mercaderia.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Julio.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Julio.tipo.alimentos.total+=$scope.grupo.Julio.tipo.alimentos.vector[i];
+                    for(var i=0;i<$scope.grupo.Julio.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Julio.tipo.mercaderia.total+=$scope.grupo.Julio.tipo.mercaderia.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Agosto.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Agosto.tipo.alimentos.total+=$scope.grupo.Agosto.tipo.alimentos.vector[i];
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.mercaderia.total+=$scope.grupo.Agosto.tipo.mercaderia.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Septiembre.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Septiembre.tipo.alimentos.total+=$scope.grupo.Septiembre.tipo.alimentos.vector[i];
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.mercaderia.total+=$scope.grupo.Septiembre.tipo.mercaderia.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Octubre.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Octubre.tipo.alimentos.total+=$scope.grupo.Octubre.tipo.alimentos.vector[i];
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.mercaderia.total+=$scope.grupo.Octubre.tipo.mercaderia.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Noviembre.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Noviembre.tipo.alimentos.total+=$scope.grupo.Noviembre.tipo.alimentos.vector[i];
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.mercaderia.total+=$scope.grupo.Noviembre.tipo.mercaderia.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Diciembre.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Diciembre.tipo.alimentos.total+=$scope.grupo.Diciembre.tipo.alimentos.vector[i];
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.mercaderia.total+=$scope.grupo.Diciembre.tipo.mercaderia.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Total.tipo.alimentos.vector.length;i++){
-                        $scope.grupo.Total.tipo.alimentos.total+=$scope.grupo.Total.tipo.alimentos.vector[i];
+                    for(var i=0;i<$scope.grupo.Total.tipo.mercaderia.vector.length;i++){
+                        $scope.grupo.Total.tipo.mercaderia.total+=$scope.grupo.Total.tipo.mercaderia.vector[i];
                        
                     }
-                    //salud
-                    for(var i=0;i<$scope.grupo.Enero.tipo.salud.vector.length;i++){
-                        $scope.grupo.Enero.tipo.salud.total+=$scope.grupo.Enero.tipo.salud.vector[i];
+                    //arriendo
+                    for(var i=0;i<$scope.grupo.Enero.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Enero.tipo.arriendo.total+=$scope.grupo.Enero.tipo.arriendo.vector[i];
                       
                     }
-                    for(var i=0;i<$scope.grupo.Febrero.tipo.salud.vector.length;i++){
-                        $scope.grupo.Febrero.tipo.salud.total+=$scope.grupo.Febrero.tipo.salud.vector[i];
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.arriendo.total+=$scope.grupo.Febrero.tipo.arriendo.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Marzo.tipo.salud.vector.length;i++){
-                        $scope.grupo.Marzo.tipo.salud.total+=$scope.grupo.Marzo.tipo.salud.vector[i];
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.arriendo.total+=$scope.grupo.Marzo.tipo.arriendo.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Abril.tipo.salud.vector.length;i++){
-                        $scope.grupo.Abril.tipo.salud.total+=$scope.grupo.Abril.tipo.salud.vector[i];
+                    for(var i=0;i<$scope.grupo.Abril.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Abril.tipo.arriendo.total+=$scope.grupo.Abril.tipo.arriendo.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Mayo.tipo.salud.vector.length;i++){
-                        $scope.grupo.Mayo.tipo.salud.total+=$scope.grupo.Mayo.tipo.salud.vector[i];
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.arriendo.total+=$scope.grupo.Mayo.tipo.arriendo.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Junio.tipo.salud.vector.length;i++){
-                        $scope.grupo.Junio.tipo.salud.total+=$scope.grupo.Junio.tipo.salud.vector[i];
+                    for(var i=0;i<$scope.grupo.Junio.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Junio.tipo.arriendo.total+=$scope.grupo.Junio.tipo.arriendo.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Julio.tipo.salud.vector.length;i++){
-                        $scope.grupo.Julio.tipo.salud.total+=$scope.grupo.Julio.tipo.salud.vector[i];
+                    for(var i=0;i<$scope.grupo.Julio.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Julio.tipo.arriendo.total+=$scope.grupo.Julio.tipo.arriendo.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Agosto.tipo.salud.vector.length;i++){
-                        $scope.grupo.Agosto.tipo.salud.total+=$scope.grupo.Agosto.tipo.salud.vector[i];
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.arriendo.total+=$scope.grupo.Agosto.tipo.arriendo.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Septiembre.tipo.salud.vector.length;i++){
-                        $scope.grupo.Septiembre.tipo.salud.total+=$scope.grupo.Septiembre.tipo.salud.vector[i];
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.arriendo.total+=$scope.grupo.Septiembre.tipo.arriendo.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Octubre.tipo.salud.vector.length;i++){
-                        $scope.grupo.Octubre.tipo.salud.total+=$scope.grupo.Octubre.tipo.salud.vector[i];
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.arriendo.total+=$scope.grupo.Octubre.tipo.arriendo.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Noviembre.tipo.salud.vector.length;i++){
-                        $scope.grupo.Noviembre.tipo.salud.total+=$scope.grupo.Noviembre.tipo.salud.vector[i];
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.arriendo.total+=$scope.grupo.Noviembre.tipo.arriendo.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Diciembre.tipo.salud.vector.length;i++){
-                        $scope.grupo.Diciembre.tipo.salud.total+=$scope.grupo.Diciembre.tipo.salud.vector[i];
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.arriendo.total+=$scope.grupo.Diciembre.tipo.arriendo.vector[i];
                        
                     }
-                     for(var i=0;i<$scope.grupo.Total.tipo.salud.vector.length;i++){
-                        $scope.grupo.Total.tipo.salud.total+=$scope.grupo.Total.tipo.salud.vector[i];
+                     for(var i=0;i<$scope.grupo.Total.tipo.arriendo.vector.length;i++){
+                        $scope.grupo.Total.tipo.arriendo.total+=$scope.grupo.Total.tipo.arriendo.vector[i];
                        
                     }
                     
-                    //vivienda
-                    for(var i=0;i<$scope.grupo.Enero.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Enero.tipo.vivienda.total+=$scope.grupo.Enero.tipo.vivienda.vector[i];
+                    //serviciosBasicos
+                    for(var i=0;i<$scope.grupo.Enero.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Enero.tipo.serviciosBasicos.total+=$scope.grupo.Enero.tipo.serviciosBasicos.vector[i];
                       
                     }
-                    for(var i=0;i<$scope.grupo.Febrero.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Febrero.tipo.vivienda.total+=$scope.grupo.Febrero.tipo.vivienda.vector[i];
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.serviciosBasicos.total+=$scope.grupo.Febrero.tipo.serviciosBasicos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Marzo.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Marzo.tipo.vivienda.total+=$scope.grupo.Marzo.tipo.vivienda.vector[i];
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.serviciosBasicos.total+=$scope.grupo.Marzo.tipo.serviciosBasicos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Abril.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Abril.tipo.vivienda.total+=$scope.grupo.Abril.tipo.vivienda.vector[i];
+                    for(var i=0;i<$scope.grupo.Abril.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Abril.tipo.serviciosBasicos.total+=$scope.grupo.Abril.tipo.serviciosBasicos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Mayo.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Mayo.tipo.vivienda.total+=$scope.grupo.Mayo.tipo.vivienda.vector[i];
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.serviciosBasicos.total+=$scope.grupo.Mayo.tipo.serviciosBasicos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Junio.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Junio.tipo.vivienda.total+=$scope.grupo.Junio.tipo.vivienda.vector[i];
+                    for(var i=0;i<$scope.grupo.Junio.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Junio.tipo.serviciosBasicos.total+=$scope.grupo.Junio.tipo.serviciosBasicos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Julio.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Julio.tipo.vivienda.total+=$scope.grupo.Julio.tipo.vivienda.vector[i];
+                    for(var i=0;i<$scope.grupo.Julio.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Julio.tipo.serviciosBasicos.total+=$scope.grupo.Julio.tipo.serviciosBasicos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Agosto.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Agosto.tipo.vivienda.total+=$scope.grupo.Agosto.tipo.vivienda.vector[i];
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.serviciosBasicos.total+=$scope.grupo.Agosto.tipo.serviciosBasicos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Septiembre.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Septiembre.tipo.vivienda.total+=$scope.grupo.Septiembre.tipo.vivienda.vector[i];
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.serviciosBasicos.total+=$scope.grupo.Septiembre.tipo.serviciosBasicos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Octubre.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Octubre.tipo.vivienda.total+=$scope.grupo.Octubre.tipo.vivienda.vector[i];
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.serviciosBasicos.total+=$scope.grupo.Octubre.tipo.serviciosBasicos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Noviembre.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Noviembre.tipo.vivienda.total+=$scope.grupo.Noviembre.tipo.vivienda.vector[i];
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.serviciosBasicos.total+=$scope.grupo.Noviembre.tipo.serviciosBasicos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Diciembre.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Diciembre.tipo.vivienda.total+=$scope.grupo.Diciembre.tipo.vivienda.vector[i];
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.serviciosBasicos.total+=$scope.grupo.Diciembre.tipo.serviciosBasicos.vector[i];
                        
                     }
-                     for(var i=0;i<$scope.grupo.Total.tipo.vivienda.vector.length;i++){
-                        $scope.grupo.Total.tipo.vivienda.total+=$scope.grupo.Total.tipo.vivienda.vector[i];
+                     for(var i=0;i<$scope.grupo.Total.tipo.serviciosBasicos.vector.length;i++){
+                        $scope.grupo.Total.tipo.serviciosBasicos.total+=$scope.grupo.Total.tipo.serviciosBasicos.vector[i];
                        
                     }
                     
-                    //educacion
-                     for(var i=0;i<$scope.grupo.Enero.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Enero.tipo.educacion.total+=$scope.grupo.Enero.tipo.educacion.vector[i];
+                    //sueldos
+                     for(var i=0;i<$scope.grupo.Enero.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Enero.tipo.sueldos.total+=$scope.grupo.Enero.tipo.sueldos.vector[i];
                       
                     }
-                    for(var i=0;i<$scope.grupo.Febrero.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Febrero.tipo.educacion.total+=$scope.grupo.Febrero.tipo.educacion.vector[i];
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.sueldos.total+=$scope.grupo.Febrero.tipo.sueldos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Marzo.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Marzo.tipo.educacion.total+=$scope.grupo.Marzo.tipo.educacion.vector[i];
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.sueldos.total+=$scope.grupo.Marzo.tipo.sueldos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Abril.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Abril.tipo.educacion.total+=$scope.grupo.Abril.tipo.educacion.vector[i];
+                    for(var i=0;i<$scope.grupo.Abril.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Abril.tipo.sueldos.total+=$scope.grupo.Abril.tipo.sueldos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Mayo.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Mayo.tipo.educacion.total+=$scope.grupo.Mayo.tipo.educacion.vector[i];
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.sueldos.total+=$scope.grupo.Mayo.tipo.sueldos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Junio.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Junio.tipo.educacion.total+=$scope.grupo.Junio.tipo.vivienda.vector[i];
+                    for(var i=0;i<$scope.grupo.Junio.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Junio.tipo.sueldos.total+=$scope.grupo.Junio.tipo.serviciosBasicos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Julio.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Julio.tipo.educacion.total+=$scope.grupo.Julio.tipo.educacion.vector[i];
+                    for(var i=0;i<$scope.grupo.Julio.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Julio.tipo.sueldos.total+=$scope.grupo.Julio.tipo.sueldos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Agosto.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Agosto.tipo.educacion.total+=$scope.grupo.Agosto.tipo.educacion.vector[i];
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.sueldos.total+=$scope.grupo.Agosto.tipo.sueldos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Septiembre.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Septiembre.tipo.educacion.total+=$scope.grupo.Septiembre.tipo.educacion.vector[i];
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.sueldos.total+=$scope.grupo.Septiembre.tipo.sueldos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Octubre.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Octubre.tipo.educacion.total+=$scope.grupo.Octubre.tipo.educacion.vector[i];
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.sueldos.total+=$scope.grupo.Octubre.tipo.sueldos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Noviembre.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Noviembre.tipo.educacion.total+=$scope.grupo.Noviembre.tipo.educacion.vector[i];
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.sueldos.total+=$scope.grupo.Noviembre.tipo.sueldos.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Diciembre.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Diciembre.tipo.educacion.total+=$scope.grupo.Diciembre.tipo.educacion.vector[i];
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.sueldos.total+=$scope.grupo.Diciembre.tipo.sueldos.vector[i];
                        
                     }
-                     for(var i=0;i<$scope.grupo.Total.tipo.educacion.vector.length;i++){
-                        $scope.grupo.Total.tipo.educacion.total+=$scope.grupo.Total.tipo.educacion.vector[i];
+                     for(var i=0;i<$scope.grupo.Total.tipo.sueldos.vector.length;i++){
+                        $scope.grupo.Total.tipo.sueldos.total+=$scope.grupo.Total.tipo.sueldos.vector[i];
                        
                     }
                     
-                    //vestimenta
+                    //movilizacion
                     
-                     for(var i=0;i<$scope.grupo.Enero.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Enero.tipo.vestimenta.total+=$scope.grupo.Enero.tipo.vestimenta.vector[i];
+                     for(var i=0;i<$scope.grupo.Enero.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Enero.tipo.movilizacion.total+=$scope.grupo.Enero.tipo.movilizacion.vector[i];
                       
                     }
-                    for(var i=0;i<$scope.grupo.Febrero.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Febrero.tipo.vestimenta.total+=$scope.grupo.Febrero.tipo.vestimenta.vector[i];
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.movilizacion.total+=$scope.grupo.Febrero.tipo.movilizacion.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Marzo.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Marzo.tipo.vestimenta.total+=$scope.grupo.Marzo.tipo.vestimenta.vector[i];
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.movilizacion.total+=$scope.grupo.Marzo.tipo.movilizacion.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Abril.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Abril.tipo.vestimenta.total+=$scope.grupo.Abril.tipo.vestimenta.vector[i];
+                    for(var i=0;i<$scope.grupo.Abril.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Abril.tipo.movilizacion.total+=$scope.grupo.Abril.tipo.movilizacion.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Mayo.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Mayo.tipo.vestimenta.total+=$scope.grupo.Mayo.tipo.vestimenta.vector[i];
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.movilizacion.total+=$scope.grupo.Mayo.tipo.movilizacion.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Junio.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Junio.tipo.vestimenta.total+=$scope.grupo.Junio.tipo.vestimenta.vector[i];
+                    for(var i=0;i<$scope.grupo.Junio.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Junio.tipo.movilizacion.total+=$scope.grupo.Junio.tipo.movilizacion.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Julio.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Julio.tipo.vestimenta.total+=$scope.grupo.Julio.tipo.vestimenta.vector[i];
+                    for(var i=0;i<$scope.grupo.Julio.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Julio.tipo.movilizacion.total+=$scope.grupo.Julio.tipo.movilizacion.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Agosto.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Agosto.tipo.vestimenta.total+=$scope.grupo.Agosto.tipo.vestimenta.vector[i];
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.movilizacion.total+=$scope.grupo.Agosto.tipo.movilizacion.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Septiembre.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Septiembre.tipo.vestimenta.total+=$scope.grupo.Septiembre.tipo.vestimenta.vector[i];
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.movilizacion.total+=$scope.grupo.Septiembre.tipo.movilizacion.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Octubre.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Octubre.tipo.vestimenta.total+=$scope.grupo.Octubre.tipo.vestimenta.vector[i];
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.movilizacion.total+=$scope.grupo.Octubre.tipo.movilizacion.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Noviembre.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Noviembre.tipo.vestimenta.total+=$scope.grupo.Noviembre.tipo.vestimenta.vector[i];
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.movilizacion.total+=$scope.grupo.Noviembre.tipo.movilizacion.vector[i];
                        
                     }
-                    for(var i=0;i<$scope.grupo.Diciembre.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Diciembre.tipo.vestimenta.total+=$scope.grupo.Diciembre.tipo.vestimenta.vector[i];
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.movilizacion.total+=$scope.grupo.Diciembre.tipo.movilizacion.vector[i];
                        
                     }
-                     for(var i=0;i<$scope.grupo.Total.tipo.vestimenta.vector.length;i++){
-                        $scope.grupo.Total.tipo.vestimenta.total+=$scope.grupo.Total.tipo.vestimenta.vector[i];
+                     for(var i=0;i<$scope.grupo.Total.tipo.movilizacion.vector.length;i++){
+                        $scope.grupo.Total.tipo.movilizacion.total+=$scope.grupo.Total.tipo.movilizacion.vector[i];
                        
                     }
                     //otros
@@ -902,6 +1164,219 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
                         $scope.grupo.Total.tipo.otros.total+=$scope.grupo.Total.tipo.otros.vector[i];
                        
                     }
+                    
+                     //viaticos
+                    for(var i=0;i<$scope.grupo.Enero.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Enero.tipo.viaticos.total+=$scope.grupo.Enero.tipo.viaticos.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.viaticos.total+=$scope.grupo.Febrero.tipo.viaticos.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.viaticos.total+=$scope.grupo.Marzo.tipo.viaticos.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Abril.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Abril.tipo.viaticos.total+=$scope.grupo.Abril.tipo.viaticos.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.viaticos.total+=$scope.grupo.Mayo.tipo.viaticos.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Junio.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Junio.tipo.viaticos.total+=$scope.grupo.Junio.tipo.viaticos.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Julio.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Julio.tipo.viaticos.total+=$scope.grupo.Julio.tipo.viaticos.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.viaticos.total+=$scope.grupo.Agosto.tipo.viaticos.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.viaticos.total+=$scope.grupo.Septiembre.tipo.viaticos.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.viaticos.total+=$scope.grupo.Octubre.tipo.viaticos.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.viaticos.total+=$scope.grupo.Noviembre.tipo.viaticos.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.viaticos.total+=$scope.grupo.Diciembre.tipo.viaticos.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Total.tipo.viaticos.vector.length;i++){
+                        $scope.grupo.Total.tipo.viaticos.total+=$scope.grupo.Total.tipo.viaticos.vector[i];
+                       
+                    }
+                     //capacitacion
+                    for(var i=0;i<$scope.grupo.Enero.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Enero.tipo.capacitacion.total+=$scope.grupo.Enero.tipo.capacitacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.capacitacion.total+=$scope.grupo.Febrero.tipo.capacitacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.capacitacion.total+=$scope.grupo.Marzo.tipo.capacitacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Abril.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Abril.tipo.capacitacion.total+=$scope.grupo.Abril.tipo.capacitacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.capacitacion.total+=$scope.grupo.Mayo.tipo.capacitacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Junio.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Junio.tipo.capacitacion.total+=$scope.grupo.Junio.tipo.capacitacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Julio.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Julio.tipo.capacitacion.total+=$scope.grupo.Julio.tipo.capacitacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.capacitacion.total+=$scope.grupo.Agosto.tipo.capacitacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.capacitacion.total+=$scope.grupo.Septiembre.tipo.capacitacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.capacitacion.total+=$scope.grupo.Octubre.tipo.capacitacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.capacitacion.total+=$scope.grupo.Noviembre.tipo.capacitacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.capacitacion.total+=$scope.grupo.Diciembre.tipo.capacitacion.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Total.tipo.capacitacion.vector.length;i++){
+                        $scope.grupo.Total.tipo.capacitacion.total+=$scope.grupo.Total.tipo.capacitacion.vector[i];
+                       
+                    }
+                     //suministros
+                    for(var i=0;i<$scope.grupo.Enero.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Enero.tipo.suministros.total+=$scope.grupo.Enero.tipo.suministros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.suministros.total+=$scope.grupo.Febrero.tipo.suministros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.suministros.total+=$scope.grupo.Marzo.tipo.suministros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Abril.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Abril.tipo.suministros.total+=$scope.grupo.Abril.tipo.suministros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.suministros.total+=$scope.grupo.Mayo.tipo.suministros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Junio.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Junio.tipo.suministros.total+=$scope.grupo.Junio.tipo.suministros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Julio.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Julio.tipo.suministros.total+=$scope.grupo.Julio.tipo.suministros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.suministros.total+=$scope.grupo.Agosto.tipo.suministros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.suministros.total+=$scope.grupo.Septiembre.tipo.suministros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.suministros.total+=$scope.grupo.Octubre.tipo.suministros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.suministros.total+=$scope.grupo.Noviembre.tipo.suministros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.suministros.total+=$scope.grupo.Diciembre.tipo.suministros.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Total.tipo.suministros.vector.length;i++){
+                        $scope.grupo.Total.tipo.suministros.total+=$scope.grupo.Total.tipo.suministros.vector[i];
+                       
+                    }
+                     //herramientas
+                    for(var i=0;i<$scope.grupo.Enero.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Enero.tipo.herramientas.total+=$scope.grupo.Enero.tipo.herramientas.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Febrero.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Febrero.tipo.herramientas.total+=$scope.grupo.Febrero.tipo.herramientas.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Marzo.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Marzo.tipo.herramientas.total+=$scope.grupo.Marzo.tipo.herramientas.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Abril.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Abril.tipo.herramientas.total+=$scope.grupo.Abril.tipo.herramientas.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Mayo.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Mayo.tipo.herramientas.total+=$scope.grupo.Mayo.tipo.herramientas.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Junio.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Junio.tipo.herramientas.total+=$scope.grupo.Junio.tipo.herramientas.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Julio.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Julio.tipo.herramientas.total+=$scope.grupo.Julio.tipo.herramientas.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Agosto.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Agosto.tipo.herramientas.total+=$scope.grupo.Agosto.tipo.herramientas.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Septiembre.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Septiembre.tipo.herramientas.total+=$scope.grupo.Septiembre.tipo.herramientas.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Octubre.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Octubre.tipo.herramientas.total+=$scope.grupo.Octubre.tipo.herramientas.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Noviembre.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Noviembre.tipo.herramientas.total+=$scope.grupo.Noviembre.tipo.herramientas.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Diciembre.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Diciembre.tipo.herramientas.total+=$scope.grupo.Diciembre.tipo.herramientas.vector[i];
+                       
+                    }
+                    for(var i=0;i<$scope.grupo.Total.tipo.herramientas.vector.length;i++){
+                        $scope.grupo.Total.tipo.herramientas.total+=$scope.grupo.Total.tipo.herramientas.vector[i];
+                       
+                    }
                    
                 }
             }
@@ -917,27 +1392,43 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             $scope.mostrar=true;
           $scope.periodo='';
           $scope.factXperiodo=[];
-           $scope.grupo={
+              $scope.grupo={
             Enero:{
                 nombre:'Enero',
-                tipo:{
-                    alimentos:{
+         tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -951,23 +1442,39 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             Febrero:{
                 nombre:'Febrero',
                 tipo:{
-                    alimentos:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -981,23 +1488,39 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             Marzo:{
                 nombre:'Marzo',
                 tipo:{
-                    alimentos:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -1010,24 +1533,40 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             },     
             Abril:{
                 nombre:'Abril',
-                tipo:{
-                    alimentos:{
+            tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -1040,24 +1579,40 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             },
             Mayo:{
                 nombre:'Mayo',
-                tipo:{
-                    alimentos:{
+               tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -1070,23 +1625,39 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             },
             Junio:{nombre:'Junio',
                 tipo:{
-                    alimentos:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -1095,27 +1666,45 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
                         total:0
                     },
                     
-                }},
+                }
+              
+            },
             Julio:{
                 nombre:'Julio',
-                tipo:{
-                    alimentos:{
+             tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -1128,24 +1717,40 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             },
             Agosto:{
                 nombre:'Agosto',
-                tipo:{
-                    alimentos:{
+             tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -1158,24 +1763,40 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             },
             Septiembre:{
                 nombre:'Septiembre',
-                tipo:{
-                    alimentos:{
+              tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -1189,23 +1810,39 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             Octubre:{
                 nombre:'Octubre',
                 tipo:{
-                    alimentos:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -1218,24 +1855,40 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             },
             Noviembre:{
                 nombre:'Noviembre',
-                tipo:{
-                    alimentos:{
+              tipo:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -1249,23 +1902,39 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             Diciembre:{
                 nombre:'Diciembre',
                 tipo:{
-                    alimentos:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -1279,23 +1948,39 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             Total:{
                 nombre:'Total',
                 tipo:{
-                    alimentos:{
+                    mercaderia:{
                         vector:[],
                         total:0
                     },
-                    salud:{
+                    arriendo:{
                         vector:[],
                         total:0
                     },
-                    vivienda:{
+                    serviciosBasicos:{
                         vector:[],
                         total:0
                     },
-                    educacion:{
+                    sueldos:{
                         vector:[],
                         total:0
                     },
-                    vestimenta:{
+                    movilizacion:{
+                        vector:[],
+                        total:0
+                    },
+                     viaticos:{
+                        vector:[],
+                        total:0
+                    },
+                    capacitacion:{
+                        vector:[],
+                        total:0
+                    },
+                    suministros:{
+                        vector:[],
+                        total:0
+                    },
+                     herramientas:{
                         vector:[],
                         total:0
                     },
@@ -1308,6 +1993,7 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             }
             
         }
+           
         }
 
       
@@ -1317,110 +2003,164 @@ aplicacion.controller('gastosNegocioMensualCtrl', [
             var data = [
                 [' -----  ','Resumen de Gastos Personales Mensual',' ------','---'],
                 ['Periodo',$scope.periodo,'Usuario',$scope.Facturas[0].idComprador.nombre+' ' + $scope.Facturas[0].idComprador.apellido ],
-                ['Mes','Alimentos','Salud','Vivienda','Educacion','Vestimenta','Otros'],
+                ['Mes','mercaderia','arriendo','serviciosBasicos','sueldos','movilizacion','Otros'],
                 [$scope.grupo.Enero.nombre,
-                $scope.grupo.Enero.tipo.alimentos.total,
-                $scope.grupo.Enero.tipo.salud.total,
-                $scope.grupo.Enero.tipo.vivienda.total,
-                $scope.grupo.Enero.tipo.educacion.total,
-                $scope.grupo.Enero.tipo.vestimenta.total,
-                $scope.grupo.Enero.tipo.otros.total],
+                $scope.grupo.Enero.tipo.mercaderia.total,
+                $scope.grupo.Enero.tipo.arriendo.total,
+                $scope.grupo.Enero.tipo.serviciosBasicos.total,
+                $scope.grupo.Enero.tipo.sueldos.total,
+                $scope.grupo.Enero.tipo.movilizacion.total,
+                $scope.grupo.Enero.tipo.otros.total,
+                
+                 $scope.grupo.Enero.tipo.viaticos.total,
+                $scope.grupo.Enero.tipo.capacitacion.total,
+                $scope.grupo.Enero.tipo.suministros.total,
+                $scope.grupo.Enero.tipo.herramientas.total,],
                 
                 [$scope.grupo.Febrero.nombre,
-                $scope.grupo.Febrero.tipo.alimentos.total,
-                $scope.grupo.Febrero.tipo.salud.total,
-                $scope.grupo.Febrero.tipo.vivienda.total,
-                $scope.grupo.Febrero.tipo.educacion.total,
-                $scope.grupo.Febrero.tipo.vestimenta.total,
-                $scope.grupo.Febrero.tipo.otros.total],
+                $scope.grupo.Febrero.tipo.mercaderia.total,
+                $scope.grupo.Febrero.tipo.arriendo.total,
+                $scope.grupo.Febrero.tipo.serviciosBasicos.total,
+                $scope.grupo.Febrero.tipo.sueldos.total,
+                $scope.grupo.Febrero.tipo.movilizacion.total,
+                $scope.grupo.Febrero.tipo.otros.total,
+                 $scope.grupo.Febrero.tipo.viaticos.total,
+                $scope.grupo.Febrero.tipo.capacitacion.total,
+                $scope.grupo.Febrero.tipo.suministros.total,
+                $scope.grupo.Febrero.tipo.herramientas.total,],
                 
                 [$scope.grupo.Marzo.nombre,
-                $scope.grupo.Marzo.tipo.alimentos.total,
-                $scope.grupo.Marzo.tipo.salud.total,
-                $scope.grupo.Marzo.tipo.vivienda.total,
-                $scope.grupo.Marzo.tipo.educacion.total,
-                $scope.grupo.Marzo.tipo.vestimenta.total,
-                $scope.grupo.Marzo.tipo.otros.total],
+                $scope.grupo.Marzo.tipo.mercaderia.total,
+                $scope.grupo.Marzo.tipo.arriendo.total,
+                $scope.grupo.Marzo.tipo.serviciosBasicos.total,
+                $scope.grupo.Marzo.tipo.sueldos.total,
+                $scope.grupo.Marzo.tipo.movilizacion.total,
+                $scope.grupo.Marzo.tipo.otros.total,
+                 $scope.grupo.Marzo.tipo.viaticos.total,
+                $scope.grupo.Marzo.tipo.capacitacion.total,
+                $scope.grupo.Marzo.tipo.suministros.total,
+                $scope.grupo.Marzo.tipo.herramientas.total,],
                 
                 [$scope.grupo.Abril.nombre,
-                $scope.grupo.Abril.tipo.alimentos.total,
-                $scope.grupo.Abril.tipo.salud.total,
-                $scope.grupo.Abril.tipo.vivienda.total,
-                $scope.grupo.Abril.tipo.educacion.total,
-                $scope.grupo.Abril.tipo.vestimenta.total,
-                $scope.grupo.Abril.tipo.otros.total],
+                $scope.grupo.Abril.tipo.mercaderia.total,
+                $scope.grupo.Abril.tipo.arriendo.total,
+                $scope.grupo.Abril.tipo.serviciosBasicos.total,
+                $scope.grupo.Abril.tipo.sueldos.total,
+                $scope.grupo.Abril.tipo.movilizacion.total,
+                $scope.grupo.Abril.tipo.otros.total,
+                 $scope.grupo.Abril.tipo.viaticos.total,
+                $scope.grupo.Abril.tipo.capacitacion.total,
+                $scope.grupo.Abril.tipo.suministros.total,
+                $scope.grupo.Abril.tipo.herramientas.total,],
                 
                 [$scope.grupo.Mayo.nombre,
-                $scope.grupo.Mayo.tipo.alimentos.total,
-                $scope.grupo.Mayo.tipo.salud.total,
-                $scope.grupo.Mayo.tipo.vivienda.total,
-                $scope.grupo.Mayo.tipo.educacion.total,
-                $scope.grupo.Mayo.tipo.vestimenta.total,
-                $scope.grupo.Mayo.tipo.otros.total],
+                $scope.grupo.Mayo.tipo.mercaderia.total,
+                $scope.grupo.Mayo.tipo.arriendo.total,
+                $scope.grupo.Mayo.tipo.serviciosBasicos.total,
+                $scope.grupo.Mayo.tipo.sueldos.total,
+                $scope.grupo.Mayo.tipo.movilizacion.total,
+                $scope.grupo.Mayo.tipo.otros.total,
+                 $scope.grupo.Mayo.tipo.viaticos.total,
+                $scope.grupo.Mayo.tipo.capacitacion.total,
+                $scope.grupo.Mayo.tipo.suministros.total,
+                $scope.grupo.Mayo.tipo.herramientas.total,],
                 
                 [$scope.grupo.Junio.nombre,
-                $scope.grupo.Junio.tipo.alimentos.total,
-                $scope.grupo.Junio.tipo.salud.total,
-                $scope.grupo.Junio.tipo.vivienda.total,
-                $scope.grupo.Junio.tipo.educacion.total,
-                $scope.grupo.Junio.tipo.vestimenta.total,
-                $scope.grupo.Junio.tipo.otros.total],
+                $scope.grupo.Junio.tipo.mercaderia.total,
+                $scope.grupo.Junio.tipo.arriendo.total,
+                $scope.grupo.Junio.tipo.serviciosBasicos.total,
+                $scope.grupo.Junio.tipo.sueldos.total,
+                $scope.grupo.Junio.tipo.movilizacion.total,
+                $scope.grupo.Junio.tipo.otros.total,
+                 $scope.grupo.Junio.tipo.viaticos.total,
+                $scope.grupo.Junio.tipo.capacitacion.total,
+                $scope.grupo.Junio.tipo.suministros.total,
+                $scope.grupo.Junio.tipo.herramientas.total,
+                 ],
                 
                 [$scope.grupo.Julio.nombre,
-                $scope.grupo.Julio.tipo.alimentos.total,
-                $scope.grupo.Julio.tipo.salud.total,
-                $scope.grupo.Julio.tipo.vivienda.total,
-                $scope.grupo.Julio.tipo.educacion.total,
-                $scope.grupo.Julio.tipo.vestimenta.total,
-                $scope.grupo.Julio.tipo.otros.total],
+                $scope.grupo.Julio.tipo.mercaderia.total,
+                $scope.grupo.Julio.tipo.arriendo.total,
+                $scope.grupo.Julio.tipo.serviciosBasicos.total,
+                $scope.grupo.Julio.tipo.sueldos.total,
+                $scope.grupo.Julio.tipo.movilizacion.total,
+                $scope.grupo.Julio.tipo.otros.total,
+                 $scope.grupo.Julio.tipo.viaticos.total,
+                $scope.grupo.Julio.tipo.capacitacion.total,
+                $scope.grupo.Julio.tipo.suministros.total,
+                $scope.grupo.Julio.tipo.herramientas.total,],
                 
                 [$scope.grupo.Agosto.nombre,
-                $scope.grupo.Agosto.tipo.alimentos.total,
-                $scope.grupo.Agosto.tipo.salud.total,
-                $scope.grupo.Agosto.tipo.vivienda.total,
-                $scope.grupo.Agosto.tipo.educacion.total,
-                $scope.grupo.Agosto.tipo.vestimenta.total,
-                $scope.grupo.Agosto.tipo.otros.total],
+                $scope.grupo.Agosto.tipo.mercaderia.total,
+                $scope.grupo.Agosto.tipo.arriendo.total,
+                $scope.grupo.Agosto.tipo.serviciosBasicos.total,
+                $scope.grupo.Agosto.tipo.sueldos.total,
+                $scope.grupo.Agosto.tipo.movilizacion.total,
+                $scope.grupo.Agosto.tipo.otros.total,
+                 $scope.grupo.Agosto.tipo.viaticos.total,
+                $scope.grupo.Agosto.tipo.capacitacion.total,
+                $scope.grupo.Agosto.tipo.suministros.total,
+                $scope.grupo.Agosto.tipo.herramientas.total,],
                 
                 [$scope.grupo.Septiembre.nombre,
-                $scope.grupo.Septiembre.tipo.alimentos.total,
-                $scope.grupo.Septiembre.tipo.salud.total,
-                $scope.grupo.Septiembre.tipo.vivienda.total,
-                $scope.grupo.Septiembre.tipo.educacion.total,
-                $scope.grupo.Septiembre.tipo.vestimenta.total,
-                $scope.grupo.Septiembre.tipo.otros.total],
+                $scope.grupo.Septiembre.tipo.mercaderia.total,
+                $scope.grupo.Septiembre.tipo.arriendo.total,
+                $scope.grupo.Septiembre.tipo.serviciosBasicos.total,
+                $scope.grupo.Septiembre.tipo.sueldos.total,
+                $scope.grupo.Septiembre.tipo.movilizacion.total,
+                $scope.grupo.Septiembre.tipo.otros.total,
+                 $scope.grupo.Septiembre.tipo.viaticos.total,
+                $scope.grupo.Septiembre.tipo.capacitacion.total,
+                $scope.grupo.Septiembre.tipo.suministros.total,
+                $scope.grupo.Septiembre.tipo.herramientas.total,],
                 
                 [$scope.grupo.Octubre.nombre,
-                $scope.grupo.Octubre.tipo.alimentos.total,
-                $scope.grupo.Octubre.tipo.salud.total,
-                $scope.grupo.Octubre.tipo.vivienda.total,
-                $scope.grupo.Octubre.tipo.educacion.total,
-                $scope.grupo.Octubre.tipo.vestimenta.total,
-                $scope.grupo.Octubre.tipo.otros.total],
+                $scope.grupo.Octubre.tipo.mercaderia.total,
+                $scope.grupo.Octubre.tipo.arriendo.total,
+                $scope.grupo.Octubre.tipo.serviciosBasicos.total,
+                $scope.grupo.Octubre.tipo.sueldos.total,
+                $scope.grupo.Octubre.tipo.movilizacion.total,
+                $scope.grupo.Octubre.tipo.otros.total,
+                 $scope.grupo.Octubre.tipo.viaticos.total,
+                $scope.grupo.Octubre.tipo.capacitacion.total,
+                $scope.grupo.Octubre.tipo.suministros.total,
+                $scope.grupo.Octubre.tipo.herramientas.total,],
                 
                 [$scope.grupo.Noviembre.nombre,
-                $scope.grupo.Noviembre.tipo.alimentos.total,
-                $scope.grupo.Noviembre.tipo.salud.total,
-                $scope.grupo.Noviembre.tipo.vivienda.total,
-                $scope.grupo.Noviembre.tipo.educacion.total,
-                $scope.grupo.Noviembre.tipo.vestimenta.total,
-                $scope.grupo.Noviembre.tipo.otros.total],
+                $scope.grupo.Noviembre.tipo.mercaderia.total,
+                $scope.grupo.Noviembre.tipo.arriendo.total,
+                $scope.grupo.Noviembre.tipo.serviciosBasicos.total,
+                $scope.grupo.Noviembre.tipo.sueldos.total,
+                $scope.grupo.Noviembre.tipo.movilizacion.total,
+                $scope.grupo.Noviembre.tipo.otros.total,
+                 $scope.grupo.Noviembre.tipo.viaticos.total,
+                $scope.grupo.Noviembre.tipo.capacitacion.total,
+                $scope.grupo.Noviembre.tipo.suministros.total,
+                $scope.grupo.Noviembre.tipo.herramientas.total,],
                 
                 [$scope.grupo.Diciembre.nombre,
-                $scope.grupo.Diciembre.tipo.alimentos.total,
-                $scope.grupo.Diciembre.tipo.salud.total,
-                $scope.grupo.Diciembre.tipo.vivienda.total,
-                $scope.grupo.Diciembre.tipo.educacion.total,
-                $scope.grupo.Diciembre.tipo.vestimenta.total,
-                $scope.grupo.Diciembre.tipo.otros.total],
+                $scope.grupo.Diciembre.tipo.mercaderia.total,
+                $scope.grupo.Diciembre.tipo.arriendo.total,
+                $scope.grupo.Diciembre.tipo.serviciosBasicos.total,
+                $scope.grupo.Diciembre.tipo.sueldos.total,
+                $scope.grupo.Diciembre.tipo.movilizacion.total,
+                $scope.grupo.Diciembre.tipo.otros.total,
+                 $scope.grupo.Diciembre.tipo.viaticos.total,
+                $scope.grupo.Diciembre.tipo.capacitacion.total,
+                $scope.grupo.Diciembre.tipo.suministros.total,
+                $scope.grupo.Diciembre.tipo.herramientas.total,],
                 
                 [$scope.grupo.Total.nombre,
-                $scope.grupo.Total.tipo.alimentos.total,
-                $scope.grupo.Total.tipo.salud.total,
-                $scope.grupo.Total.tipo.vivienda.total,
-                $scope.grupo.Total.tipo.educacion.total,
-                $scope.grupo.Total.tipo.vestimenta.total,
-                $scope.grupo.Total.tipo.otros.total],
+                $scope.grupo.Total.tipo.mercaderia.total,
+                $scope.grupo.Total.tipo.arriendo.total,
+                $scope.grupo.Total.tipo.serviciosBasicos.total,
+                $scope.grupo.Total.tipo.sueldos.total,
+                $scope.grupo.Total.tipo.movilizacion.total,
+                $scope.grupo.Total.tipo.otros.total,
+                 $scope.grupo.Total.tipo.viaticos.total,
+                $scope.grupo.Total.tipo.capacitacion.total,
+                $scope.grupo.Total.tipo.suministros.total,
+                $scope.grupo.Total.tipo.herramientas.total,],
                 
             ];
             var csvContent = '';

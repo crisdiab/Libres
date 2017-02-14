@@ -1,243 +1,305 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3">
-
-      <div class="row">
-        <h2>Logeado como: </h2>
-        {{facturas[0].idComprador.nombre}}
-        {{facturas[0].idComprador.apellido}}
-      </div>
-    </div>
-    <div class="col-md-3">
-
-    </div>
-    <div class="col-md-3"></div>
-    <div class="col-md-3"></div>
 
 
-  </div>
-  <div class="row"></div>
-  <div class="row">
 
     <div class="col-md-4">
+
       <div class="input-group">
+
         <input type="text" ng-model="periodo"class="form-control" placeholder="Buscar periodo...">
+
         <span class="input-group-btn">
-        <button class="btn btn-success" type="button" ng-click="NegxPeriodo(facturas,periodo)" >Buscar</button>
+
+        <button class="btn btn-success" type="button" ng-click="FacturasXPeriodo(Facturas,periodo)" ng-show="mostrar" >Buscar</button>
+
+
+
 
 
       </span>
 
-        <br>tipos
-        <br>
-        {{factXtipo}}
       </div><!-- /input-group -->
+      
+
     </div><!-- /.col-lg-6 -->
-  </div>
-  <a class="btn btn-info" type="button" ng-mousedown="nuevaBusqueda()" >new busqueda</a>
-  <div class="row">
-    <table class="table table-hover" id="tblReporte" >
+
+<table class="table table-hover">
+
       <thead>
+
       <tr>
+
         <th>Mes</th>
+
         <th>Mercaderia</th>
+
         <th>Arriendo</th>
+
         <th>Servicios Basicos</th>
+
         <th>Sueldos</th>
+
         <th>Movilizacion</th>
+
+        <th>Otros</th>
         <th>Viaticos</th>
         <th>Capacitacion</th>
-        <th>Suministros</th>
-        <th>Herramientas</th>
-        <th>Otros</th>
+        <th>suministros</th>
+        <th>herramientas</th>
+        
+
+
 
       </tr>
+
       </thead>
-
-
-
-
-
 
       <tbody>
 
+      <!--ng-repeat="factura in factXperiodo"-->
+
+
+
+      <!--<tr ng-repeat="mes in meses">-->
+
+      <!--<td >{{mes}}</td>-->
+
+
+
+      <!--</tr>-->
+
       <tr>
-        <td>Enero</td>
-        <td>{{sumaCategoria(tipos.mercaderia1,sumas.mercaderia1)}}</td>
-        <td>{{sumaCategoria(tipos.arriendo1,sumas.arriendo1)}}</td>
-        <td>{{sumaCategoria(tipos.serviciosBasico1,sumas.serviciosBasico1)}}</td>
-        <td>{{sumaCategoria(tipos.sueldos1,sumas.sueldos1)}}</td>
-        <td>{{sumaCategoria(tipos.movilizacion1,sumas.movilizacion1)}}</td>
-        <td>{{sumaCategoria(tipos.viaticos1,sumas.viaticos1)}}</td>
-        <td>{{sumaCategoria(tipos.capacitacion1,sumas.capacitacion1)}}</td>
-        <td>{{sumaCategoria(tipos.suministros1,sumas.suministros1)}}</td>
-        <td>{{sumaCategoria(tipos.herramientas1,sumas.herramientas1)}}</td>
-        <td>{{sumaCategoria(tipos.otros1,sumas.otros1)}}</td>
+
+        <td>{{grupo.Enero.nombre}}</td>
+        <td>{{grupo.Enero.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Enero.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Enero.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Enero.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Enero.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Enero.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Enero.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Enero.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Enero.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Enero.tipo.herramientas.total|currency}}</td>
+
       </tr>
-      <tr>
-        <td>Febrero</td>
-        <td>{{sumaCategoria(tipos.mercaderia2,sumas.mercaderia2)}}</td>
-        <td>{{sumaCategoria(tipos.arriendo2,sumas.arriendo2)}}</td>
-        <td>{{sumaCategoria(tipos.serviciosBasico2,sumas.serviciosBasico2)}}</td>
-        <td>{{sumaCategoria(tipos.sueldos2,sumas.sueldos2)}}</td>
-        <td>{{sumaCategoria(tipos.movilizacion2,sumas.movilizacion2)}}</td>
-        <td>{{sumaCategoria(tipos.viaticos2,sumas.viaticos2)}}</td>
-        <td>{{sumaCategoria(tipos.capacitacion2,sumas.capacitacion2)}}</td>
-        <td>{{sumaCategoria(tipos.suministros2,sumas.suministros2)}}</td>
-        <td>{{sumaCategoria(tipos.herramientas2,sumas.herramientas2)}}</td>
-        <td>{{sumaCategoria(tipos.otros2,sumas.otros2)}}</td>
+      
+        <tr>
+
+        <td>{{grupo.Febrero.nombre}}</td>
+        <td>{{grupo.Febrero.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Febrero.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Febrero.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Febrero.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Febrero.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Febrero.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Febrero.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Febrero.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Febrero.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Febrero.tipo.herramientas.total|currency}}</td>
+
       </tr>
-      <tr>
-        <td>Marzo</td>
-        <td>{{sumaCategoria(tipos.mercaderia3,sumas.mercaderia3)}}</td>
-        <td>{{sumaCategoria(tipos.arriendo3,sumas.arriendo3)}}</td>
-        <td>{{sumaCategoria(tipos.serviciosBasico3,sumas.serviciosBasico3)}}</td>
-        <td>{{sumaCategoria(tipos.sueldos3,sumas.sueldos3)}}</td>
-        <td>{{sumaCategoria(tipos.movilizacion3,sumas.movilizacion3)}}</td>
-        <td>{{sumaCategoria(tipos.viaticos3,sumas.viaticos3)}}</td>
-        <td>{{sumaCategoria(tipos.capacitacion3,sumas.capacitacion3)}}</td>
-        <td>{{sumaCategoria(tipos.suministros3,sumas.suministros3)}}</td>
-        <td>{{sumaCategoria(tipos.herramientas3,sumas.herramientas3)}}</td>
-        <td>{{sumaCategoria(tipos.otros3,sumas.otros3)}}</td>
+      
+        <tr>
+
+        <td>{{grupo.Marzo.nombre}}</td>
+        <td>{{grupo.Marzo.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Marzo.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Marzo.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Marzo.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Marzo.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Marzo.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Marzo.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Marzo.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Marzo.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Marzo.tipo.herramientas.total|currency}}</td>
+
       </tr>
-      <tr>
-        <td>Abril</td>
-        <td>{{sumaCategoria(tipos.mercaderia4,sumas.mercaderia4)}}</td>
-        <td>{{sumaCategoria(tipos.arriendo4,sumas.arriendo4)}}</td>
-        <td>{{sumaCategoria(tipos.serviciosBasico4,sumas.serviciosBasico4)}}</td>
-        <td>{{sumaCategoria(tipos.sueldos4,sumas.sueldos4)}}</td>
-        <td>{{sumaCategoria(tipos.movilizacion4,sumas.movilizacion4)}}</td>
-        <td>{{sumaCategoria(tipos.viaticos4,sumas.viaticos4)}}</td>
-        <td>{{sumaCategoria(tipos.capacitacion4,sumas.capacitacion4)}}</td>
-        <td>{{sumaCategoria(tipos.suministros4,sumas.suministros4)}}</td>
-        <td>{{sumaCategoria(tipos.herramientas4,sumas.herramientas4)}}</td>
-        <td>{{sumaCategoria(tipos.otros4,sumas.otros4)}}</td>
+      
+        <tr>
+
+        <td>{{grupo.Abril.nombre}}</td>
+        <td>{{grupo.Abril.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Abril.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Abril.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Abril.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Abril.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Abril.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Abril.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Abril.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Abril.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Abril.tipo.herramientas.total|currency}}</td>
+
       </tr>
-      <tr>
-        <td>Mayo</td>
-        <td>{{sumaCategoria(tipos.mercaderia5,sumas.mercaderia5)}}</td>
-        <td>{{sumaCategoria(tipos.arriendo5,sumas.arriendo5)}}</td>
-        <td>{{sumaCategoria(tipos.serviciosBasico5,sumas.serviciosBasico5)}}</td>
-        <td>{{sumaCategoria(tipos.sueldos5,sumas.sueldos5)}}</td>
-        <td>{{sumaCategoria(tipos.movilizacion5,sumas.movilizacion5)}}</td>
-        <td>{{sumaCategoria(tipos.viaticos5,sumas.viaticos5)}}</td>
-        <td>{{sumaCategoria(tipos.capacitacion5,sumas.capacitacion5)}}</td>
-        <td>{{sumaCategoria(tipos.suministros5,sumas.suministros5)}}</td>
-        <td>{{sumaCategoria(tipos.herramientas5,sumas.herramientas5)}}</td>
-        <td>{{sumaCategoria(tipos.otros5,sumas.otros5)}}</td>
+      
+        <tr>
+
+        <td>{{grupo.Mayo.nombre}}</td>
+        <td>{{grupo.Mayo.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Mayo.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Mayo.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Mayo.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Mayo.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Mayo.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Mayo.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Mayo.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Mayo.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Mayo.tipo.herramientas.total|currency}}</td>
+
       </tr>
-      <tr>
-        <td>Junio</td>
-        <td>{{sumaCategoria(tipos.mercaderia6,sumas.mercaderia6)}}</td>
-        <td>{{sumaCategoria(tipos.arriendo6,sumas.arriendo6)}}</td>
-        <td>{{sumaCategoria(tipos.serviciosBasico6,sumas.serviciosBasico6)}}</td>
-        <td>{{sumaCategoria(tipos.sueldos6,sumas.sueldos6)}}</td>
-        <td>{{sumaCategoria(tipos.movilizacion6,sumas.movilizacion6)}}</td>
-        <td>{{sumaCategoria(tipos.viaticos6,sumas.viaticos6)}}</td>
-        <td>{{sumaCategoria(tipos.capacitacion6,sumas.capacitacion6)}}</td>
-        <td>{{sumaCategoria(tipos.suministros6,sumas.suministros6)}}</td>
-        <td>{{sumaCategoria(tipos.herramientas6,sumas.herramientas6)}}</td>
-        <td>{{sumaCategoria(tipos.otros6,sumas.otros6)}}</td>
+      
+        <tr>
+
+        <td>{{grupo.Junio.nombre}}</td>
+        <td>{{grupo.Junio.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Junio.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Junio.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Junio.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Junio.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Junio.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Junio.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Junio.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Junio.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Junio.tipo.herramientas.total|currency}}</td>
+
       </tr>
-      <tr>
-        <td>Julio</td>
-        <td>{{sumaCategoria(tipos.mercaderia7,sumas.mercaderia7)}}</td>
-        <td>{{sumaCategoria(tipos.arriendo7,sumas.arriendo7)}}</td>
-        <td>{{sumaCategoria(tipos.serviciosBasico7,sumas.serviciosBasico7)}}</td>
-        <td>{{sumaCategoria(tipos.sueldos7,sumas.sueldos7)}}</td>
-        <td>{{sumaCategoria(tipos.movilizacion7,sumas.movilizacion7)}}</td>
-        <td>{{sumaCategoria(tipos.viaticos7,sumas.viaticos7)}}</td>
-        <td>{{sumaCategoria(tipos.capacitacion7,sumas.capacitacion7)}}</td>
-        <td>{{sumaCategoria(tipos.suministros7,sumas.suministros7)}}</td>
-        <td>{{sumaCategoria(tipos.herramientas7,sumas.herramientas7)}}</td>
-        <td>{{sumaCategoria(tipos.otros7,sumas.otros7)}}</td>
+      
+        <tr>
+
+        <td>{{grupo.Julio.nombre}}</td>
+        <td>{{grupo.Julio.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Julio.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Julio.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Julio.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Julio.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Julio.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Julio.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Julio.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Julio.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Julio.tipo.herramientas.total|currency}}</td>
+
       </tr>
-      <tr>
-        <td>Agosto</td>
-        <td>{{sumaCategoria(tipos.mercaderia8,sumas.mercaderia8)}}</td>
-        <td>{{sumaCategoria(tipos.arriendo8,sumas.arriendo8)}}</td>
-        <td>{{sumaCategoria(tipos.serviciosBasico8,sumas.serviciosBasico8)}}</td>
-        <td>{{sumaCategoria(tipos.sueldos8,sumas.sueldos8)}}</td>
-        <td>{{sumaCategoria(tipos.movilizacion8,sumas.movilizacion8)}}</td>
-        <td>{{sumaCategoria(tipos.viaticos8,sumas.viaticos8)}}</td>
-        <td>{{sumaCategoria(tipos.capacitacion8,sumas.capacitacion8)}}</td>
-        <td>{{sumaCategoria(tipos.suministros8,sumas.suministros8)}}</td>
-        <td>{{sumaCategoria(tipos.herramientas8,sumas.herramientas8)}}</td>
-        <td>{{sumaCategoria(tipos.otros8,sumas.otros8)}}</td>
+      
+        <tr>
+
+        <td>{{grupo.Agosto.nombre}}</td>
+        <td>{{grupo.Agosto.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Agosto.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Agosto.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Agosto.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Agosto.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Agosto.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Agosto.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Agosto.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Agosto.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Agosto.tipo.herramientas.total|currency}}</td>
+
       </tr>
-      <tr>
-        <td>Septiembre</td>
-        <td>{{sumaCategoria(tipos.mercaderia9,sumas.mercaderia9)}}</td>
-        <td>{{sumaCategoria(tipos.arriendo9,sumas.arriendo9)}}</td>
-        <td>{{sumaCategoria(tipos.serviciosBasico9,sumas.serviciosBasico9)}}</td>
-        <td>{{sumaCategoria(tipos.sueldos9,sumas.sueldos9)}}</td>
-        <td>{{sumaCategoria(tipos.movilizacion9,sumas.movilizacion9)}}</td>
-        <td>{{sumaCategoria(tipos.viaticos9,sumas.viaticos9)}}</td>
-        <td>{{sumaCategoria(tipos.capacitacion9,sumas.capacitacion9)}}</td>
-        <td>{{sumaCategoria(tipos.suministros9,sumas.suministros9)}}</td>
-        <td>{{sumaCategoria(tipos.herramientas9,sumas.herramientas9)}}</td>
-        <td>{{sumaCategoria(tipos.otros9,sumas.otros9)}}</td>
+      
+        <tr>
+
+        <td>{{grupo.Septiembre.nombre}}</td>
+        <td>{{grupo.Septiembre.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Septiembre.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Septiembre.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Septiembre.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Septiembre.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Septiembre.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Septiembre.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Septiembre.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Septiembre.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Septiembre.tipo.herramientas.total|currency}}</td>
+
       </tr>
-      <tr>
-        <td>Octubre</td>
-        <td>{{sumaCategoria(tipos.mercaderia10,sumas.mercaderia10)}}</td>
-        <td>{{sumaCategoria(tipos.arriendo10,sumas.arriendo10)}}</td>
-        <td>{{sumaCategoria(tipos.serviciosBasico10,sumas.serviciosBasico10)}}</td>
-        <td>{{sumaCategoria(tipos.sueldos10,sumas.sueldos10)}}</td>
-        <td>{{sumaCategoria(tipos.movilizacion10,sumas.movilizacion10)}}</td>
-        <td>{{sumaCategoria(tipos.viaticos10,sumas.viaticos10)}}</td>
-        <td>{{sumaCategoria(tipos.capacitacion10,sumas.capacitacion10)}}</td>
-        <td>{{sumaCategoria(tipos.suministros10,sumas.suministros10)}}</td>
-        <td>{{sumaCategoria(tipos.herramientas10,sumas.herramientas10)}}</td>
-        <td>{{sumaCategoria(tipos.otros10,sumas.otros10)}}</td>
+      
+        <tr>
+
+        <td>{{grupo.Octubre.nombre}}</td>
+        <td>{{grupo.Octubre.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Octubre.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Octubre.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Octubre.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Octubre.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Octubre.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Octubre.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Octubre.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Octubre.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Octubre.tipo.herramientas.total|currency}}</td>
+
       </tr>
-      <tr>
-        <td>Noviembre</td>
-        <td>{{sumaCategoria(tipos.mercaderia11,sumas.mercaderia11)}}</td>
-        <td>{{sumaCategoria(tipos.arriendo11,sumas.arriendo11)}}</td>
-        <td>{{sumaCategoria(tipos.serviciosBasico11,sumas.serviciosBasico11)}}</td>
-        <td>{{sumaCategoria(tipos.sueldos11,sumas.sueldos11)}}</td>
-        <td>{{sumaCategoria(tipos.movilizacion11,sumas.movilizacion11)}}</td>
-        <td>{{sumaCategoria(tipos.viaticos11,sumas.viaticos11)}}</td>
-        <td>{{sumaCategoria(tipos.capacitacion11,sumas.capacitacion11)}}</td>
-        <td>{{sumaCategoria(tipos.suministros11,sumas.suministros11)}}</td>
-        <td>{{sumaCategoria(tipos.herramientas11,sumas.herramientas11)}}</td>
-        <td>{{sumaCategoria(tipos.otros11,sumas.otros11)}}</td>
+      
+        <tr>
+
+        <td>{{grupo.Noviembre.nombre}}</td>
+        <td>{{grupo.Noviembre.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Noviembre.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Noviembre.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Noviembre.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Noviembre.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Noviembre.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Noviembre.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Noviembre.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Noviembre.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Noviembre.tipo.herramientas.total|currency}}</td>
+
       </tr>
-      <tr>
-        <td>Diciembre</td>
-        <td>{{sumaCategoria(tipos.mercaderia12,sumas.mercaderia12)}}</td>
-        <td>{{sumaCategoria(tipos.arriendo12,sumas.arriendo12)}}</td>
-        <td>{{sumaCategoria(tipos.serviciosBasico12,sumas.serviciosBasico12)}}</td>
-        <td>{{sumaCategoria(tipos.sueldos12,sumas.sueldos12)}}</td>
-        <td>{{sumaCategoria(tipos.movilizacion12,sumas.movilizacion12)}}</td>
-        <td>{{sumaCategoria(tipos.viaticos12,sumas.viaticos12)}}</td>
-        <td>{{sumaCategoria(tipos.capacitacion12,sumas.capacitacion12)}}</td>
-        <td>{{sumaCategoria(tipos.suministros12,sumas.suministros12)}}</td>
-        <td>{{sumaCategoria(tipos.herramientas12,sumas.herramientas12)}}</td>
-        <td>{{sumaCategoria(tipos.otros12,sumas.otros12)}}</td>
+      
+        <tr>
+
+        <td>{{grupo.Diciembre.nombre}}</td>
+        <td>{{grupo.Diciembre.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Diciembre.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Diciembre.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Diciembre.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Diciembre.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Diciembre.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Diciembre.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Diciembre.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Diciembre.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Diciembre.tipo.herramientas.total|currency}}</td>
+
       </tr>
+      
+        <tr>
+
+        <td>{{grupo.Total.nombre}}</td>
+        <td>{{grupo.Total.tipo.mercaderia.total|currency}}</td>
+        <td>{{grupo.Total.tipo.arriendo.total|currency}}</td>
+        <td>{{grupo.Total.tipo.serviciosBasicos.total|currency}}</td>
+        <td>{{grupo.Total.tipo.sueldos.total|currency}}</td>
+        <td>{{grupo.Total.tipo.movilizacion.total|currency}}</td>
+        <td>{{grupo.Total.tipo.otros.total|currency}}</td>
+          <td>{{grupo.Total.tipo.viaticos.total|currency}}</td>
+        <td>{{grupo.Total.tipo.capacitacion.total|currency}}</td>
+        <td>{{grupo.Total.tipo.suministros.total|currency}}</td>
+        <td>{{grupo.Total.tipo.herramientas.total|currency}}</td>
+
+      </tr>
+
+      
+
+
+
+
+
+    
 
 
 
 
 
       </tbody>
+
     </table>
-
-
   </div>
   <div class="row">
     <div class="col-md-4">
-      <button class="btn btn-info" type="button" ng-click="nuevaBusqueda()" ng-show="ocultarNC">nueva busqueda</button>
+      <button ng-hide="mostrar" ng-click="exportarGP()" class="btn btn-success">Exportar</button>
     </div>
-    <div class="col-md-2"></div>
     <div class="col-md-4">
-      <button class="btn btn-info"  type="button" ng-click="exportar()">Exportar Excel</button>
+      <button ng-hide="mostrar" ng-click="nuevaBusqueda()" class="btn btn-success">Nueva Consulta</button>
     </div>
   </div>
 </div>
-
-
-
-
+<!--{{grupo || JSON}}-->
